@@ -1,6 +1,14 @@
 import json
 
 def getDefinitionsJDMn(fileName):
+    """_summary_
+
+    Args:
+        fileName (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     with open(fileName, "r") as arquivo:
         dados = json.load(arquivo)
     
@@ -11,6 +19,15 @@ def getDefinitionsJDMn(fileName):
     return decisionTable
 
 def castingValues(typeToCast, value):
+    """_summary_
+
+    Args:
+        typeToCast (_type_): _description_
+        value (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     if value is not None:
         if typeToCast == 'number':
             if type(value) != "<class 'float'>":
@@ -22,6 +39,16 @@ def castingValues(typeToCast, value):
     return value
 
 def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
+    """_summary_
+
+    Args:
+        decisionTable (_type_): _description_
+        dictToEvaluate (_type_): _description_
+        debbugJDMn (_type_, optional): _description_. Defaults to None.
+
+    Returns:
+        _type_: _description_
+    """
     inputs  = decisionTable ['input'  ]
     rules   = decisionTable ['rule'   ]
     
