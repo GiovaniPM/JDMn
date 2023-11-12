@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0yoiwrk" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.15.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.0.0">
+  <decision id="Decision_0406rbz" name="Hipertensos">
+    <decisionTable id="DecisionTable_0az1k9r" hitPolicy="FIRST">
+      <input id="Input_1" label="PAS">
+        <inputExpression id="InputExpression_1" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0j2r2c2" label="PAD">
+        <inputExpression id="LiteralExpression_05uqpqm" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1h7gbp6" label="Riscos">
+        <inputExpression id="LiteralExpression_1cj5cdk" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0mscmkk" label="CondClinicas">
+        <inputExpression id="LiteralExpression_1te6eyk" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Risco" typeRef="string" />
+      <rule id="DecisionRule_0zzd8h4">
+        <inputEntry id="UnaryTests_0vbgcur">
+          <text>&lt; 120</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wxinjg">
+          <text>&lt; 80</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15g1ozo">
+          <text>&lt; 1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vt16is">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vmtmye">
+          <text>Basal</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1m7fos8">
+        <inputEntry id="UnaryTests_0uoakbq">
+          <text>&lt; 120</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pljv9w">
+          <text>&lt; 80</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qkfqd3">
+          <text>&gt;= 3</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kugix7">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1b0d0tz">
+          <text>Moderado</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19q16zc">
+        <inputEntry id="UnaryTests_14nqwsd">
+          <text>&lt; 120</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m584ly">
+          <text>&lt; 80</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fnvlso">
+          <text>&gt;= 2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dimr57">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_048z98y">
+          <text>Baixo</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1846bk4">
+        <inputEntry id="UnaryTests_1ftuyhi">
+          <text>&lt; 120</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lagnaw">
+          <text>&lt; 80</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h44p88">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fuxprv">
+          <text>S</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09yav2t">
+          <text>Muito Alto</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05acl93">
+        <inputEntry id="UnaryTests_0npui0m">
+          <text>&lt;= 129</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yqwaw9">
+          <text>&lt;= 84</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16drrvz">
+          <text>&lt; 1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1b4ghil">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18mqumv">
+          <text>Basal</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0fzve21">
+        <inputEntry id="UnaryTests_1cdszxo">
+          <text>&lt;= 129</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_113u546">
+          <text>&lt;= 84</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e8hlst">
+          <text>&gt;= 3</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y1us1u">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1d7rmcg">
+          <text>Moderado</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0d4nocw">
+        <inputEntry id="UnaryTests_0tbzd02">
+          <text>&lt;= 129</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lz3xoe">
+          <text>&lt;= 84</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ea5i51">
+          <text>&gt;= 2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_185srz5">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0shtbuj">
+          <text>Baixo</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0o8qpnv">
+        <inputEntry id="UnaryTests_0ovzheu">
+          <text>&lt;= 129</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f6i1si">
+          <text>&lt;= 84</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l3tkam">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vug562">
+          <text>S</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ummzy2">
+          <text>Muito Alto</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0we56m4">
+        <inputEntry id="UnaryTests_1udogey">
+          <text>&lt;= 139</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0acnf24">
+          <text>&lt;= 89</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oy8it7">
+          <text>&lt; 1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0juocwx">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0cvuw2r">
+          <text>Basal</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1t2qjm1">
+        <inputEntry id="UnaryTests_0c4a22w">
+          <text>&lt;= 139</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1w9ro83">
+          <text>&lt;= 89</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sspbgw">
+          <text>&gt;= 3</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x4i72y">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1n31gam">
+          <text>Alto</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1h7yrld">
+        <inputEntry id="UnaryTests_1m5or4j">
+          <text>&lt;= 139</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1aqgjhe">
+          <text>&lt;= 89</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oopxa3">
+          <text>&gt;= 2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vs6hzq">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12ndbvf">
+          <text>Baixo</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0flju04">
+        <inputEntry id="UnaryTests_1wnd4bi">
+          <text>&lt;= 139</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00e72qe">
+          <text>&lt;= 89</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t3cvmv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t3zgeg">
+          <text>S</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dlvwsg">
+          <text>Muito Alto</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1yuo5w5">
+        <inputEntry id="UnaryTests_1y5vkj6">
+          <text>&lt;= 159</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k7k3f2">
+          <text>&lt;= 99</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16n9a5l">
+          <text>&lt; 1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mwa0cz">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07bdjxx">
+          <text>Baixo</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18tc5r6">
+        <inputEntry id="UnaryTests_1cpapkt">
+          <text>&lt;= 159</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0503nko">
+          <text>&lt;= 99</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g5rvgg">
+          <text>&gt;= 3</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x144jk">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04rncvr">
+          <text>Alto</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wmbtpr">
+        <inputEntry id="UnaryTests_1hlxshg">
+          <text>&lt;= 159</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03c0gpb">
+          <text>&lt;= 99</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03zh3hv">
+          <text>&gt;= 2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h5e3hx">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1su9clv">
+          <text>Moderado</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_179mkri">
+        <inputEntry id="UnaryTests_1ymw0i8">
+          <text>&lt;= 159</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bsb7wq">
+          <text>&lt;= 99</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m1tit1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03urtrl">
+          <text>S</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17031cf">
+          <text>Muito Alto</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0bqlcp8">
+        <inputEntry id="UnaryTests_12prhhb">
+          <text>&lt;= 179</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wgfmxd">
+          <text>&lt;= 109</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qzu7oe">
+          <text>&lt; 1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xdpttn">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vqzyyz">
+          <text>Moderado</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_053ie18">
+        <inputEntry id="UnaryTests_02u6ajv">
+          <text>&lt;= 179</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1f7mtjd">
+          <text>&lt;= 109</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1he7a0a">
+          <text>&gt;= 3</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0irq7dc">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1xw3xqs">
+          <text>Alto</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0m92vrf">
+        <inputEntry id="UnaryTests_1ucv4wu">
+          <text>&lt;= 179</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cw24q1">
+          <text>&lt;= 109</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04vc8q1">
+          <text>&gt;= 2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ugwqp5">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1wqjbrx">
+          <text>Moderado</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0sz9841">
+        <inputEntry id="UnaryTests_0fwc1hc">
+          <text>&lt;= 179</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xe2ei3">
+          <text>&lt;= 109</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08k4w0m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y1zo2j">
+          <text>S</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ecehrs">
+          <text>Muito Alto</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0p0tiab">
+        <inputEntry id="UnaryTests_076o1aa">
+          <text>&gt;= 180</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rn5u1i">
+          <text>&gt;= 110</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ocsyqw">
+          <text>&lt; 1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nsoiac">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1m3wuq3">
+          <text>Alto</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1fbpokm">
+        <inputEntry id="UnaryTests_0raiu2i">
+          <text>&gt;= 180</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ulzmhk">
+          <text>&gt;= 110</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zzszfk">
+          <text>&gt;= 3</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15awe3i">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ro6h1j">
+          <text>Muito Alto</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1m9j6vg">
+        <inputEntry id="UnaryTests_0ww6qds">
+          <text>&gt;= 180</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12rgich">
+          <text>&gt;= 110</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_183uzzc">
+          <text>&gt;= 2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06jaxiw">
+          <text>N</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08dh6eu">
+          <text>Muito Alto</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06w5e4f">
+        <inputEntry id="UnaryTests_1wc90f0">
+          <text>&gt;= 180</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cll3ba">
+          <text>&gt;= 110</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16tw0vt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_076x6sb">
+          <text>S</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vcs52s">
+          <text>Muito Alto</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14kjgyp">
+        <inputEntry id="UnaryTests_1xeald7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q0jagd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1705pyd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1268tca">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_130rca8">
+          <text>N/D</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_0406rbz">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

@@ -1,0 +1,100 @@
+@startjson
+{
+    "definitions": {
+        "decision": {
+            "decisionTable": {
+                "input": [{
+                        "inputExpression": {
+                            "label": "Preço",
+                            "typeRef": "number"
+                        }
+                    },
+                    {
+                        "inputExpression": {
+                            "label": "Categoria",
+                            "typeRef": "string"
+                        }
+                    }
+                ],
+                "output": {
+                    "label": "Desconto",
+                    "typeRef": "number"
+                },
+                "rule": [{
+                        "inputEntry": [{
+                                "text": "< 100"
+                            },
+                            {
+                                "text": ""
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": 0
+                        }
+                    },
+                    {
+                        "inputEntry": [{
+                                "text": ">= 200"
+                            },
+                            {
+                                "text": "eletronico"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": 15
+                        }
+                    },
+                    {
+                        "inputEntry": [{
+                                "text": ">= 100"
+                            },
+                            {
+                                "text": "eletronico"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": 10
+                        }
+                    },
+                    {
+                        "inputEntry": [{
+                                "text": ">= 300"
+                            },
+                            {
+                                "text": "vestuario"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": 10
+                        }
+                    },
+                    {
+                        "inputEntry": [{
+                                "text": ">= 100"
+                            },
+                            {
+                                "text": "vestuario"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": 5
+                        }
+                    },
+                    {
+                        "inputEntry": [{
+                                "text": ""
+                            },
+                            {
+                                "text": ""
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": 0
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
+@endjson
