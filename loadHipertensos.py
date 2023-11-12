@@ -6,7 +6,7 @@ dados = {}
 dados['PAS'] = None
 dados['PAD'] = 60
 dados['Riscos'] = 3
-dados['CondClinicas'] = 'S'
+dados['CondClinicas'] = 'N'
 
 desconto, prova = JDMn.evaluateJDMn(JDMnDefs, dados, 'S')
 

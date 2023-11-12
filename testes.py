@@ -1,0 +1,2 @@
+expressao = "'4' in ['1', '2', '3']"
+print(eval(expressao))
