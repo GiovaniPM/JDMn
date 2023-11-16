@@ -3,7 +3,7 @@ import JDMn
 JDMnDefs = JDMn.getDefinitionsJDMn("desconto.json")
 
 dados = {}
-dados['Preco'] = 501
+dados['Preco'] = 600
 dados['Categoria'] = 'vestuario'
 
 desconto, prova = JDMn.evaluateJDMn(JDMnDefs, dados, 'S')

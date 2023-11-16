@@ -83,9 +83,12 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
         pos        = 0
         
         for entry in entrys:
-            if entry['text'] == '' or entry['text'] == None:
-                expression.append('True')
-            elif values[pos] == None or values[pos] == '':
+            if values[pos] == '' or values[pos] == None:
+                if entry['text'] == '' or entry['text'] == None:
+                    expression.append('True')
+                else:
+                    expression.append('False')
+            elif entry['text'] == '' or entry['text'] == None:
                 expression.append('True')
             elif types[pos] == 'number':
                 expression.append(str(values[pos]) + " " + entry['text'])
