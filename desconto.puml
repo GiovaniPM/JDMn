@@ -3,93 +3,963 @@
     "definitions": {
         "decision": {
             "decisionTable": {
-                "input": [{
+                "input": [
+                    {
                         "inputExpression": {
-                            "label": "Preço",
+                            "label": "PAS",
                             "typeRef": "number"
                         }
                     },
                     {
                         "inputExpression": {
-                            "label": "Categoria",
+                            "label": "PAD",
+                            "typeRef": "number"
+                        }
+                    },
+                    {
+                        "inputExpression": {
+                            "label": "Riscos",
+                            "typeRef": "number"
+                        }
+                    },
+                    {
+                        "inputExpression": {
+                            "label": "CondClinicas",
                             "typeRef": "string"
                         }
                     }
                 ],
-                "output": {
-                    "label": "Desconto",
-                    "typeRef": "number"
-                },
-                "rule": [{
-                        "inputEntry": [{
-                                "text": "< 100"
+                "output": "",
+                "rule": [
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "< 120"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "< 1"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Basal"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "< 120"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ">= 3"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Moderado"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "< 120"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ">= 2"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Baixo"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "< 120"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "S"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Muito Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 129"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "< 1"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Basal"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 129"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ">= 3"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Moderado"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 129"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ">= 2"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Baixo"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 129"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "S"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Muito Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 139"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "< 1"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Basal"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 139"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ">= 3"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 139"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ">= 2"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Baixo"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 139"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "S"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Muito Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 159"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "< 1"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Baixo"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 159"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ">= 3"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 159"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ">= 2"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Moderado"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 159"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "S"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Muito Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 179"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "< 1"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Moderado"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 179"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ">= 3"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 179"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ">= 2"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Moderado"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 179"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "S"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Muito Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ">= 180"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "< 1"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ">= 180"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ">= 3"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Muito Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ">= 180"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ">= 2"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Muito Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ">= 180"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "S"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Muito Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "< 80"
+                            },
+                            {
+                                "text": "< 1"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Basal"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "< 80"
+                            },
+                            {
+                                "text": ">= 3"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Moderado"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "< 80"
+                            },
+                            {
+                                "text": ">= 2"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Baixo"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "< 80"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "S"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Muito Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "<= 84"
+                            },
+                            {
+                                "text": "< 1"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Basal"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "<= 84"
+                            },
+                            {
+                                "text": ">= 3"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Moderado"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "<= 84"
+                            },
+                            {
+                                "text": ">= 2"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Baixo"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "<= 84"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "S"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Muito Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "<= 89"
+                            },
+                            {
+                                "text": "< 1"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Basal"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "<= 89"
+                            },
+                            {
+                                "text": ">= 3"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "<= 89"
+                            },
+                            {
+                                "text": ">= 2"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Baixo"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "<= 89"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "S"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Muito Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "<= 99"
+                            },
+                            {
+                                "text": "< 1"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Baixo"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "<= 99"
+                            },
+                            {
+                                "text": ">= 3"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "<= 99"
+                            },
+                            {
+                                "text": ">= 2"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Moderado"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "<= 99"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "S"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Muito Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "<= 109"
+                            },
+                            {
+                                "text": "< 1"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Moderado"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "<= 109"
+                            },
+                            {
+                                "text": ">= 3"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "<= 109"
+                            },
+                            {
+                                "text": ">= 2"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Moderado"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "<= 109"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "S"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Muito Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ">= 110"
+                            },
+                            {
+                                "text": "< 1"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ">= 110"
+                            },
+                            {
+                                "text": ">= 3"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Muito Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ">= 110"
+                            },
+                            {
+                                "text": ">= 2"
+                            },
+                            {
+                                "text": "N"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Muito Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ">= 110"
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "S"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "Muito Alto"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ""
                             },
                             {
                                 "text": ""
                             }
                         ],
                         "outputEntry": {
-                            "text": 0
-                        }
-                    },
-                    {
-                        "inputEntry": [{
-                                "text": ">= 200"
-                            },
-                            {
-                                "text": "eletronico"
-                            }
-                        ],
-                        "outputEntry": {
-                            "text": 15
-                        }
-                    },
-                    {
-                        "inputEntry": [{
-                                "text": ">= 100"
-                            },
-                            {
-                                "text": "eletronico"
-                            }
-                        ],
-                        "outputEntry": {
-                            "text": 10
-                        }
-                    },
-                    {
-                        "inputEntry": [{
-                                "text": ">= 300"
-                            },
-                            {
-                                "text": "vestuario"
-                            }
-                        ],
-                        "outputEntry": {
-                            "text": 10
-                        }
-                    },
-                    {
-                        "inputEntry": [{
-                                "text": ">= 100"
-                            },
-                            {
-                                "text": "vestuario"
-                            }
-                        ],
-                        "outputEntry": {
-                            "text": 5
-                        }
-                    },
-                    {
-                        "inputEntry": [{
-                                "text": ""
-                            },
-                            {
-                                "text": ""
-                            }
-                        ],
-                        "outputEntry": {
-                            "text": 0
+                            "text": "N/D"
                         }
                     }
                 ]
