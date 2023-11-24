@@ -83,13 +83,13 @@ class JDMnSetup ( wx.Frame ):
 		bSizer8 = wx.BoxSizer( wx.VERTICAL )
 		
 		self.m_button1 = wx.Button( self.m_panel8, wx.ID_ANY, u"Add", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer8.Add( self.m_button1, 0, wx.ALL, 5 )
+		bSizer8.Add( self.m_button1, 0, wx.BOTTOM, 5 )
 		
 		self.m_button2 = wx.Button( self.m_panel8, wx.ID_ANY, u"Remove", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer8.Add( self.m_button2, 0, wx.ALL, 5 )
+		bSizer8.Add( self.m_button2, 0, wx.TOP|wx.BOTTOM, 5 )
 		
 		self.m_button3 = wx.Button( self.m_panel8, wx.ID_ANY, u"...", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer8.Add( self.m_button3, 0, wx.ALL, 5 )
+		bSizer8.Add( self.m_button3, 0, wx.TOP, 5 )
 		
 		
 		self.m_panel8.SetSizer( bSizer8 )
@@ -165,13 +165,13 @@ class JDMnSetup ( wx.Frame ):
 		bSizer12 = wx.BoxSizer( wx.VERTICAL )
 		
 		self.m_button4 = wx.Button( self.m_panel11, wx.ID_ANY, u"Add", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer12.Add( self.m_button4, 0, wx.ALL, 5 )
+		bSizer12.Add( self.m_button4, 0, wx.BOTTOM, 5 )
 		
 		self.m_button5 = wx.Button( self.m_panel11, wx.ID_ANY, u"Remove", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer12.Add( self.m_button5, 0, wx.ALL, 5 )
+		bSizer12.Add( self.m_button5, 0, wx.TOP|wx.BOTTOM, 5 )
 		
 		self.m_button6 = wx.Button( self.m_panel11, wx.ID_ANY, u"...", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer12.Add( self.m_button6, 0, wx.ALL, 5 )
+		bSizer12.Add( self.m_button6, 0, wx.TOP, 5 )
 		
 		
 		self.m_panel11.SetSizer( bSizer12 )
