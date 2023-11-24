@@ -11,7 +11,7 @@
         <property name="embedded_files_path">res</property>
         <property name="encoding">UTF-8</property>
         <property name="event_generation">connect</property>
-        <property name="file"></property>
+        <property name="file">JDmnGen</property>
         <property name="first_id">1000</property>
         <property name="help_provider">none</property>
         <property name="internationalize">0</property>
@@ -95,6 +95,7 @@
                 <property name="permission">none</property>
                 <object class="sizeritem" expanded="0">
                     <property name="border">5</property>
+<<<<<<< HEAD
                     <property name="flag">wxALL|wxEXPAND</property>
                     <property name="proportion">0</property>
                     <object class="wxPanel" expanded="0">
@@ -175,6 +176,8 @@
                 </object>
                 <object class="sizeritem" expanded="0">
                     <property name="border">5</property>
+=======
+>>>>>>> d3cd05dc2991d48e9c44f7d080f805cf5f949229
                     <property name="flag">wxEXPAND | wxALL</property>
                     <property name="proportion">1</property>
                     <object class="wxPanel" expanded="0">
@@ -516,7 +519,7 @@
                                                             <property name="permission">none</property>
                                                             <object class="sizeritem" expanded="0">
                                                                 <property name="border">5</property>
-                                                                <property name="flag">wxALL|wxEXPAND</property>
+                                                                <property name="flag">wxEXPAND</property>
                                                                 <property name="proportion">1</property>
                                                                 <object class="wxGrid" expanded="0">
                                                                     <property name="BottomDockable">1</property>
@@ -603,7 +606,7 @@
                                                                     <event name="OnChar"></event>
                                                                     <event name="OnEnterWindow"></event>
                                                                     <event name="OnEraseBackground"></event>
-                                                                    <event name="OnGridCellChange"></event>
+                                                                    <event name="OnGridCellChange">LabelAlterado</event>
                                                                     <event name="OnGridCellLeftClick"></event>
                                                                     <event name="OnGridCellLeftDClick"></event>
                                                                     <event name="OnGridCellRightClick"></event>
@@ -662,7 +665,7 @@
                                                 </object>
                                                 <object class="sizeritem" expanded="0">
                                                     <property name="border">5</property>
-                                                    <property name="flag">wxEXPAND | wxALL</property>
+                                                    <property name="flag">wxEXPAND</property>
                                                     <property name="proportion">0</property>
                                                     <object class="wxPanel" expanded="0">
                                                         <property name="BottomDockable">1</property>
@@ -805,7 +808,7 @@
                                                                     <property name="window_extra_style"></property>
                                                                     <property name="window_name"></property>
                                                                     <property name="window_style"></property>
-                                                                    <event name="OnButtonClick"></event>
+                                                                    <event name="OnButtonClick">AdicionaInput</event>
                                                                     <event name="OnChar"></event>
                                                                     <event name="OnEnterWindow"></event>
                                                                     <event name="OnEraseBackground"></event>
@@ -893,7 +896,7 @@
                                                                     <property name="window_extra_style"></property>
                                                                     <property name="window_name"></property>
                                                                     <property name="window_style"></property>
-                                                                    <event name="OnButtonClick"></event>
+                                                                    <event name="OnButtonClick">RemoveInput</event>
                                                                     <event name="OnChar"></event>
                                                                     <event name="OnEnterWindow"></event>
                                                                     <event name="OnEraseBackground"></event>
@@ -1361,7 +1364,7 @@
                                                             <property name="permission">none</property>
                                                             <object class="sizeritem" expanded="0">
                                                                 <property name="border">5</property>
-                                                                <property name="flag">wxALL|wxEXPAND</property>
+                                                                <property name="flag">wxEXPAND</property>
                                                                 <property name="proportion">1</property>
                                                                 <object class="wxGrid" expanded="0">
                                                                     <property name="BottomDockable">1</property>
@@ -1387,10 +1390,10 @@
                                                                     <property name="close_button">1</property>
                                                                     <property name="col_label_horiz_alignment">wxALIGN_CENTRE</property>
                                                                     <property name="col_label_size">30</property>
-                                                                    <property name="col_label_values"></property>
+                                                                    <property name="col_label_values">&quot;Output&quot;</property>
                                                                     <property name="col_label_vert_alignment">wxALIGN_CENTRE</property>
-                                                                    <property name="cols">0</property>
-                                                                    <property name="column_sizes"></property>
+                                                                    <property name="cols">1</property>
+                                                                    <property name="column_sizes">125</property>
                                                                     <property name="context_help"></property>
                                                                     <property name="context_menu">1</property>
                                                                     <property name="default_pane">0</property>
@@ -1436,7 +1439,7 @@
                                                                     <property name="row_label_values"></property>
                                                                     <property name="row_label_vert_alignment">wxALIGN_CENTRE</property>
                                                                     <property name="row_sizes"></property>
-                                                                    <property name="rows">0</property>
+                                                                    <property name="rows">1</property>
                                                                     <property name="show">1</property>
                                                                     <property name="size"></property>
                                                                     <property name="subclass"></property>
@@ -1507,7 +1510,7 @@
                                                 </object>
                                                 <object class="sizeritem" expanded="0">
                                                     <property name="border">5</property>
-                                                    <property name="flag">wxEXPAND | wxALL</property>
+                                                    <property name="flag">wxEXPAND</property>
                                                     <property name="proportion">0</property>
                                                     <object class="wxPanel" expanded="0">
                                                         <property name="BottomDockable">1</property>
@@ -1650,7 +1653,7 @@
                                                                     <property name="window_extra_style"></property>
                                                                     <property name="window_name"></property>
                                                                     <property name="window_style"></property>
-                                                                    <event name="OnButtonClick"></event>
+                                                                    <event name="OnButtonClick">AdicionaRule</event>
                                                                     <event name="OnChar"></event>
                                                                     <event name="OnEnterWindow"></event>
                                                                     <event name="OnEraseBackground"></event>
@@ -1738,7 +1741,7 @@
                                                                     <property name="window_extra_style"></property>
                                                                     <property name="window_name"></property>
                                                                     <property name="window_style"></property>
-                                                                    <event name="OnButtonClick"></event>
+                                                                    <event name="OnButtonClick">RemoveRule</event>
                                                                     <event name="OnChar"></event>
                                                                     <event name="OnEnterWindow"></event>
                                                                     <event name="OnEraseBackground"></event>
@@ -1863,6 +1866,7 @@
                         </object>
                     </object>
                 </object>
+<<<<<<< HEAD
                 <object class="sizeritem" expanded="0">
                     <property name="border">5</property>
                     <property name="flag">wxEXPAND | wxALL</property>
@@ -1943,6 +1947,8 @@
                         <event name="OnUpdateUI"></event>
                     </object>
                 </object>
+=======
+>>>>>>> d3cd05dc2991d48e9c44f7d080f805cf5f949229
             </object>
             <object class="wxMenuBar" expanded="0">
                 <property name="bg"></property>
