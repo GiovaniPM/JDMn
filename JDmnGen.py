@@ -130,16 +130,18 @@ class JDMnSetup ( wx.Frame ):
 		self.m_grid7 = wx.grid.Grid( self.m_panel10, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 		
 		# Grid
-		self.m_grid7.CreateGrid( 0, 0 )
+		self.m_grid7.CreateGrid( 1, 1 )
 		self.m_grid7.EnableEditing( True )
 		self.m_grid7.EnableGridLines( True )
 		self.m_grid7.EnableDragGridSize( False )
 		self.m_grid7.SetMargins( 0, 0 )
 		
 		# Columns
+		self.m_grid7.SetColSize( 0, 125 )
 		self.m_grid7.EnableDragColMove( False )
 		self.m_grid7.EnableDragColSize( True )
 		self.m_grid7.SetColLabelSize( 30 )
+		self.m_grid7.SetColLabelValue( 0, u"Output" )
 		self.m_grid7.SetColLabelAlignment( wx.ALIGN_CENTRE, wx.ALIGN_CENTRE )
 		
 		# Rows
@@ -213,14 +215,30 @@ class JDMnSetup ( wx.Frame ):
 		self.Centre( wx.BOTH )
 		
 		# Connect Events
+		self.m_grid4.Bind( wx.grid.EVT_GRID_CELL_CHANGED, self.LabelAlterado )
 		self.m_button1.Bind( wx.EVT_BUTTON, self.AdicionaInput )
+		self.m_button2.Bind( wx.EVT_BUTTON, self.RemoveInput )
+		self.m_button4.Bind( wx.EVT_BUTTON, self.AdicionaRule )
+		self.m_button5.Bind( wx.EVT_BUTTON, self.RemoveRule )
 	
 	def __del__( self ):
 		pass
 	
 	
 	# Virtual event handlers, overide them in your derived class
+	def LabelAlterado( self, event ):
+		event.Skip()
+	
 	def AdicionaInput( self, event ):
+		event.Skip()
+	
+	def RemoveInput( self, event ):
+		event.Skip()
+	
+	def AdicionaRule( self, event ):
+		event.Skip()
+	
+	def RemoveRule( self, event ):
 		event.Skip()
 	
 
