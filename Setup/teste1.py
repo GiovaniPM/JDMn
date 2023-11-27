@@ -1,20 +1,20 @@
 import wx
-import wx.grid
 
-class TestFrame(wx.Frame):
-    def __init__(self):
-        wx.Frame.__init__(self, None, title="Grid", size=(640,480))
-        self.grid = wx.grid.Grid(self)
-        self.grid.CreateGrid(50,50)
+# Create an application object
+app = wx.App()
 
-        for row in range(20):
-            for col in range(6):
-                self.grid.SetCellValue(row, col, "cell (%d,%d)" % (row, col))
+# Create a frame as the parent window
+frame = wx.Frame(None, title="Open File Dialog Example")
 
-        # Alterando o rótulo da coluna
-        self.grid.SetColLabelValue(0, "Nova Coluna")
+# Create the open file dialog
+openFileDialog = wx.FileDialog(frame, "Open", "", "", "Python files (*.py)|*.py", wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
 
-app = wx.App(False)
-frame = TestFrame()
-frame.Show()
-app.MainLoop()
+# Show the dialog and get the user input
+if openFileDialog.ShowModal() == wx.ID_OK:
+    # Get the selected file path
+    filePath = openFileDialog.GetPath()
+    # Do something with the file
+    print(f"You chose the file: {filePath}")
+
+# Destroy the dialog
+openFileDialog.Destroy()

@@ -220,6 +220,8 @@ class JDMnSetup ( wx.Frame ):
 		self.m_button2.Bind( wx.EVT_BUTTON, self.RemoveInput )
 		self.m_button4.Bind( wx.EVT_BUTTON, self.AdicionaRule )
 		self.m_button5.Bind( wx.EVT_BUTTON, self.RemoveRule )
+		self.Bind( wx.EVT_MENU, self.OpenFile, id = self.open.GetId() )
+		self.Bind( wx.EVT_MENU, self.SaveFile, id = self.save.GetId() )
 	
 	def __del__( self ):
 		pass
@@ -239,6 +241,12 @@ class JDMnSetup ( wx.Frame ):
 		event.Skip()
 	
 	def RemoveRule( self, event ):
+		event.Skip()
+	
+	def OpenFile( self, event ):
+		event.Skip()
+	
+	def SaveFile( self, event ):
 		event.Skip()
 	
 
