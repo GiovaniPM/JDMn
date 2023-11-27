@@ -1,0 +1,72 @@
+@startjson
+{
+    "definitions": {
+        "decision": {
+            "decisionTable": {
+                "input": [{
+                        "inputExpression": {
+                            "label": "colunaUm",
+                            "typeRef": "string"
+                        }
+                    },
+                    {
+                        "inputExpression": {
+                            "label": "colunaDois",
+                            "typeRef": "string"
+                        }
+                    }
+                ],
+                "rule": [{
+                        "inputEntry": [{
+                                "text": "1"
+                            },
+                            {
+                                "text": ""
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "1"
+                        }
+                    },
+                    {
+                        "inputEntry": [{
+                                "text": ""
+                            },
+                            {
+                                "text": "1"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "1"
+                        }
+                    },
+                    {
+                        "inputEntry": [{
+                                "text": "1"
+                            },
+                            {
+                                "text": "1"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "1"
+                        }
+                    },
+                    {
+                        "inputEntry": [{
+                                "text": ""
+                            },
+                            {
+                                "text": ""
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": ""
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
+@endjson
