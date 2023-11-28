@@ -25,7 +25,7 @@ Python also has several other characteristics that make it popular amongst devel
 - It’s extendable. Python code can be written in other languages (such as C++), and users can add low-level modules to the Python interpreter to customize and optimize their tools.
 - It has a broad standard library. This library is available for anyone to access and means that users don’t have to write code for every single function—they can access built-in modules that help with issues in everyday programming and more.
 
-In this article, you will learn the Top 10 Reasons Why Python is So Popular With Developers.
+Top 10 Reasons Why Python is So Popular With Developers.
 
 1. Easy to Learn and Use
 1. Mature and Supportive Python Community
