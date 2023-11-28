@@ -21,7 +21,7 @@
                                 "text": "1"
                             },
                             {
-                                "text": ""
+                                "text": "0"
                             }
                         ],
                         "outputEntry": {
@@ -30,7 +30,7 @@
                     },
                     {
                         "inputEntry": [{
-                                "text": ""
+                                "text": "0"
                             },
                             {
                                 "text": "1"
@@ -54,14 +54,14 @@
                     },
                     {
                         "inputEntry": [{
-                                "text": ""
+                                "text": "0"
                             },
                             {
-                                "text": ""
+                                "text": "0"
                             }
                         ],
                         "outputEntry": {
-                            "text": ""
+                            "text": "0"
                         }
                     }
                 ]
