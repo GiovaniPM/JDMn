@@ -14,3 +14,13 @@ JavaScript Object Notation
 The JSON format is syntactically identical to the code for creating JavaScript objects.
 Because of this similarity, a JavaScript program can easily convert JSON data into native JavaScript objects.
 The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. Code for reading and generating JSON data can be written in any programming language.
+
+# What's Python?
+
+Python is a high-level, interpreted programming language with a simple syntax, which makes it easily readable and extremely user- and beginner-friendly. Originally built to satisfy Guido Van Rossum’s desire for a programming language that was simple to use and beautiful to look at, Python was first released to the world in 1991.
+Python also has several other characteristics that make it popular amongst developers and engineers. These include:
+- It’s easy to read. Python code uses English keywords rather than punctuation, and its line breaks help define the code blocks. In practice, this means you can identify what the code is designed to do simply by looking at it.
+- It’s open source. You can download the source code, modify it, and use it however you want.
+- It’s portable. Some languages require you to modify code to run on different platforms, but Python is a cross-platform language, which means you can run the same code on any operating system with a Python interpreter.
+- It’s extendable. Python code can be written in other languages (such as C++), and users can add low-level modules to the Python interpreter to customize and optimize their tools.
+- It has a broad standard library. This library is available for anyone to access and means that users don’t have to write code for every single function—they can access built-in modules that help with issues in everyday programming and more.
