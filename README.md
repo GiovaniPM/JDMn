@@ -38,11 +38,16 @@ Top 10 Reasons Why Python is So Popular With Developers.
 1. Use of python in academics
 1. It is interpreted
 
-## Library used
+## Software need
 
-[![Python Version](https://img.shields.io/badge/python-3.12.0-brightgreen.svg)](https://python.org)
+### Python
 
-Flask              3.0.0
+[![Python](https://img.shields.io/badge/python-3.12.0-brightgreen.svg)](https://python.org)
+
+### PIP
+
+[![Flask](https://img.shields.io/badge/Flask-3.0.0-brightgreen.svg)](https://flask.palletsprojects.com)
+
 Flask-Cors         4.0.0
 requests           2.31.0
 wxPython           4.2.1
