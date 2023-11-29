@@ -1,5 +1,5 @@
 # JDMn
-Python/JSON implement of DMn
+Python/JSON implementation of DMn
 
 ## Proposal
 
