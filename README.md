@@ -3,7 +3,7 @@ Python/JSON implement of DMn
 
 ## Proposal
 
-Create a lightweight DMn implementation, using a popular file represetantion and a flexible language.
+To create a lightweight DMn implementation, using a popular file represetantion and a flexible language.
 The represtative DMn tables, use a complete satisfation of all imput entrys into the rule to be validate a hypothesis.
 
 ## What’s DMN?
