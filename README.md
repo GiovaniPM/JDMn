@@ -172,19 +172,28 @@ print('Return:', desconto)
 
 ### API
 
-#### GET
+#### Server
+
+```dos
+ .\JDMn\Setup
+python app.py
+```
+
+### Postman client
+
+##### GET
 
 ```
 http://127.0.0.1:8080/jdmn
 ```
 
-#### Request Headers
+##### Request Headers
 
 ```
 Content-Type           application/json
 ```
 
-#### Body
+##### Body
 
 ```json
 {
