@@ -60,7 +60,7 @@ Top 10 Reasons Why Python is So Popular With Developers.
 ### Project directories
 
 ```dos
-(root)
+JDMn (root)
 ├─── <DIR> api      (api implementation)
 ├─── <DIR> examples (json examples)
 ├─── <DIR> lib      (jdmn library)
