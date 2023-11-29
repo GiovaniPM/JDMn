@@ -135,3 +135,19 @@ Top 10 Reasons Why Python is So Popular With Developers.
 ### App setup
 
 ![image](https://github.com/GiovaniPM/JDMn/assets/9011792/4740bd33-0198-4160-8c18-2ae8f6a37e49)
+
+## Implementation
+
+```python
+import JDMn
+
+JDMnDefs = JDMn.getDefinitionsJDMn("or.json")
+
+dados = {}
+dados['colunaUm']   = '1'
+dados['colunaDois'] = '0'
+
+desconto, prova = JDMn.evaluateJDMn(JDMnDefs, dados, 'S')
+
+print('Return:', desconto)
+```
