@@ -40,6 +40,8 @@ Top 10 Reasons Why Python is So Popular With Developers.
 
 ## Library used
 
+[![Python Version](https://img.shields.io/badge/python-3.12.0-brightgreen.svg)](https://python.org)
+
 Flask              3.0.0
 Flask-Cors         4.0.0
 requests           2.31.0
