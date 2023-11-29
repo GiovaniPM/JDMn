@@ -57,11 +57,11 @@ Top 10 Reasons Why Python is So Popular With Developers.
 
 ```dos
 (root)
-├───api
-├───examples
-├───lib
-├───Setup
-└───README.md
+├───<DIR> api (api implementation)
+├───<DIR> examples (json examples)
+├───<DIR> lib (jdmn library)
+├───<DIR> Setup (app to create jdmn)
+└───README.md (this file)
 ```
 
 ### General structure
