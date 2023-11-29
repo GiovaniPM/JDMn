@@ -53,6 +53,17 @@ Top 10 Reasons Why Python is So Popular With Developers.
 
 ## Architecture
 
+### Project directories
+
+'''dos
+(root)
+├───api
+└───examples
+└───lib
+└───Setup
+└───README.md
+'''
+
 ### General structure
 
 ![image](https://github.com/GiovaniPM/JDMn/assets/9011792/038c5661-ae5e-445b-94e8-5878889f0863)
