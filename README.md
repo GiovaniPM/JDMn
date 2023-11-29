@@ -47,6 +47,6 @@ Top 10 Reasons Why Python is So Popular With Developers.
 ### PIP support
 
 [![Flask](https://img.shields.io/badge/Flask-3.0.0-brightgreen.svg)](https://flask.palletsprojects.com)
-[![Flask](https://img.shields.io/badge/"Flask-Cors"-4.0.0-brightgreen.svg)](https://flask.palletsprojects.com)
+[![Flask-Cors](https://img.shields.io/badge/Flask_Cors-4.0.0-brightgreen.svg)](https://flask.palletsprojects.com)
 requests           2.31.0
 wxPython           4.2.1
