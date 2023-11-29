@@ -38,6 +38,11 @@ Top 10 Reasons Why Python is So Popular With Developers.
 1. Use of python in academics
 1. It is interpreted
 
+## So, JSON with Python?
+
+A “JSON object” is very similar to a Python dictionary. A “JSON array” is very similar to a Python list. In the same way that JSON objects can be nested within arrays or arrays nested within objects, Python dictionaries can be nested within lists or lists nested within dictionaries.
+You can save the Python dictionary into JSON files using a built-in module json.
+
 ## Software needs
 
 ### Python
