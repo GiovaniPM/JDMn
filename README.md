@@ -15,6 +15,10 @@ The JSON format is syntactically identical to the code for creating JavaScript o
 Because of this similarity, a JavaScript program can easily convert JSON data into native JavaScript objects.
 The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. Code for reading and generating JSON data can be written in any programming language.
 
+### Why use JSON instead XML
+
+As a markup language, XML is more complex and requires a tag structure. In contrast, JSON is a data format that extends from JavaScript. It does not use tags, which makes it more compact and easier to read for humans. JSON can represent the same data in a smaller file size for faster data transfer.
+
 ## What's Python?
 
 Python is a high-level, interpreted programming language with a simple syntax, which makes it easily readable and extremely user- and beginner-friendly. Originally built to satisfy Guido Van Rossum’s desire for a programming language that was simple to use and beautiful to look at, Python was first released to the world in 1991.
