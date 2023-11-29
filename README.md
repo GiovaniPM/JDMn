@@ -154,6 +154,8 @@ or.json
 
 ## Implementation
 
+### App
+
 ```python
 import JDMn
 
@@ -166,4 +168,107 @@ dados['colunaDois'] = '0'
 desconto, prova = JDMn.evaluateJDMn(JDMnDefs, dados, 'S')
 
 print('Return:', desconto)
+```
+
+### API
+
+#### GET
+
+```
+http://127.0.0.1:8080/jdmn
+```
+
+#### Request Headers
+
+```
+Content-Type           application/json
+```
+
+#### Body
+
+```json
+{
+    "evaluate": {
+        "JDMn": {
+            "definitions": {
+                "decision": {
+                    "decisionTable": {
+                        "input": [
+                            {
+                                "inputExpression": {
+                                    "label": "colunaUm",
+                                    "typeRef": "string"
+                                }
+                            },
+                            {
+                                "inputExpression": {
+                                    "label": "colunaDois",
+                                    "typeRef": "string"
+                                }
+                            }
+                        ],
+                        "rule": [
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "1"
+                                    },
+                                    {
+                                        "text": "1"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "1"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "1"
+                                    },
+                                    {
+                                        "text": "0"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "1"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "0"
+                                    },
+                                    {
+                                        "text": "1"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "1"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "0"
+                                    },
+                                    {
+                                        "text": "0"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "0"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "condition": {
+            "colunaUm": "0",
+            "colunaDois": "1"
+        }
+    }
+}
 ```
