@@ -51,6 +51,10 @@ Top 10 Reasons Why Python is So Popular With Developers.
 [![Requests](https://img.shields.io/badge/requests-2.31.0-brightgreen.svg)](https://requests.readthedocs.io/en/latest/)
 [![wxPython](https://img.shields.io/badge/wxPython-4.2.1-brightgreen.svg)](https://wxpython.org/index.html)
 
+### Postman
+
+[![Postman](https://img.shields.io/badge/Postman-10.20.6-brightgreen.svg)](https://www.postman.com/)
+
 ## Architecture
 
 ### Project directories
