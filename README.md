@@ -51,6 +51,83 @@ Top 10 Reasons Why Python is So Popular With Developers.
 [![Requests](https://img.shields.io/badge/requests-2.31.0-brightgreen.svg)](https://requests.readthedocs.io/en/latest/)
 [![wxPython](https://img.shields.io/badge/wxPython-4.2.1-brightgreen.svg)](https://wxpython.org/index.html)
 
-## JSON Archtecture
+## Architecture
+
+### General structure
 
 ![image](https://github.com/GiovaniPM/JDMn/assets/9011792/038c5661-ae5e-445b-94e8-5878889f0863)
+
+### File example
+
+```json
+{
+    "definitions": {
+        "decision": {
+            "decisionTable": {
+                "input": [{
+                        "inputExpression": {
+                            "label": "colunaUm",
+                            "typeRef": "string"
+                        }
+                    },
+                    {
+                        "inputExpression": {
+                            "label": "colunaDois",
+                            "typeRef": "string"
+                        }
+                    }
+                ],
+                "rule": [{
+                        "inputEntry": [{
+                                "text": "1"
+                            },
+                            {
+                                "text": "1"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "1"
+                        }
+                    },
+                    {
+                        "inputEntry": [{
+                                "text": "1"
+                            },
+                            {
+                                "text": "0"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "1"
+                        }
+                    },
+                    {
+                        "inputEntry": [{
+                                "text": "0"
+                            },
+                            {
+                                "text": "1"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "1"
+                        }
+                    },
+                    {
+                        "inputEntry": [{
+                                "text": "0"
+                            },
+                            {
+                                "text": "0"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "0"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
+```
