@@ -131,3 +131,7 @@ Top 10 Reasons Why Python is So Popular With Developers.
     }
 }
 ```
+
+### App setup
+
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/4740bd33-0198-4160-8c18-2ae8f6a37e49)
