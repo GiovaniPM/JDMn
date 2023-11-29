@@ -179,6 +179,8 @@ print('Return:', desconto)
 python app.py
 ```
 
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/1a70d3ad-3544-423f-a0b5-bde71b354e31)
+
 ### Postman client
 
 ##### GET
@@ -281,3 +283,5 @@ Content-Type           application/json
     }
 }
 ```
+
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/9ff02bc1-bac3-4658-bae5-6e2a8df061de)
