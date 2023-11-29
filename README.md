@@ -1,6 +1,11 @@
 # JDMn
 Python/JSON implement of DMn
 
+## Proposal
+
+Create a lightweight DMn implementation, using a popular file represetantion and a flexible language.
+The represtative DMn tables, use a complete satisfation of all imput entrys into the rule to be validate a hypothesis.
+
 ## What’s DMN?
 This modeling language created by OMG – an international group dedicated to developing technology standards – is a notation for business rules applied to processes.
 DMN makes it so business rules can be transformed into corporate assets, making decision-making and understanding corporate rules easier, which ultimately ensures greater task effectiveness.
