@@ -175,8 +175,8 @@ print('Return:', desconto)
 #### Server
 
 ```dos
- .\JDMn\Setup
-python app.py
+ .\JDMn\api
+python JDMnAPI.py
 ```
 
 ![image](https://github.com/GiovaniPM/JDMn/assets/9011792/1a70d3ad-3544-423f-a0b5-bde71b354e31)
