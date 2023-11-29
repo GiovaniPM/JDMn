@@ -48,5 +48,5 @@ Top 10 Reasons Why Python is So Popular With Developers.
 
 [![Flask](https://img.shields.io/badge/Flask-3.0.0-brightgreen.svg)](https://flask.palletsprojects.com)
 [![Flask-Cors](https://img.shields.io/badge/Flask_Cors-4.0.0-brightgreen.svg)](https://flask.palletsprojects.com)
-requests           2.31.0
-wxPython           4.2.1
+[![Requests](https://img.shields.io/badge/requests-2.31.0-brightgreen.svg)](https://requests.readthedocs.io/en/latest/)
+[![wxPython](https://img.shields.io/badge/wxPython-4.2.1-brightgreen.svg)](https://requests.readthedocs.io/en/latest/)
