@@ -55,14 +55,14 @@ Top 10 Reasons Why Python is So Popular With Developers.
 
 ### Project directories
 
-'''dos
+```dos
 (root)
 ├───api
 └───examples
 └───lib
 └───Setup
 └───README.md
-'''
+```
 
 ### General structure
 
