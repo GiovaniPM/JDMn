@@ -38,7 +38,7 @@ Top 10 Reasons Why Python is So Popular With Developers.
 1. Use of python in academics
 1. It is interpreted
 
-## Software need
+## Software needs
 
 ### Python
 
