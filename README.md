@@ -58,9 +58,9 @@ Top 10 Reasons Why Python is So Popular With Developers.
 ```dos
 (root)
 ├───api
-└───examples
-└───lib
-└───Setup
+├───examples
+├───lib
+├───Setup
 └───README.md
 ```
 
