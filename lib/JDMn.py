@@ -4,7 +4,7 @@ import json
 import re
 
 date_format = "%d/%m/%Y"
-dmnOperators = [ '== ', "< ", "> ", "<= ", ">= ", "NOT IN ", "IN " ]
+dmnOperators = [ '== ', "<= ", ">= ", "< ", "> ", "NOT IN ", "IN " ]
 
 def existOperator(value):
     """_summary_
