@@ -25,10 +25,10 @@
                 "output": "",
                 "rule": [{
                         "inputEntry": [{
-                                "text": "gerente"
+                                "text": "'gerente'"
                             },
                             {
-                                "text": "bom"
+                                "text": "'bom'"
                             }
                         ],
                         "outputEntry": {
@@ -37,10 +37,10 @@
                     },
                     {
                         "inputEntry": [{
-                                "text": "gerente"
+                                "text": "'gerente'"
                             },
                             {
-                                "text": "regular"
+                                "text": "'regular'"
                             }
                         ],
                         "outputEntry": {
@@ -49,10 +49,10 @@
                     },
                     {
                         "inputEntry": [{
-                                "text": "gerente"
+                                "text": "'gerente'"
                             },
                             {
-                                "text": "ruim"
+                                "text": "'ruim'"
                             }
                         ],
                         "outputEntry": {
@@ -61,10 +61,10 @@
                     },
                     {
                         "inputEntry": [{
-                                "text": "analista"
+                                "text": "'analista'"
                             },
                             {
-                                "text": "bom"
+                                "text": "'bom'"
                             }
                         ],
                         "outputEntry": {
@@ -73,10 +73,10 @@
                     },
                     {
                         "inputEntry": [{
-                                "text": "analista"
+                                "text": "'analista'"
                             },
                             {
-                                "text": "regular"
+                                "text": "'regular'"
                             }
                         ],
                         "outputEntry": {
@@ -85,10 +85,10 @@
                     },
                     {
                         "inputEntry": [{
-                                "text": "analista"
+                                "text": "'analista'"
                             },
                             {
-                                "text": "ruim"
+                                "text": "'ruim'"
                             }
                         ],
                         "outputEntry": {
@@ -97,10 +97,10 @@
                     },
                     {
                         "inputEntry": [{
-                                "text": "assistente"
+                                "text": "'assistente'"
                             },
                             {
-                                "text": "bom"
+                                "text": "'bom'"
                             }
                         ],
                         "outputEntry": {
@@ -109,10 +109,10 @@
                     },
                     {
                         "inputEntry": [{
-                                "text": "assistente"
+                                "text": "'assistente'"
                             },
                             {
-                                "text": "regular"
+                                "text": "'regular'"
                             }
                         ],
                         "outputEntry": {
@@ -121,10 +121,10 @@
                     },
                     {
                         "inputEntry": [{
-                                "text": "assistente"
+                                "text": "'assistente'"
                             },
                             {
-                                "text": "ruim"
+                                "text": "'ruim'"
                             }
                         ],
                         "outputEntry": {

@@ -3,6 +3,39 @@ from datetime import date, datetime
 import json
 import re
 
+date_format = "%d/%m/%Y"
+dmnOperators = [ '== ', "< ", "> ", "<= ", ">= ", "NOT IN ", "IN " ]
+
+def existOperator(value):
+    """_summary_
+
+    Args:
+        value (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
+    for operator in dmnOperators:
+        count = value.count(operator)
+        if count > 0:
+            return True
+    return False
+
+def strToDate(value):
+    """_summary_
+
+    Args:
+        value (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
+    date_object  = datetime.strptime(value, date_format)
+    day = date_object.day
+    month = date_object.month
+    year = date_object.year
+    return "date(" + str(year) + ", " + str(month) + ", " + str(day) + ")"
+
 def getDefinitionsJDMn(fileName):
     """_summary_
 
@@ -31,8 +64,6 @@ def castingValues(typeToCast, value):
     Returns:
         _type_: _description_
     """
-    date_format = "%d/%m/%Y"
-    
     if value is not None:
         if typeToCast == 'number':
             if type(value) != "<class 'float'>":
@@ -43,11 +74,7 @@ def castingValues(typeToCast, value):
         elif typeToCast == 'date':
             if type(value) != "<class 'str'>":
                 value = str(value)
-            date_object  = datetime.strptime(value, date_format)
-            day = date_object.day
-            month = date_object.month
-            year = date_object.year
-            value = "date(" + str(year) + ", " + str(month) + ", " + str(day) + ")"
+            value = strToDate(value)
     
     return value
 
@@ -62,8 +89,6 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
     Returns:
         _type_: _description_
     """
-    date_format = "%d/%m/%Y"
-    
     inputs  = decisionTable ['input'  ]
     rules   = decisionTable ['rule'   ]
     
@@ -97,6 +122,7 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
         expression = []
         pos        = 0
         
+        # Build the expressions to evaluate
         for entry in entrys:
             if values[pos] == '' or values[pos] == None:
                 if entry['text'] == '' or entry['text'] == None:
@@ -106,21 +132,26 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
             elif entry['text'] == '' or entry['text'] == None:
                 expression.append('True')
             elif types[pos] == 'number':
-                expression.append(str(values[pos]) + " " + entry['text'])
+                if existOperator(entry['text']):
+                    expression.append(str(values[pos]) + " " + entry['text'])
+                else:
+                    expression.append(str(values[pos]) + " == " + entry['text'])
             elif types[pos] == 'date':
                 s = entry['text']
                 match = re.search(r'\b(\d{2}/\d{2}/\d{4})\b', s)
                 if match:
                     date_string = match.group(1)
-                    date_object = datetime.strptime(date_string, date_format)
-                    day = date_object.day
-                    month = date_object.month
-                    year = date_object.year
-                    value = "date(" + str(year) + ", " + str(month) + ", " + str(day) + ")"
+                    value = strToDate(date_string)
                     s = s.replace(date_string, value)
-                expression.append(str(values[pos]) + " " + s)
+                if existOperator(entry['text']):
+                    expression.append(str(values[pos]) + " " + s)
+                else:
+                    expression.append(str(values[pos]) + " == " + s)                    
             elif types[pos] == 'string':
-                expression.append("'" + values[pos] + "' == '" + entry['text'] + "'")
+                if existOperator(entry['text']):
+                    expression.append(values[pos] + " " + entry['text'])
+                else:
+                    expression.append(values[pos] + " == " + entry['text'])
             
             pos += 1
         
