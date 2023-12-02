@@ -7,13 +7,13 @@ date_format = "%d/%m/%Y"
 dmnOperators = [ '== ', "<= ", ">= ", "< ", "> ", "NOT IN ", "IN " ]
 
 def existOperator(value):
-    """_summary_
+    """Verify into expression rule if exists a valid operator
 
     Args:
-        value (_type_): _description_
+        value (string): expression rule
 
     Returns:
-        _type_: _description_
+        boolean: true if the expression rule exists inside a valid operator
     """
     for operator in dmnOperators:
         count = value.count(operator)
@@ -22,13 +22,13 @@ def existOperator(value):
     return False
 
 def strToDate(value):
-    """_summary_
+    """Convert a string date such DD/MM/YYYY in a Python date object
 
     Args:
-        value (_type_): _description_
+        value (string): a string with date format DD/MM/YYYY
 
     Returns:
-        _type_: _description_
+        string: string with date object Python such date(YYYY, MM, DD)
     """
     date_object  = datetime.strptime(value, date_format)
     day = date_object.day
@@ -37,13 +37,13 @@ def strToDate(value):
     return "date(" + str(year) + ", " + str(month) + ", " + str(day) + ")"
 
 def getDefinitionsJDMn(fileName):
-    """_summary_
+    """Open a JDMn file (*.json) and get de decisionTable
 
     Args:
-        fileName (_type_): _description_
+        fileName (string): The filename
 
     Returns:
-        _type_: _description_
+        Dict: The decision table
     """
     with open(fileName, "r") as arquivo:
         dados = json.load(arquivo)
@@ -55,14 +55,14 @@ def getDefinitionsJDMn(fileName):
     return decisionTable
 
 def castingValues(typeToCast, value):
-    """_summary_
+    """Turn the value as the typeDef definition
 
     Args:
-        typeToCast (_type_): _description_
-        value (_type_): _description_
+        typeToCast (string): The typeDef definition
+        value (class): type cast of the original value
 
     Returns:
-        _type_: _description_
+        string: the representation of the value to be useb in the evaluate function
     """
     if value is not None:
         if typeToCast == 'number':
