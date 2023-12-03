@@ -5,13 +5,65 @@ import wx
 
 valid_types = ['string', 'number', 'date']
 
+class FrameRule(JDmnGen.Rule):
+    ruleReg = {}
+    
+    def __init__(self, parent):
+        JDmnGen.Rule.__init__(self, parent)
+    
+    def RuleSave(self, event):
+        self.ruleReg['rule'] = self.m_textCtrl1.Value
+        self.ruleReg['operator'] = self.m_comboBox1.Value
+        self.Close()
+    
+    def RuleCancel(self, event):
+        self.ruleReg = {}
+        self.Close()
+
+class FrameInput(JDmnGen.Input):
+    inputReg = {}
+    
+    def __init__(self, parent):
+        JDmnGen.Input.__init__(self, parent)
+    
+    def InputSave(self, event):
+        self.inputReg['label'] = self.m_textCtrl1.Value
+        self.inputReg['typeDef'] = self.m_comboBox1.Value
+        self.Close()
+    
+    def InputCancel(self, event):
+        self.inputReg = {}
+        self.Close()
+
 class FramePrincipal(JDmnGen.JDMnSetup):
     def __init__(self, parent):
         JDmnGen.JDMnSetup.__init__(self, parent)
     
+    def ruleColSelect(self, event):
+        row = event.GetRow()
+        col = event.GetCol()
+        if col > 0:
+            value = self.m_grid7.GetCellValue(row, col)
+            frame = FrameRule(self)
+            if value != "":
+                operator, rule = JDMn.splitRule(value)
+                if operator != "":
+                    frame.m_comboBox1.Value = operator
+                    frame.m_textCtrl1.Value = rule
+            frame.ShowModal()
+            if frame.ruleReg != {}:
+                self.m_grid7.SetCellValue( row, col, frame.ruleReg['operator'] + ' ' + frame.ruleReg['rule'] )
+    
     def AdicionaInput(self, event):
-        self.m_grid4.AppendRows(1)
-        self.m_grid7.AppendCols(1)
+        frame = FrameInput(self)
+        frame.ShowModal()
+        if frame.inputReg != {}:
+            self.m_grid4.AppendRows(1)
+            self.m_grid7.AppendCols(1)
+            row = self.m_grid4.GetNumberRows()
+            self.m_grid7.SetColLabelValue(row, frame.inputReg['label'])
+            self.m_grid4.SetCellValue(row-1, 0, frame.inputReg['label'])
+            self.m_grid4.SetCellValue(row-1, 1, frame.inputReg['typeDef'])
     
     def RemoveInput(self, event):
         selected_rows = self.m_grid4.GetSelectedRows()

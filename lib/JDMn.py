@@ -3,8 +3,24 @@ from datetime import date, datetime
 import json
 import re
 
-date_format = "%d/%m/%Y"
+date_format = "%d/%m/%Y" # DD/MM/YYYY
 dmnOperators = [ '== ', "<= ", ">= ", "< ", "> ", "NOT IN ", "IN " ]
+
+def splitRule(rule):
+    pos = 0
+    sel = -1
+    for operator in dmnOperators:
+        count = rule.count(operator)
+        if count > 0 and sel < 0:
+            sel = pos
+        pos += 1
+    if sel > -1:
+        oper = dmnOperators[sel]
+        rule = rule.replace(oper, '')
+    else:
+        oper = ""
+        rule = ""
+    return oper, rule
 
 def existOperator(value):
     """Verify into expression rule if exists a valid operator

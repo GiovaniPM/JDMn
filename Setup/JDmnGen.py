@@ -33,6 +33,8 @@ class JDMnSetup ( wx.Frame ):
 		
 		self.m_staticText1 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"Inputs:", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText1.Wrap( -1 )
+		self.m_staticText1.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 92, False, wx.EmptyString ) )
+		
 		bSizer2.Add( self.m_staticText1, 0, wx.ALL, 5 )
 		
 		bSizer4 = wx.BoxSizer( wx.HORIZONTAL )
@@ -110,13 +112,15 @@ class JDMnSetup ( wx.Frame ):
 		self.m_panel2.SetSizer( bSizer2 )
 		self.m_panel2.Layout()
 		bSizer2.Fit( self.m_panel2 )
-		bSizer1.Add( self.m_panel2, 1, wx.EXPAND |wx.ALL, 5 )
+		bSizer1.Add( self.m_panel2, 1, wx.EXPAND, 5 )
 		
 		self.m_panel4 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( -1,50 ), wx.TAB_TRAVERSAL )
 		bSizer3 = wx.BoxSizer( wx.VERTICAL )
 		
 		self.m_staticText2 = wx.StaticText( self.m_panel4, wx.ID_ANY, u"Rules:", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText2.Wrap( -1 )
+		self.m_staticText2.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 92, False, wx.EmptyString ) )
+		
 		bSizer3.Add( self.m_staticText2, 0, wx.ALL, 5 )
 		
 		bSizer9 = wx.BoxSizer( wx.HORIZONTAL )
@@ -191,7 +195,7 @@ class JDMnSetup ( wx.Frame ):
 		
 		self.m_panel4.SetSizer( bSizer3 )
 		self.m_panel4.Layout()
-		bSizer1.Add( self.m_panel4, 1, wx.EXPAND |wx.ALL, 5 )
+		bSizer1.Add( self.m_panel4, 1, wx.EXPAND, 5 )
 		
 		
 		self.SetSizer( bSizer1 )
@@ -218,6 +222,7 @@ class JDMnSetup ( wx.Frame ):
 		self.m_grid4.Bind( wx.grid.EVT_GRID_CELL_CHANGED, self.LabelAlterado )
 		self.m_button1.Bind( wx.EVT_BUTTON, self.AdicionaInput )
 		self.m_button2.Bind( wx.EVT_BUTTON, self.RemoveInput )
+		self.m_grid7.Bind( wx.grid.EVT_GRID_CELL_LEFT_DCLICK, self.ruleColSelect )
 		self.m_button4.Bind( wx.EVT_BUTTON, self.AdicionaRule )
 		self.m_button5.Bind( wx.EVT_BUTTON, self.RemoveRule )
 		self.Bind( wx.EVT_MENU, self.OpenFile, id = self.open.GetId() )
@@ -237,6 +242,9 @@ class JDMnSetup ( wx.Frame ):
 	def RemoveInput( self, event ):
 		event.Skip()
 	
+	def ruleColSelect( self, event ):
+		event.Skip()
+	
 	def AdicionaRule( self, event ):
 		event.Skip()
 	
@@ -247,6 +255,234 @@ class JDMnSetup ( wx.Frame ):
 		event.Skip()
 	
 	def SaveFile( self, event ):
+		event.Skip()
+	
+
+###########################################################################
+## Class Input
+###########################################################################
+
+class Input ( wx.Dialog ):
+	
+	def __init__( self, parent ):
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Input", pos = wx.DefaultPosition, size = wx.Size( 500,300 ), style = wx.DEFAULT_DIALOG_STYLE )
+		
+		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
+		
+		bSizer12 = wx.BoxSizer( wx.VERTICAL )
+		
+		self.m_panel10 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer12.Add( self.m_panel10, 1, wx.EXPAND, 5 )
+		
+		self.m_panel9 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer13 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		self.m_panel12 = wx.Panel( self.m_panel9, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer13.Add( self.m_panel12, 1, wx.EXPAND, 5 )
+		
+		self.m_panel13 = wx.Panel( self.m_panel9, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer21 = wx.BoxSizer( wx.VERTICAL )
+		
+		bSizer14 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		self.m_staticText3 = wx.StaticText( self.m_panel13, wx.ID_ANY, u"Label name:", wx.DefaultPosition, wx.Size( 100,-1 ), 0 )
+		self.m_staticText3.Wrap( -1 )
+		self.m_staticText3.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 92, False, wx.EmptyString ) )
+		
+		bSizer14.Add( self.m_staticText3, 0, 0, 5 )
+		
+		self.m_textCtrl1 = wx.TextCtrl( self.m_panel13, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 300,-1 ), 0 )
+		bSizer14.Add( self.m_textCtrl1, 0, 0, 5 )
+		
+		
+		bSizer21.Add( bSizer14, 1, wx.EXPAND|wx.TOP|wx.BOTTOM, 5 )
+		
+		bSizer15 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		self.m_staticText4 = wx.StaticText( self.m_panel13, wx.ID_ANY, u"TypeDef:", wx.DefaultPosition, wx.Size( 100,-1 ), 0 )
+		self.m_staticText4.Wrap( -1 )
+		self.m_staticText4.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 92, False, wx.EmptyString ) )
+		
+		bSizer15.Add( self.m_staticText4, 0, 0, 5 )
+		
+		m_comboBox1Choices = [ u"date", u"number", u"string" ]
+		self.m_comboBox1 = wx.ComboBox( self.m_panel13, wx.ID_ANY, u"Types", wx.DefaultPosition, wx.DefaultSize, m_comboBox1Choices, 0 )
+		self.m_comboBox1.SetSelection( 2 )
+		bSizer15.Add( self.m_comboBox1, 0, 0, 5 )
+		
+		
+		bSizer21.Add( bSizer15, 0, wx.EXPAND|wx.TOP|wx.BOTTOM, 5 )
+		
+		bSizer25 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		self.m_panel15 = wx.Panel( self.m_panel13, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer25.Add( self.m_panel15, 0, wx.EXPAND, 5 )
+		
+		
+		bSizer21.Add( bSizer25, 1, wx.EXPAND|wx.TOP|wx.BOTTOM, 5 )
+		
+		bSizer16 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		self.m_button7 = wx.Button( self.m_panel13, wx.ID_ANY, u"Save", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer16.Add( self.m_button7, 0, wx.RIGHT, 5 )
+		
+		self.m_button8 = wx.Button( self.m_panel13, wx.ID_ANY, u"Cancel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer16.Add( self.m_button8, 0, wx.LEFT, 5 )
+		
+		
+		bSizer21.Add( bSizer16, 0, wx.ALIGN_RIGHT|wx.TOP|wx.BOTTOM, 5 )
+		
+		
+		self.m_panel13.SetSizer( bSizer21 )
+		self.m_panel13.Layout()
+		bSizer21.Fit( self.m_panel13 )
+		bSizer13.Add( self.m_panel13, 1, wx.EXPAND, 5 )
+		
+		self.m_panel14 = wx.Panel( self.m_panel9, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer13.Add( self.m_panel14, 1, wx.EXPAND, 5 )
+		
+		
+		self.m_panel9.SetSizer( bSizer13 )
+		self.m_panel9.Layout()
+		bSizer13.Fit( self.m_panel9 )
+		bSizer12.Add( self.m_panel9, 1, wx.EXPAND, 5 )
+		
+		self.m_panel11 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer12.Add( self.m_panel11, 1, wx.EXPAND, 5 )
+		
+		
+		self.SetSizer( bSizer12 )
+		self.Layout()
+		
+		self.Centre( wx.BOTH )
+		
+		# Connect Events
+		self.m_button7.Bind( wx.EVT_BUTTON, self.InputSave )
+		self.m_button8.Bind( wx.EVT_BUTTON, self.InputCancel )
+	
+	def __del__( self ):
+		pass
+	
+	
+	# Virtual event handlers, overide them in your derived class
+	def InputSave( self, event ):
+		event.Skip()
+	
+	def InputCancel( self, event ):
+		event.Skip()
+	
+
+###########################################################################
+## Class Rule
+###########################################################################
+
+class Rule ( wx.Dialog ):
+	
+	def __init__( self, parent ):
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Rule", pos = wx.DefaultPosition, size = wx.Size( 500,400 ), style = wx.DEFAULT_DIALOG_STYLE )
+		
+		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
+		
+		bSizer12 = wx.BoxSizer( wx.VERTICAL )
+		
+		self.m_panel10 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer12.Add( self.m_panel10, 1, wx.EXPAND, 5 )
+		
+		self.m_panel9 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer13 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		self.m_panel12 = wx.Panel( self.m_panel9, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer13.Add( self.m_panel12, 1, wx.EXPAND, 5 )
+		
+		self.m_panel13 = wx.Panel( self.m_panel9, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer21 = wx.BoxSizer( wx.VERTICAL )
+		
+		bSizer15 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		self.m_staticText4 = wx.StaticText( self.m_panel13, wx.ID_ANY, u"Operator:", wx.DefaultPosition, wx.Size( 100,-1 ), 0 )
+		self.m_staticText4.Wrap( -1 )
+		self.m_staticText4.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 92, False, wx.EmptyString ) )
+		
+		bSizer15.Add( self.m_staticText4, 0, 0, 5 )
+		
+		m_comboBox1Choices = [ u"==", u"< ", u"<=", u"> ", u">=", u"NOT IN", u"IN" ]
+		self.m_comboBox1 = wx.ComboBox( self.m_panel13, wx.ID_ANY, u"Types", wx.DefaultPosition, wx.DefaultSize, m_comboBox1Choices, 0 )
+		self.m_comboBox1.SetSelection( 2 )
+		bSizer15.Add( self.m_comboBox1, 0, 0, 5 )
+		
+		
+		bSizer21.Add( bSizer15, 0, wx.EXPAND|wx.TOP|wx.BOTTOM, 5 )
+		
+		bSizer14 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		self.m_staticText3 = wx.StaticText( self.m_panel13, wx.ID_ANY, u"Rule:", wx.DefaultPosition, wx.Size( 100,-1 ), 0 )
+		self.m_staticText3.Wrap( -1 )
+		self.m_staticText3.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 92, False, wx.EmptyString ) )
+		
+		bSizer14.Add( self.m_staticText3, 0, 0, 5 )
+		
+		self.m_textCtrl1 = wx.TextCtrl( self.m_panel13, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 300,-1 ), 0 )
+		bSizer14.Add( self.m_textCtrl1, 0, 0, 5 )
+		
+		
+		bSizer21.Add( bSizer14, 1, wx.EXPAND|wx.TOP|wx.BOTTOM, 5 )
+		
+		bSizer25 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		self.m_panel15 = wx.Panel( self.m_panel13, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer25.Add( self.m_panel15, 0, wx.EXPAND, 5 )
+		
+		
+		bSizer21.Add( bSizer25, 1, wx.EXPAND|wx.TOP|wx.BOTTOM, 5 )
+		
+		bSizer16 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		self.m_button7 = wx.Button( self.m_panel13, wx.ID_ANY, u"Save", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer16.Add( self.m_button7, 0, wx.RIGHT, 5 )
+		
+		self.m_button8 = wx.Button( self.m_panel13, wx.ID_ANY, u"Cancel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer16.Add( self.m_button8, 0, wx.LEFT, 5 )
+		
+		
+		bSizer21.Add( bSizer16, 0, wx.ALIGN_RIGHT|wx.TOP|wx.BOTTOM, 5 )
+		
+		
+		self.m_panel13.SetSizer( bSizer21 )
+		self.m_panel13.Layout()
+		bSizer21.Fit( self.m_panel13 )
+		bSizer13.Add( self.m_panel13, 1, wx.EXPAND, 5 )
+		
+		self.m_panel14 = wx.Panel( self.m_panel9, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer13.Add( self.m_panel14, 1, wx.EXPAND, 5 )
+		
+		
+		self.m_panel9.SetSizer( bSizer13 )
+		self.m_panel9.Layout()
+		bSizer13.Fit( self.m_panel9 )
+		bSizer12.Add( self.m_panel9, 1, wx.EXPAND, 5 )
+		
+		self.m_panel11 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer12.Add( self.m_panel11, 1, wx.EXPAND, 5 )
+		
+		
+		self.SetSizer( bSizer12 )
+		self.Layout()
+		
+		self.Centre( wx.BOTH )
+		
+		# Connect Events
+		self.m_button7.Bind( wx.EVT_BUTTON, self.RuleSave )
+		self.m_button8.Bind( wx.EVT_BUTTON, self.RuleCancel )
+	
+	def __del__( self ):
+		pass
+	
+	
+	# Virtual event handlers, overide them in your derived class
+	def RuleSave( self, event ):
+		event.Skip()
+	
+	def RuleCancel( self, event ):
 		event.Skip()
 	
 
