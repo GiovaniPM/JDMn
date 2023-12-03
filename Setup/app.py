@@ -49,7 +49,7 @@ class FramePrincipal(JDmnGen.JDMnSetup):
                 operator, rule = JDMn.splitRule(value)
                 if operator != "":
                     frame.m_comboBox1.Value = operator
-                    frame.m_textCtrl1.Value = rule
+                    frame.m_textCtrl1.Value = rule.strip()
             frame.ShowModal()
             if frame.ruleReg != {}:
                 self.m_grid7.SetCellValue( row, col, frame.ruleReg['operator'] + ' ' + frame.ruleReg['rule'] )
