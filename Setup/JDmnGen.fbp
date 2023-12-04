@@ -3108,7 +3108,7 @@
             <property name="minimum_size"></property>
             <property name="name">Rule</property>
             <property name="pos"></property>
-            <property name="size">500,400</property>
+            <property name="size">500,300</property>
             <property name="style">wxDEFAULT_DIALOG_STYLE</property>
             <property name="subclass"></property>
             <property name="title">Rule</property>
@@ -3152,7 +3152,7 @@
             <event name="OnSetFocus"></event>
             <event name="OnSize"></event>
             <event name="OnUpdateUI"></event>
-            <object class="wxBoxSizer" expanded="0">
+            <object class="wxBoxSizer" expanded="1">
                 <property name="minimum_size"></property>
                 <property name="name">bSizer12</property>
                 <property name="orient">wxVERTICAL</property>
@@ -3237,7 +3237,7 @@
                         <event name="OnUpdateUI"></event>
                     </object>
                 </object>
-                <object class="sizeritem" expanded="0">
+                <object class="sizeritem" expanded="1">
                     <property name="border">5</property>
                     <property name="flag">wxEXPAND</property>
                     <property name="proportion">1</property>
