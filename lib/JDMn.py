@@ -7,6 +7,14 @@ date_format = "%d/%m/%Y" # DD/MM/YYYY
 dmnOperators = [ '== ', "<= ", ">= ", "< ", "> ", "NOT IN ", "IN " ]
 
 def splitRule(rule):
+    """_summary_
+
+    Args:
+        rule (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     pos = 0
     sel = -1
     for operator in dmnOperators:
