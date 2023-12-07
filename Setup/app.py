@@ -97,6 +97,9 @@ class FramePrincipal(JDmnGen.JDMnSetup):
             for pos in selected_rows:
                 self.m_grid7.DeleteRows(pos)
     
+    def Exit(self, event):
+        self.Close()
+    
     def OpenFile(self,event):
         openFrame = wx.Frame(None, title="Open File Dialog Example")
         
