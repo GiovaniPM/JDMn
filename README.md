@@ -69,7 +69,7 @@ You can save the Python dictionary into JSON files using a built-in module json.
 
 [![Postman](https://img.shields.io/badge/Postman-10.20.6-brightgreen.svg)](https://www.postman.com/)
 
-## wxFoemBuilder
+### wxFormBuilder
 
 [![wxFormBuilder](https://img.shields.io/badge/wxFormBuilder-4.0.0-brightgreen.svg)](https://github.com/wxFormBuilder/wxFormBuilder/releases/download/v4.0.0/wxFormBuilder-4.0.0-x64.exe)
 
