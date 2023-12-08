@@ -4,7 +4,7 @@ import json
 import re
 
 date_format = "%d/%m/%Y" # DD/MM/YYYY
-dmnOperators = [ '== ', '<= ', '>= ', '< ', '> ', 'NOT IN ', 'IN ' ]
+dmnOperators = [ '== ', '<= ', '>= ', '< ', '> ', 'not in ', 'in ' ]
 
 def splitRule(rule):
     """_summary_

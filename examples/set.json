@@ -1,0 +1,1 @@
+{"definitions": {"decision": {"decisionTable": {"input": [{"inputExpression": {"label": "colunaUm", "typeRef": "string"}}], "rule": [{"inputEntry": [{"text": "in  ['1','3','5']"}], "outputEntry": {"text": "1"}}, {"inputEntry": [{"text": "in  ['2', '4', '6']"}], "outputEntry": {"text": "2"}}, {"inputEntry": [{"text": ""}], "outputEntry": {"text": "3"}}]}}}}

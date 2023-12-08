@@ -2323,7 +2323,7 @@
         </object>
       </object>
     </object>
-    <object class="Dialog" expanded="false">
+    <object class="Dialog" expanded="true">
       <property name="aui_managed">0</property>
       <property name="aui_manager_style">wxAUI_MGR_DEFAULT</property>
       <property name="bg"></property>
@@ -2351,7 +2351,7 @@
       <property name="window_extra_style"></property>
       <property name="window_name"></property>
       <property name="window_style"></property>
-      <object class="wxBoxSizer" expanded="false">
+      <object class="wxBoxSizer" expanded="true">
         <property name="minimum_size"></property>
         <property name="name">bSizer12</property>
         <property name="orient">wxVERTICAL</property>
@@ -2414,11 +2414,11 @@
             <property name="window_style">wxTAB_TRAVERSAL</property>
           </object>
         </object>
-        <object class="sizeritem" expanded="false">
+        <object class="sizeritem" expanded="true">
           <property name="border">5</property>
           <property name="flag">wxEXPAND</property>
           <property name="proportion">1</property>
-          <object class="wxPanel" expanded="false">
+          <object class="wxPanel" expanded="true">
             <property name="BottomDockable">1</property>
             <property name="LeftDockable">1</property>
             <property name="RightDockable">1</property>
@@ -2470,7 +2470,7 @@
             <property name="window_extra_style"></property>
             <property name="window_name"></property>
             <property name="window_style">wxTAB_TRAVERSAL</property>
-            <object class="wxBoxSizer" expanded="false">
+            <object class="wxBoxSizer" expanded="true">
               <property name="minimum_size"></property>
               <property name="name">bSizer13</property>
               <property name="orient">wxHORIZONTAL</property>
@@ -2533,11 +2533,11 @@
                   <property name="window_style">wxTAB_TRAVERSAL</property>
                 </object>
               </object>
-              <object class="sizeritem" expanded="false">
+              <object class="sizeritem" expanded="true">
                 <property name="border">5</property>
                 <property name="flag">wxEXPAND</property>
                 <property name="proportion">1</property>
-                <object class="wxPanel" expanded="false">
+                <object class="wxPanel" expanded="true">
                   <property name="BottomDockable">1</property>
                   <property name="LeftDockable">1</property>
                   <property name="RightDockable">1</property>
@@ -2589,16 +2589,16 @@
                   <property name="window_extra_style"></property>
                   <property name="window_name"></property>
                   <property name="window_style">wxTAB_TRAVERSAL</property>
-                  <object class="wxBoxSizer" expanded="false">
+                  <object class="wxBoxSizer" expanded="true">
                     <property name="minimum_size"></property>
                     <property name="name">bSizer21</property>
                     <property name="orient">wxVERTICAL</property>
                     <property name="permission">none</property>
-                    <object class="sizeritem" expanded="false">
+                    <object class="sizeritem" expanded="true">
                       <property name="border">5</property>
                       <property name="flag">wxEXPAND|wxTOP|wxBOTTOM</property>
                       <property name="proportion">0</property>
-                      <object class="wxBoxSizer" expanded="false">
+                      <object class="wxBoxSizer" expanded="true">
                         <property name="minimum_size"></property>
                         <property name="name">bSizer15</property>
                         <property name="orient">wxHORIZONTAL</property>
@@ -2683,7 +2683,7 @@
                             <property name="caption"></property>
                             <property name="caption_visible">1</property>
                             <property name="center_pane">0</property>
-                            <property name="choices">&quot;==&quot; &quot;&lt; &quot; &quot;&lt;=&quot; &quot;&gt; &quot; &quot;&gt;=&quot; &quot;NOT IN&quot; &quot;IN&quot;</property>
+                            <property name="choices">&quot;==&quot; &quot;&lt; &quot; &quot;&lt;=&quot; &quot;&gt; &quot; &quot;&gt;=&quot; &quot;not in&quot; &quot;in&quot;</property>
                             <property name="close_button">1</property>
                             <property name="context_help"></property>
                             <property name="context_menu">1</property>

@@ -414,7 +414,7 @@ class Rule ( wx.Dialog ):
 
 		bSizer15.Add( self.m_staticText4, 0, 0, 5 )
 
-		m_comboBox1Choices = [ u"==", u"< ", u"<=", u"> ", u">=", u"NOT IN", u"IN" ]
+		m_comboBox1Choices = [ u"==", u"< ", u"<=", u"> ", u">=", u"not in", u"in" ]
 		self.m_comboBox1 = wx.ComboBox( self.m_panel13, wx.ID_ANY, u"Types", wx.DefaultPosition, wx.DefaultSize, m_comboBox1Choices, 0 )
 		self.m_comboBox1.SetSelection( 2 )
 		bSizer15.Add( self.m_comboBox1, 0, 0, 5 )

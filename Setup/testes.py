@@ -1,2 +1,2 @@
-expressao = "'4' in ['1', '2', '3']"
+expressao = "'1' in  ['1','3','5']"
 print(eval(expressao))
