@@ -9,6 +9,8 @@ from requests import post
 import hashlib
 import JDMn
 import os
+import time
+import uuid
 
 app = Flask(__name__)
 CORS(app)
@@ -38,7 +40,12 @@ def decompoe():
     else:
         if 'evaluate' in request.json:
             if 'evaluate' in request.json:
+                reg['_id'] =  str(uuid.uuid4())
+                start_time_millis = int(time.time() * 1000)
                 reg['evaluate'] = evaluateJDMn(request.json['evaluate'])
+                end_time_millis = int(time.time() * 1000)
+                reg['process time'] = str(end_time_millis - start_time_millis) + ' ms'
+                print(reg['_id'] + ' - ' + reg['process time'])
         else:
             return jsonify( { 'error': 'No keys valid found.' } )
     
