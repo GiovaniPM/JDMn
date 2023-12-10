@@ -79,11 +79,12 @@ You can save the Python dictionary into JSON files using a built-in module json.
 
 ```dos
 JDMn (root)
-├─── <DIR> api      (api implementation)
-├─── <DIR> examples (json examples)
-├─── <DIR> lib      (jdmn library)
-├─── <DIR> Setup    (app to create jdmn)
-└─── README.md      (this file)
+├─── <DIR> api          (api implementation)
+├─── <DIR> examples     (json examples)
+├─── <DIR> lib          (jdmn library)
+├─── <DIR> Setup        (app to create jdmn)
+├─── requirements.txt   (pip dependencies file)
+└─── README.md          (this file)
 ```
 
 ### File structure
@@ -169,6 +170,8 @@ or.json
 ### App setup
 
 ![image](https://github.com/GiovaniPM/JDMn/assets/9011792/4740bd33-0198-4160-8c18-2ae8f6a37e49)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/2e4dfa64-12ea-4e15-80b0-d5b34f0867fa)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/f04a0281-0284-4471-b076-7f115e7c501b)
 
 ## Implementation
 
