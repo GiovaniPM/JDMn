@@ -56,11 +56,11 @@ You can save the Python dictionary into JSON files using a built-in module json.
 
 ### Python
 
-[![Python](https://img.shields.io/badge/python-3.12.0-brightgreen.svg)](https://python.org)
+[![Python](https://img.shields.io/badge/python-3.12.0-brightgreen.svg?logo=python](https://python.org)
 
 ### PIP support
 
-[![Flask](https://img.shields.io/badge/Flask-3.0.0-brightgreen.svg)](https://flask.palletsprojects.com)
+[![Flask](https://img.shields.io/badge/Flask-3.0.0-brightgreen.svg?logo=flask)](https://flask.palletsprojects.com)
 [![Flask-Cors](https://img.shields.io/badge/Flask_Cors-4.0.0-brightgreen.svg)](https://flask-cors.readthedocs.io/en/latest/)
 [![Requests](https://img.shields.io/badge/requests-2.31.0-brightgreen.svg)](https://requests.readthedocs.io/en/latest/)
 [![uuid](https://img.shields.io/badge/uuid-1.30-brightgreen.svg)](https://pypi.org/project/uuid/)
@@ -68,7 +68,7 @@ You can save the Python dictionary into JSON files using a built-in module json.
 
 ### Postman
 
-[![Postman](https://img.shields.io/badge/Postman-10.20.6-brightgreen.svg)](https://www.postman.com/)
+[![Postman](https://img.shields.io/badge/Postman-10.20.6-brightgreen.svg?logo=postman)](https://www.postman.com/)
 
 ### wxFormBuilder
 
