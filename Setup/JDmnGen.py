@@ -221,6 +221,7 @@ class JDMnSetup ( wx.Frame ):
 		self.Centre( wx.BOTH )
 
 		# Connect Events
+		self.Bind( wx.EVT_ACTIVATE, self.appEntry )
 		self.m_grid4.Bind( wx.grid.EVT_GRID_CELL_CHANGED, self.LabelAlterado )
 		self.m_button1.Bind( wx.EVT_BUTTON, self.AdicionaInput )
 		self.m_button2.Bind( wx.EVT_BUTTON, self.RemoveInput )
@@ -236,6 +237,9 @@ class JDMnSetup ( wx.Frame ):
 
 
 	# Virtual event handlers, override them in your derived class
+	def appEntry( self, event ):
+		event.Skip()
+
 	def LabelAlterado( self, event ):
 		event.Skip()
 
@@ -313,7 +317,7 @@ class Input ( wx.Dialog ):
 
 		bSizer15.Add( self.m_staticText4, 0, 0, 5 )
 
-		m_comboBox1Choices = [ u"date", u"number", u"string" ]
+		m_comboBox1Choices = [ u"date", u"number", u"string", u"boolean" ]
 		self.m_comboBox1 = wx.ComboBox( self.m_panel13, wx.ID_ANY, u"Types", wx.DefaultPosition, wx.DefaultSize, m_comboBox1Choices, 0 )
 		self.m_comboBox1.SetSelection( 2 )
 		bSizer15.Add( self.m_comboBox1, 0, 0, 5 )
@@ -365,6 +369,7 @@ class Input ( wx.Dialog ):
 		self.Centre( wx.BOTH )
 
 		# Connect Events
+		self.Bind( wx.EVT_ACTIVATE, self.inputEntry )
 		self.m_button7.Bind( wx.EVT_BUTTON, self.InputSave )
 		self.m_button8.Bind( wx.EVT_BUTTON, self.InputCancel )
 
@@ -373,6 +378,9 @@ class Input ( wx.Dialog ):
 
 
 	# Virtual event handlers, override them in your derived class
+	def inputEntry( self, event ):
+		event.Skip()
+
 	def InputSave( self, event ):
 		event.Skip()
 
@@ -481,6 +489,7 @@ class Rule ( wx.Dialog ):
 		self.Centre( wx.BOTH )
 
 		# Connect Events
+		self.Bind( wx.EVT_ACTIVATE, self.ruleEntry )
 		self.m_button7.Bind( wx.EVT_BUTTON, self.RuleSave )
 		self.m_button8.Bind( wx.EVT_BUTTON, self.RuleCancel )
 
@@ -489,6 +498,9 @@ class Rule ( wx.Dialog ):
 
 
 	# Virtual event handlers, override them in your derived class
+	def ruleEntry( self, event ):
+		event.Skip()
+
 	def RuleSave( self, event ):
 		event.Skip()
 

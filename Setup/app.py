@@ -24,6 +24,12 @@ class FrameInput(JDmnGen.Input):
     def __init__(self, parent):
         JDmnGen.Input.__init__(self, parent)
     
+    def inputEntry( self, event ):
+        self.m_comboBox1.Clear()
+        for row in JDMn.valid_types:
+            self.m_comboBox1.Append(row.strip())
+        self.m_comboBox1.Selection = 0
+    
     def InputSave(self, event):
         self.inputReg['label'] = self.m_textCtrl1.Value
         self.inputReg['typeDef'] = self.m_comboBox1.Value
@@ -34,23 +40,39 @@ class FrameInput(JDmnGen.Input):
         self.Close()
 
 class FramePrincipal(JDmnGen.JDMnSetup):
+    msgTypes = ''
+    
     def __init__(self, parent):
         JDmnGen.JDMnSetup.__init__(self, parent)
+    
+    def appEntry( self, event ):
+        self.msgTypes = 'Type invalid!\n\nValid Types:\n'
+        for row in JDMn.valid_types:
+            self.msgTypes += '    - ' +  row + '\n'
     
     def ruleColSelect(self, event):
         row = event.GetRow()
         col = event.GetCol()
         if col > 0:
-            value = self.m_grid7.GetCellValue(row, col)
             frame = FrameRule(self)
+            
+            frame.m_comboBox1.Clear()
+            for operator in JDMn.dmnOperators:
+                frame.m_comboBox1.Append(operator.strip())
+            
+            value = self.m_grid7.GetCellValue(row, col)
             if value != "":
                 operator, rule = JDMn.splitRule(value)
                 if operator != "":
                     frame.m_comboBox1.Value = operator
                     frame.m_textCtrl1.Value = rule.strip()
+                else:
+                    frame.m_comboBox1.Value = '=='
+                    frame.m_textCtrl1.Value = value.strip()
+
             frame.ShowModal()
             if frame.ruleReg != {}:
-                self.m_grid7.SetCellValue( row, col, frame.ruleReg['operator'] + ' ' + frame.ruleReg['rule'] )
+                self.m_grid7.SetCellValue( row, col, frame.ruleReg['operator'] + frame.ruleReg['rule'] )
     
     def AdicionaInput(self, event):
         frame = FrameInput(self)
@@ -82,7 +104,7 @@ class FramePrincipal(JDmnGen.JDMnSetup):
             self.m_grid4.SetCellBackgroundColour(row, col, wx.NullColour)
             value = value.lower()
             if value not in JDMn.valid_types:
-                wx.MessageBox('Type invalid!\n\nValid Types:\n    - string\n    - number\n    - date\n    - boolean', 'Error')
+                wx.MessageBox(self.msgTypes, 'Error')
                 self.m_grid4.SetCellBackgroundColour(row, col, wx.RED)
     
     def AdicionaRule(self, event):

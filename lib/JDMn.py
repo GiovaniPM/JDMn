@@ -8,27 +8,32 @@ dmnOperators = [ '== ', '<= ', '>= ', '< ', '> ', 'not in ', 'in ' ]
 valid_types  = ['string', 'number', 'date', 'boolean']
 
 def splitRule(rule):
-    """_summary_
+    """Split a column rule into: operator and value
 
     Args:
-        rule (_type_): _description_
+        rule (string): the column rule
 
     Returns:
-        _type_: _description_
+        oper: the operator
+        rule: the value
     """
     pos = 0
     sel = -1
+    
     for operator in dmnOperators:
         count = rule.count(operator)
+        
         if count > 0 and sel < 0:
             sel = pos
         pos += 1
+    
     if sel > -1:
         oper = dmnOperators[sel]
         rule = rule.replace(oper, '')
     else:
         oper = ""
         rule = ""
+    
     return oper, rule
 
 def existOperator(value):
