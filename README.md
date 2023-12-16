@@ -123,7 +123,7 @@ ex.:
 ex.:
 > True
 
-#### Examples
+#### Examples expression rule
 
 | Operation                         | Evaluation |   |
 |-----------------------------------|------------|---|
