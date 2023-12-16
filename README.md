@@ -78,6 +78,13 @@ You can save the Python dictionary into JSON files using a built-in module json.
 
 ## Architecture
 
+### How the decision works
+
+The first successfully rule found is the our result, beside next out rules could be found.
+A successfully rule is the row, wich all columns evaluate with true.
+There are the follow possible data types in input enty: string, date, number and boolean.
+The available logic operators are: <, <=, >, >=, ==, !=, in and not in. Column without operator will be used ==.
+
 ### Project directories
 
 ```dos
