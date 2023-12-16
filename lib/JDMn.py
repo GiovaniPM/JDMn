@@ -189,6 +189,7 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
         expressions.append(expression)
     
     pos = 0
+    generalError = False
     
     for line in expressions:
         test = True
@@ -200,6 +201,7 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
                 except:
                     print('\033[91m', line, '--> (', results[pos], ') ** Error **\033[0m')
                     exceptValue = True
+                    generalError = True
                     test = False
         tests.append(test)
         if debbugJDMn != None:
@@ -218,7 +220,7 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
             outputPos = pos
         pos += 1
     
-    if outputPos > -1:
+    if outputPos > -1 and generalError != True:
         valueReturned = results[outputPos]
     else:
         valueReturned = None
