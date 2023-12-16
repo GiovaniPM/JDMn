@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <wxFormBuilder_Project>
   <FileVersion major="1" minor="17"/>
-  <object class="Project" expanded="false">
+  <object class="Project" expanded="true">
     <property name="class_decoration"></property>
     <property name="code_generation">Python</property>
     <property name="disconnect_events">1</property>
@@ -1421,7 +1421,7 @@
         </object>
       </object>
     </object>
-    <object class="Dialog" expanded="false">
+    <object class="Dialog" expanded="true">
       <property name="aui_managed">0</property>
       <property name="aui_manager_style">wxAUI_MGR_DEFAULT</property>
       <property name="bg"></property>
@@ -1919,7 +1919,7 @@
                             <property name="caption"></property>
                             <property name="caption_visible">1</property>
                             <property name="center_pane">0</property>
-                            <property name="choices">&quot;date&quot; &quot;number&quot; &quot;string&quot;</property>
+                            <property name="choices">&quot;date&quot; &quot;number&quot; &quot;string&quot; &quot;boolean&quot;</property>
                             <property name="close_button">1</property>
                             <property name="context_help"></property>
                             <property name="context_menu">1</property>

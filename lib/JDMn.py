@@ -5,6 +5,7 @@ import re
 
 date_format = "%d/%m/%Y" # DD/MM/YYYY
 dmnOperators = [ '== ', '<= ', '>= ', '< ', '> ', 'not in ', 'in ' ]
+valid_types = ['string', 'number', 'date', 'boolean']
 
 def splitRule(rule):
     """_summary_
@@ -156,6 +157,11 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
             elif entry['text'] == '' or entry['text'] == None:
                 expression.append('True')
             elif types[pos] == 'number':
+                if existOperator(entry['text']):
+                    expression.append(str(values[pos]) + " " + entry['text'])
+                else:
+                    expression.append(str(values[pos]) + " == " + entry['text'])
+            elif types[pos] == 'boolean':
                 if existOperator(entry['text']):
                     expression.append(str(values[pos]) + " " + entry['text'])
                 else:

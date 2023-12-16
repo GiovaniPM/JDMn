@@ -12,7 +12,7 @@ JDMnDefs = JDMn.getDefinitionsJDMn("Beverages.json")
 
 dados = {}
 dados['dish'] = "'" + dish + "'"
-dados['children'] = "'false'"
+dados['children'] = False
 
 beverage, prova = JDMn.evaluateJDMn(JDMnDefs, dados, 'S')
 

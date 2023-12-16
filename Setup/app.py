@@ -3,8 +3,6 @@ import JDmnGen
 import json
 import wx
 
-valid_types = ['string', 'number', 'date']
-
 class FrameRule(JDmnGen.Rule):
     ruleReg = {}
     
@@ -83,8 +81,8 @@ class FramePrincipal(JDmnGen.JDMnSetup):
         elif col == 1:
             self.m_grid4.SetCellBackgroundColour(row, col, wx.NullColour)
             value = value.lower()
-            if value not in valid_types:
-                wx.MessageBox('Type invalid!\n\nValid Types:\n    - string\n    - number\n    - date', 'Error')
+            if value not in JDMn.valid_types:
+                wx.MessageBox('Type invalid!\n\nValid Types:\n    - string\n    - number\n    - date\n    - boolean', 'Error')
                 self.m_grid4.SetCellBackgroundColour(row, col, wx.RED)
     
     def AdicionaRule(self, event):
