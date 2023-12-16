@@ -181,7 +181,43 @@ Will be found in the second block
 }
 ```
 
+#### Columns rules
+
+Will be found in the third block
+
+```json
+[
+    {'inputEntry': [
+        {'text': '1'},
+        {'text': '1'}],
+     'outputEntry': {'text': '1'}},
+    {'inputEntry': [
+        {'text': '1'},
+        {'text': '0'}],
+     'outputEntry': {'text': '1'}},
+    {'inputEntry': [
+        {'text': '0'},
+        {'text': '1'}],
+     'outputEntry': {'text': '1'}},
+    {'inputEntry': [
+        {'text': '0'},
+        {'text': '0'}],
+    'outputEntry': {'text': '0'}}
+]
+```
+
+#### Expression rules
+
 ### Project directories
+
+Will be found in the last block
+
+```dos
+ ['0.0 == 1', '1.0 == 1'] --> ( 1 ) False
+ ['0.0 == 1', '1.0 == 0'] --> ( 1 ) False
+ ['0.0 == 0', '1.0 == 1'] --> ( 1 ) True
+ ['0.0 == 0', '1.0 == 0'] --> ( 0 ) False
+```
 
 ```dos
 JDMn (root)
