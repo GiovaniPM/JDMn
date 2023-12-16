@@ -89,6 +89,40 @@ Columns without any logical operation or with None as value, means these columns
 Inputs entry without value or None as a value, will evaluate to False if the rule column have a valid logic operation.  
 String must be delimmited with ', like: 'house'
 
+#### Datatype representation inside coluns
+
+##### String
+
+```dos
+'xxxxxxx'
+ex.:
+'house'
+```
+
+##### Number
+
+```dos
+a float or int value
+ex.:
+1 or 1.0
+```
+
+##### Date
+
+```dos
+'DD/MM/YYYY'
+ex.:
+'12/12/2023'
+```
+
+##### Boolean
+
+```dos
+True or False
+ex.:
+True
+```
+
 #### Examples
 
 | Operation                         | Evaluation |   |
