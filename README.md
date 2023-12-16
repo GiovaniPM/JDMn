@@ -80,10 +80,10 @@ You can save the Python dictionary into JSON files using a built-in module json.
 
 ### How the decision works
 
-The first successfully rule found is the our result, beside next out rules could be found.
+The first rule successfully found is our result, regardless of other rules that can be found.
 A successfully rule is the row, wich all columns evaluate with true.
-There are the follow possible data types in input enty: string, date, number and boolean.
-The available logic operators are: <, <=, >, >=, ==, !=, in and not in. Column without operator will be used ==.
+There are the follow possible data types in input entry: string, date, number and boolean.
+The available logic operators are: <, <=, >, >=, ==, !=, in and not in. Column without a operator will be used ==.
 
 ### Project directories
 
