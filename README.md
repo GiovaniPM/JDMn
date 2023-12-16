@@ -105,13 +105,13 @@ or.json
                 "input": [{
                         "inputExpression": {
                             "label": "colunaUm",
-                            "typeRef": "string"
+                            "typeRef": "number"
                         }
                     },
                     {
                         "inputExpression": {
                             "label": "colunaDois",
-                            "typeRef": "string"
+                            "typeRef": "number"
                         }
                     }
                 ],
@@ -232,13 +232,13 @@ Content-Type           application/json
                             {
                                 "inputExpression": {
                                     "label": "colunaUm",
-                                    "typeRef": "string"
+                                    "typeRef": "number"
                                 }
                             },
                             {
                                 "inputExpression": {
                                     "label": "colunaDois",
-                                    "typeRef": "string"
+                                    "typeRef": "number"
                                 }
                             }
                         ],
