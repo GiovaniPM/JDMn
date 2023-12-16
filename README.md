@@ -153,7 +153,7 @@ ex.:
  ['0.0 == 0', '1.0 == 0'] --> ( 0 ) False
 ```
 
-#### Coluns data types
+#### Coluns datatypes
 
 Will be found in the first block
 
@@ -168,6 +168,17 @@ Will be found in the first block
         'typeRef': 'number'}
     }
 ]
+```
+
+#### Input entrys
+
+Will be found in the second block
+
+```json
+{
+    'colunaUm': '0',
+    'colunaDois': '1'
+}
 ```
 
 ### Project directories
