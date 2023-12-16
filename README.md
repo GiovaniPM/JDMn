@@ -208,8 +208,6 @@ Will be found in the third block
 
 #### Expression rules
 
-### Project directories
-
 Will be found in the last block
 
 ```dos
@@ -218,6 +216,8 @@ Will be found in the last block
  ['0.0 == 0', '1.0 == 1'] --> ( 1 ) True
  ['0.0 == 0', '1.0 == 0'] --> ( 0 ) False
 ```
+
+### Project directories
 
 ```dos
 JDMn (root)
