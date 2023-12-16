@@ -87,8 +87,7 @@ There are the follow possible data types in input entry: string, date, number an
 The available logic operators are: <, <=, >, >=, ==, !=, in and not in. Column without a operator will be used ==.  
 Columns without any logical operation or with None as value, means these columns will be evaluate as True. This approach is used to define columns whose are optional completion.  
 Inputs entry without value or None as a value, will evaluate to False if the rule column have a valid logic operation.  
-String must be delimmited with ', like: 'house'  
-String are case sensitive
+String must be delimmited with ', like: 'house', also are case sensitive
 
 #### Datatype representation inside coluns
 
