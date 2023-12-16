@@ -153,7 +153,7 @@ ex.:
  ['0.0 == 0', '1.0 == 0'] --> ( 0 ) False
 ```
 
-#### Coluns datatypes
+#### Columns datatypes
 
 Will be found in the first block
 
@@ -206,7 +206,7 @@ Will be found in the third block
 ]
 ```
 
-#### Expression rules
+#### Expression rules generated
 
 Will be found in the last block
 
