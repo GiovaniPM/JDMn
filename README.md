@@ -101,33 +101,27 @@ If the input entry to evaluate is **'house'**, and the column rule is **'== 'Hou
 
 ##### String
 
-**'xxxxxxx'**
+**'xxxxxxx'**  
 ex.:
 > 'house'
 
 ##### Number
 
-```dos
-a float or int value
+a **float** or **int** value  
 ex.:
-1 or 1.0
-```
+> 1 or 1.0
 
 ##### Date
 
-```dos
-'DD/MM/YYYY'
+**'DD/MM/YYYY'**  
 ex.:
-'12/12/2023'
-```
+> '12/12/2023'
 
 ##### Boolean
 
-```dos
-True or False
+**True** or **False**  
 ex.:
-True
-```
+> True
 
 #### Examples
 
