@@ -101,9 +101,9 @@ If the input entry to evaluate is **'house'**, and the column rule is **'== 'Hou
 
 ##### String
 
-**'xxxxxxx'**  
-ex.:
-> 'house'
+>**'xxxxxxx'**  
+>ex.:
+>> 'house'
 
 ##### Number
 
