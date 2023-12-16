@@ -3,9 +3,9 @@ from datetime import date, datetime
 import json
 import re
 
-date_format = "%d/%m/%Y" # DD/MM/YYYY
+date_format  = "%d/%m/%Y" # DD/MM/YYYY
 dmnOperators = [ '== ', '<= ', '>= ', '< ', '> ', 'not in ', 'in ' ]
-valid_types = ['string', 'number', 'date', 'boolean']
+valid_types  = ['string', 'number', 'date', 'boolean']
 
 def splitRule(rule):
     """_summary_
@@ -91,13 +91,13 @@ def castingValues(typeToCast, value):
     """
     if value is not None:
         if typeToCast == 'number':
-            if type(value) != "<class 'float'>":
+            if str(type(value)) != "<class 'float'>":
                 value = float(value)
         elif typeToCast == 'string':
-            if type(value) != "<class 'str'>":
+            if str(type(value)) != "<class 'str'>":
                 value = str(value)
         elif typeToCast == 'date':
-            if type(value) != "<class 'str'>":
+            if str(type(value)) != "<class 'str'>":
                 value = str(value)
             value = strToDate(value)
     
@@ -179,9 +179,9 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
                     expression.append(str(values[pos]) + " == " + s)                    
             elif types[pos] == 'string':
                 if existOperator(entry['text']):
-                    expression.append(values[pos] + " " + entry['text'])
+                    expression.append("'" + values[pos] + "' " + entry['text'])
                 else:
-                    expression.append(values[pos] + " == " + entry['text'])
+                    expression.append("'" + values[pos] + "' == " + entry['text'])
             
             pos += 1
         
@@ -192,15 +192,22 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
     
     for line in expressions:
         test = True
+        exceptValue = False
         for column in line:
             if test == True:
-                test = eval(column)
+                try:
+                    test = eval(column)
+                except:
+                    print('\033[91m', line, '--> (', results[pos], ') ** Error **\033[0m')
+                    exceptValue = True
+                    test = False
         tests.append(test)
         if debbugJDMn != None:
-            if test:
-                print('\033[32m', line, '--> (', results[pos], ')', test, '\033[0m')
-            else:
-                print('\033[34m', line, '--> (', results[pos], ')', test, '\033[0m')
+            if exceptValue != True:
+                if test:
+                    print('\033[32m', line, '--> (', results[pos], ')', test, '\033[0m')
+                else:
+                    print('\033[34m', line, '--> (', results[pos], ')', test, '\033[0m')
         pos += 1
     
     pos       = 0
@@ -211,4 +218,14 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
             outputPos = pos
         pos += 1
     
-    return results[outputPos], expressions[outputPos]
+    if outputPos > -1:
+        valueReturned = results[outputPos]
+    else:
+        valueReturned = None
+    
+    if str(type(valueReturned)) != "<class 'str'>":
+        valueReturned = valueReturned
+    else:
+        valueReturned = valueReturned.replace("'", "")
+    
+    return valueReturned, expressions[outputPos]
