@@ -138,6 +138,27 @@ ex.:
 | '12/12/2023' >= '01/12/23'        | True       |   |
 | True == False                     | False      |   |
 
+#### Debbuging the JDMn
+
+```dos
+[{'inputExpression': {'label': 'colunaUm', 'typeRef': 'number'}}, {'inputExpression': {'label': 'colunaDois', 'typeRef': 'number'}}]
+----
+{'colunaUm': '0', 'colunaDois': '1'}
+----
+[{'inputEntry': [{'text': '1'}, {'text': '1'}], 'outputEntry': {'text': '1'}}, {'inputEntry': [{'text': '1'}, {'text': '0'}], 'outputEntry': {'text': '1'}}, {'inputEntry': [{'text': '0'}, {'text': '1'}], 'outputEntry': {'text': '1'}}, {'inputEntry': [{'text': '0'}, {'text': '0'}], 'outputEntry': {'text': '0'}}]
+----
+ ['0.0 == 1', '1.0 == 1'] --> ( 1 ) False
+ ['0.0 == 1', '1.0 == 0'] --> ( 1 ) False
+ ['0.0 == 0', '1.0 == 1'] --> ( 1 ) True
+ ['0.0 == 0', '1.0 == 0'] --> ( 0 ) False
+```
+
+#### Coluns data types
+
+Will be found in the first block
+
+>[{'inputExpression': {'label': 'colunaUm', 'typeRef': 'number'}}, {'inputExpression': {'label': 'colunaDois', 'typeRef': 'number'}}]
+
 ### Project directories
 
 ```dos
