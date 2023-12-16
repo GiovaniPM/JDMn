@@ -85,8 +85,24 @@ The first rule successfully found is our result, regardless of other rules that 
 A successfully rule is the row, wich all columns evaluate with true.  
 There are the follow possible data types in input entry: string, date, number and boolean.  
 The available logic operators are: <, <=, >, >=, ==, !=, in and not in. Column without a operator will be used ==.  
-Columns without any logical operation or with None as value, means these columns will evaluate to True. This approach is used to define columns whose are optional completion.  
-Inputs entry without value or None as the value, will evaluate to False if the rule column have a valid logic operation.
+Columns without any logical operation or with None as value, means these columns will be evaluate as True. This approach is used to define columns whose are optional completion.  
+Inputs entry without value or None as a value, will evaluate to False if the rule column have a valid logic operation.  
+String must be delimmited with ', like: 'house'
+
+#### Examples
+
+| Operation                         | Evaluation |   |
+|-----------------------------------|------------|---|
+| 'house' == 'house'                | True       |   |
+| 'house' == 'House'                | False      |   |
+| 'house' == 1                      | Error      |   |
+| 'a' >= 'b'                        | False      |   |
+| 'a' <= 'b'                        | True       |   |
+| 'apple'in ['apple', 'orange']     | True       |   |
+| 'apple'not in ['apple', 'orange'] | False      |   |
+| 600.0 > 300                       | True       |   |
+| '12/12/2023' >= '01/12/23'        | True       |   |
+| True == False                     | False      |   |
 
 ### Project directories
 
