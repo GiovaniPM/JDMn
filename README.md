@@ -83,7 +83,7 @@ You can save the Python dictionary into JSON files using a built-in module json.
 
 The first expression rule successfully found is our result, regardless of other expressions rules that can be found.  
 A successfully rule is the row, wich all columns evaluate with true.  
-There are the follow possible data types in input entry: string, date, number and boolean.  
+There are the follow possible datatypes in input entry: string, date, number and boolean.  
 The available logic operators are: <, <=, >, >=, ==, !=, in and not in. Column without a operator will be used ==.  
 Columns without any logical operation or with None as value, means these columns will be evaluate as True. This approach is used to define columns whose are optional completion.  
 Inputs entry without value or None as a value, will evaluate to False if the rule column have a valid logic operation.  
@@ -93,7 +93,7 @@ String must be delimmited with ', like: 'house', also are case sensitive
 
 > **input entry** concatenated with **column rule**
 
-If the input entry to evaluate is **'house'**, and the column rule is **'== 'House'** th rule will be like:  
+If the input entry to evaluate is **'house'**, and the column rule is **'== 'House'** the rule will be like:  
 **'house' == 'House'**  
 **'house' == 'House'** will be the expression rule will be evaluated by the JDMn
 
@@ -325,8 +325,8 @@ import JDMn
 JDMnDefs = JDMn.getDefinitionsJDMn("or.json")
 
 dados = {}
-dados['colunaUm']   = '1'
-dados['colunaDois'] = '0'
+dados['colunaUm']   = 1
+dados['colunaDois'] = 0
 
 desconto, prova = JDMn.evaluateJDMn(JDMnDefs, dados, 'S')
 
