@@ -84,7 +84,8 @@ You can save the Python dictionary into JSON files using a built-in module json.
 The first rule successfully found is our result, regardless of other rules that can be found.  
 A successfully rule is the row, wich all columns evaluate with true.  
 There are the follow possible data types in input entry: string, date, number and boolean.  
-The available logic operators are: <, <=, >, >=, ==, !=, in and not in. Column without a operator will be used ==.
+The available logic operators are: <, <=, >, >=, ==, !=, in and not in. Column without a operator will be used ==.  
+Columns without any logical operation or with None as value, means these columns will evaluate to True. This approach is used to define rules whose are optional completion.
 
 ### Project directories
 
