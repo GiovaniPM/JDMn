@@ -158,7 +158,16 @@ ex.:
 Will be found in the first block
 
 ```json
-[{'inputExpression': {'label': 'colunaUm', 'typeRef': 'number'}}, {'inputExpression': {'label': 'colunaDois', 'typeRef': 'number'}}]
+[
+    {'inputExpression': {
+        'label': 'colunaUm',
+        'typeRef': 'number'}
+    },
+    {'inputExpression': {
+        'label': 'colunaDois',
+        'typeRef': 'number'}
+    }
+]
 ```
 
 ### Project directories
