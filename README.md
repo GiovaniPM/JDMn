@@ -91,7 +91,7 @@ String must be delimmited with ', like: 'house', also are case sensitive
 
 #### How JDMn makes a rule
 
-**input entry** concatenated with **column rule**  
+> **input entry** concatenated with **column rule**  
 If the input entry to evaluate is **'house'**, and the column rule is **'== 'House'** th rule will be like:  
 **'house' == 'House'**  
 **'house' == 'House'** will be the expression rule will be evaluated by the JDMn
