@@ -9,26 +9,27 @@ To create a lightweight DMn implementation, using a popular file represetantion 
 The representative DMn tables, need the complete satisfation of all imput entrys inside the rule to be validate a hypothesis.
 
 ## What’s DMN?
-This modeling language created by OMG – an international group dedicated to developing technology standards – is a notation for business rules applied to processes.
-DMN makes it so business rules can be transformed into corporate assets, making decision-making and understanding corporate rules easier, which ultimately ensures greater task effectiveness.
-The importance of DMN lies in companies’ need to ensure daily activities are carried out to the letter – that is, in line with what was previously decided.
-In that sense, DMN can turn complex business processes into easy-to-understand models, without omitting any essential rules, clarifying the path being taken for management as well as employees.
-Use of DMN makes it possible for employees and decision-makers to reproduce the same initiatives across departments, optimize communication channels with customers, and improve internal and external analysis.
+This modeling language created by OMG – an international group dedicated to developing technology standards – is a notation for business rules applied to processes.  
+DMN makes it so business rules can be transformed into corporate assets, making decision-making and understanding corporate rules easier, which ultimately ensures greater task effectiveness.  
+The importance of DMN lies in companies’ need to ensure daily activities are carried out to the letter – that is, in line with what was previously decided.  
+In that sense, DMN can turn complex business processes into easy-to-understand models, without omitting any essential rules, clarifying the path being taken for management as well as employees.  
+Use of DMN makes it possible for employees and decision-makers to reproduce the same initiatives across departments, optimize communication channels with customers, and improve internal and external analysis.  
 With the concept outlined, now let’s move on to how DMN is structured.
 
 ## What’s JSON?
-JavaScript Object Notation
-The JSON format is syntactically identical to the code for creating JavaScript objects.
-Because of this similarity, a JavaScript program can easily convert JSON data into native JavaScript objects.
+JavaScript Object Notation  
+The JSON format is syntactically identical to the code for creating JavaScript objects.  
+Because of this similarity, a JavaScript program can easily convert JSON data into native JavaScript objects.  
 The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. Code for reading and generating JSON data can be written in any programming language.
 
 ### Why use JSON instead XML
 
-As a markup language, XML is more complex and requires a tag structure. In contrast, JSON is a data format that extends from JavaScript. It does not use tags, which makes it more compact and easier to read for humans. JSON can represent the same data in a smaller file size for faster data transfer.
+As a markup language, XML is more complex and requires a tag structure. In contrast, JSON is a data format that extends from JavaScript.  
+It does not use tags, which makes it more compact and easier to read for humans. JSON can represent the same data in a smaller file size for faster data transfer.
 
 ## What's Python?
 
-Python is a high-level, interpreted programming language with a simple syntax, which makes it easily readable and extremely user- and beginner-friendly. Originally built to satisfy Guido Van Rossum’s desire for a programming language that was simple to use and beautiful to look at, Python was first released to the world in 1991.
+Python is a high-level, interpreted programming language with a simple syntax, which makes it easily readable and extremely user- and beginner-friendly. Originally built to satisfy Guido Van Rossum’s desire for a programming language that was simple to use and beautiful to look at, Python was first released to the world in 1991.  
 Python also has several other characteristics that make it popular amongst developers and engineers. These include:
 - It’s easy to read. Python code uses English keywords rather than punctuation, and its line breaks help define the code blocks. In practice, this means you can identify what the code is designed to do simply by looking at it.
 - It’s open source. You can download the source code, modify it, and use it however you want.
@@ -51,7 +52,7 @@ Top 10 Reasons Why Python is So Popular With Developers.
 
 ## So, JSON with Python?
 
-A “JSON object” is very similar to a Python dictionary. A “JSON array” is very similar to a Python list. In the same way that JSON objects can be nested within arrays or arrays nested within objects, Python dictionaries can be nested within lists or lists nested within dictionaries.
+A “JSON object” is very similar to a Python dictionary. A “JSON array” is very similar to a Python list. In the same way that JSON objects can be nested within arrays or arrays nested within objects, Python dictionaries can be nested within lists or lists nested within dictionaries.  
 You can save the Python dictionary into JSON files using a built-in module json.
 
 ## Software needs
