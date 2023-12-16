@@ -85,7 +85,7 @@ The first rule successfully found is our result, regardless of other rules that 
 A successfully rule is the row, wich all columns evaluate with true.  
 There are the follow possible data types in input entry: string, date, number and boolean.  
 The available logic operators are: <, <=, >, >=, ==, !=, in and not in. Column without a operator will be used ==.  
-Columns without any logical operation or with None as value, means these columns will evaluate to True. This approach is used to define columns whose are optional completion.
+Columns without any logical operation or with None as value, means these columns will evaluate to True. This approach is used to define columns whose are optional completion.  
 Inputs entry without value or None as the value, will evaluate to False if the rule column have a valid logic operation.
 
 ### Project directories
