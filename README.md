@@ -1,4 +1,5 @@
 # JDMn
+[![JDMn](https://img.shields.io/badge/JDMn-1.0.3-brightgreen.svg?logo=flask)]([https://flask.palletsprojects.com](https://github.com/GiovaniPM/JDMn/edit/main/README.md))
 Python/JSON implementation of DMn
 
 ## Proposal
