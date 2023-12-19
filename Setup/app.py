@@ -48,19 +48,30 @@ class FramePrincipal(JDmnGen.JDMnSetup):
     
     def downRule( self, event ):
         selected_rows = self.m_grid7.GetSelectedRows()
-        row = selected_rows[0]
-        maxRow = self.m_grid7.GetNumberRows()
+        qty = self.m_grid7.GetNumberRows() - 1
         if selected_rows:
-            if row < maxRow:
-                self.m_grid7.MoveRow(row, row+1)
+            from_pos = selected_rows[0]
+            if from_pos < qty:
+                to_pos = selected_rows[0] + 1
+                data = [self.m_grid7.GetCellValue(from_pos, col) for col in range(self.m_grid7.GetNumberCols())]
+                self.m_grid7.DeleteRows(from_pos)
+                self.m_grid7.InsertRows(to_pos)
+                for col, value in enumerate(data):
+                    self.m_grid7.SetCellValue(to_pos, col, value)
+                self.m_grid7.ForceRefresh()
     
     def upRule( self, event ):
         selected_rows = self.m_grid7.GetSelectedRows()
-        row = selected_rows[0]
-        maxRow = self.m_grid7.GetNumberRows()
         if selected_rows:
-            if row > 0:
-                self.m_grid7.MoveRow(row, row-1)
+            from_pos = selected_rows[0]
+            if from_pos > 0:
+                to_pos = selected_rows[0] - 1
+                data = [self.m_grid7.GetCellValue(from_pos, col) for col in range(self.m_grid7.GetNumberCols())]
+                self.m_grid7.DeleteRows(from_pos)
+                self.m_grid7.InsertRows(to_pos)
+                for col, value in enumerate(data):
+                    self.m_grid7.SetCellValue(to_pos, col, value)
+                self.m_grid7.ForceRefresh()
     
     def appEntry( self, event ):
         self.msgTypes = 'Type invalid!\n\nValid Types:\n'

@@ -176,11 +176,11 @@ class JDMnSetup ( wx.Frame ):
 		self.m_button5 = wx.Button( self.m_panel11, wx.ID_ANY, u"Remove", wx.DefaultPosition, wx.DefaultSize, 0 )
 		bSizer12.Add( self.m_button5, 0, wx.TOP|wx.BOTTOM, 5 )
 
-		self.m_button61 = wx.Button( self.m_panel11, wx.ID_ANY, u"Down", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer12.Add( self.m_button61, 0, wx.TOP|wx.BOTTOM, 5 )
-
 		self.m_button62 = wx.Button( self.m_panel11, wx.ID_ANY, u"Up", wx.DefaultPosition, wx.DefaultSize, 0 )
 		bSizer12.Add( self.m_button62, 0, wx.TOP|wx.BOTTOM, 5 )
+
+		self.m_button61 = wx.Button( self.m_panel11, wx.ID_ANY, u"Down", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer12.Add( self.m_button61, 0, wx.TOP|wx.BOTTOM, 5 )
 
 		self.m_button6 = wx.Button( self.m_panel11, wx.ID_ANY, u"...", wx.DefaultPosition, wx.DefaultSize, 0 )
 		bSizer12.Add( self.m_button6, 0, wx.TOP, 5 )
@@ -234,8 +234,8 @@ class JDMnSetup ( wx.Frame ):
 		self.m_grid7.Bind( wx.grid.EVT_GRID_CELL_LEFT_DCLICK, self.ruleColSelect )
 		self.m_button4.Bind( wx.EVT_BUTTON, self.AdicionaRule )
 		self.m_button5.Bind( wx.EVT_BUTTON, self.RemoveRule )
-		self.m_button61.Bind( wx.EVT_BUTTON, self.downRule )
 		self.m_button62.Bind( wx.EVT_BUTTON, self.upRule )
+		self.m_button61.Bind( wx.EVT_BUTTON, self.downRule )
 		self.Bind( wx.EVT_MENU, self.OpenFile, id = self.open.GetId() )
 		self.Bind( wx.EVT_MENU, self.SaveFile, id = self.save.GetId() )
 		self.Bind( wx.EVT_MENU, self.Exit, id = self.exit.GetId() )
@@ -266,10 +266,10 @@ class JDMnSetup ( wx.Frame ):
 	def RemoveRule( self, event ):
 		event.Skip()
 
-	def downRule( self, event ):
+	def upRule( self, event ):
 		event.Skip()
 
-	def upRule( self, event ):
+	def downRule( self, event ):
 		event.Skip()
 
 	def OpenFile( self, event ):
