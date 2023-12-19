@@ -176,6 +176,12 @@ class JDMnSetup ( wx.Frame ):
 		self.m_button5 = wx.Button( self.m_panel11, wx.ID_ANY, u"Remove", wx.DefaultPosition, wx.DefaultSize, 0 )
 		bSizer12.Add( self.m_button5, 0, wx.TOP|wx.BOTTOM, 5 )
 
+		self.m_button61 = wx.Button( self.m_panel11, wx.ID_ANY, u"Down", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer12.Add( self.m_button61, 0, wx.TOP|wx.BOTTOM, 5 )
+
+		self.m_button62 = wx.Button( self.m_panel11, wx.ID_ANY, u"Up", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer12.Add( self.m_button62, 0, wx.TOP|wx.BOTTOM, 5 )
+
 		self.m_button6 = wx.Button( self.m_panel11, wx.ID_ANY, u"...", wx.DefaultPosition, wx.DefaultSize, 0 )
 		bSizer12.Add( self.m_button6, 0, wx.TOP, 5 )
 
@@ -228,6 +234,8 @@ class JDMnSetup ( wx.Frame ):
 		self.m_grid7.Bind( wx.grid.EVT_GRID_CELL_LEFT_DCLICK, self.ruleColSelect )
 		self.m_button4.Bind( wx.EVT_BUTTON, self.AdicionaRule )
 		self.m_button5.Bind( wx.EVT_BUTTON, self.RemoveRule )
+		self.m_button61.Bind( wx.EVT_BUTTON, self.downRule )
+		self.m_button62.Bind( wx.EVT_BUTTON, self.upRule )
 		self.Bind( wx.EVT_MENU, self.OpenFile, id = self.open.GetId() )
 		self.Bind( wx.EVT_MENU, self.SaveFile, id = self.save.GetId() )
 		self.Bind( wx.EVT_MENU, self.Exit, id = self.exit.GetId() )
@@ -256,6 +264,12 @@ class JDMnSetup ( wx.Frame ):
 		event.Skip()
 
 	def RemoveRule( self, event ):
+		event.Skip()
+
+	def downRule( self, event ):
+		event.Skip()
+
+	def upRule( self, event ):
 		event.Skip()
 
 	def OpenFile( self, event ):
@@ -319,7 +333,7 @@ class Input ( wx.Dialog ):
 
 		m_comboBox1Choices = [ u"date", u"number", u"string", u"boolean" ]
 		self.m_comboBox1 = wx.ComboBox( self.m_panel13, wx.ID_ANY, u"Types", wx.DefaultPosition, wx.DefaultSize, m_comboBox1Choices, 0 )
-		self.m_comboBox1.SetSelection( 2 )
+		self.m_comboBox1.SetSelection( 0 )
 		bSizer15.Add( self.m_comboBox1, 0, 0, 5 )
 
 

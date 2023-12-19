@@ -2,6 +2,7 @@ import JDMn
 import JDmnGen
 import json
 import wx
+import wx.grid
 
 class FrameRule(JDmnGen.Rule):
     ruleReg = {}
@@ -45,6 +46,22 @@ class FramePrincipal(JDmnGen.JDMnSetup):
     def __init__(self, parent):
         JDmnGen.JDMnSetup.__init__(self, parent)
     
+    def downRule( self, event ):
+        selected_rows = self.m_grid7.GetSelectedRows()
+        row = selected_rows[0]
+        maxRow = self.m_grid7.GetNumberRows()
+        if selected_rows:
+            if row < maxRow:
+                self.m_grid7.MoveRow(row, row+1)
+    
+    def upRule( self, event ):
+        selected_rows = self.m_grid7.GetSelectedRows()
+        row = selected_rows[0]
+        maxRow = self.m_grid7.GetNumberRows()
+        if selected_rows:
+            if row > 0:
+                self.m_grid7.MoveRow(row, row-1)
+    
     def appEntry( self, event ):
         self.msgTypes = 'Type invalid!\n\nValid Types:\n'
         for row in JDMn.valid_types:
@@ -69,7 +86,7 @@ class FramePrincipal(JDmnGen.JDMnSetup):
                 else:
                     frame.m_comboBox1.Value = '=='
                     frame.m_textCtrl1.Value = value.strip()
-
+            
             frame.ShowModal()
             if frame.ruleReg != {}:
                 self.m_grid7.SetCellValue( row, col, frame.ruleReg['operator'] + frame.ruleReg['rule'] )
