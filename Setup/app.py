@@ -83,11 +83,9 @@ class FramePrincipal(JDmnGen.JDMnSetup):
         col = event.GetCol()
         if col > 0:
             frame = FrameRule(self)
-            
             frame.m_comboBox1.Clear()
             for operator in JDMn.dmnOperators:
                 frame.m_comboBox1.Append(operator.strip())
-            
             value = self.m_grid7.GetCellValue(row, col)
             if value != "":
                 operator, rule = JDMn.splitRule(value)
@@ -97,7 +95,6 @@ class FramePrincipal(JDmnGen.JDMnSetup):
                 else:
                     frame.m_comboBox1.Value = '=='
                     frame.m_textCtrl1.Value = value.strip()
-            
             frame.ShowModal()
             if frame.ruleReg != {}:
                 self.m_grid7.SetCellValue( row, col, frame.ruleReg['operator'] + frame.ruleReg['rule'] )
