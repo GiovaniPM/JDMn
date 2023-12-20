@@ -17,6 +17,10 @@ def eraseGrid(self):
         self.m_grid7.DeleteCols(1, num_cols)
     self.Title = 'JDMn Setup'
 
+class FrameAbout(JDmnGen.Rule):
+    def __init__(self, parent):
+        JDmnGen.About.__init__(self, parent)
+
 class FrameRule(JDmnGen.Rule):
     ruleReg = {}
     
@@ -58,6 +62,10 @@ class FramePrincipal(JDmnGen.JDMnSetup):
     
     def __init__(self, parent):
         JDmnGen.JDMnSetup.__init__(self, parent)
+    
+    def aboutFile( self, event ):
+        frame = FrameAbout(self)
+        frame.ShowModal()
     
     def downRule( self, event ):
         selected_rows = self.m_grid7.GetSelectedRows()
