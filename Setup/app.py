@@ -152,49 +152,54 @@ class FramePrincipal(JDmnGen.JDMnSetup):
         
         if openFileDialog.ShowModal() == wx.ID_OK:
             filePath = openFileDialog.GetPath()
+        else:
+            filePath = ''
+        
+        if filePath != '':
+            self.Title = 'JDMn Setup - ' + filePath
+            
+            decisionTable = JDMn.getDefinitionsJDMn(filePath)
+            
+            inputs  = decisionTable ['input'  ]
+            rules   = decisionTable ['rule'   ]
+            
+            row = self.m_grid4.GetNumberRows()
+            
+            for input in inputs:
+                expression = input         ['inputExpression']
+                label      = expression    ['label'          ]
+                typeValue  = expression    ['typeRef'        ]
+                
+                self.m_grid4.AppendRows(1)
+                self.m_grid7.AppendCols(1)
+                
+                self.m_grid4.SetCellValue(row, 0, label)
+                self.m_grid4.SetCellValue(row, 1, typeValue)
+                self.m_grid7.SetColLabelValue(row+1, label)
+                
+                row += 1
+            
+            row = 0
+            
+            for rule in rules:
+                entrys = rule['inputEntry']
+                output = rule['outputEntry']
+                
+                col = 1
+                
+                if row > 0:
+                    self.m_grid7.AppendRows(1)
+                
+                for entry in entrys:
+                    self.m_grid7.SetCellValue(row, col, entry['text'])
+                    
+                    col += 1
+                
+                self.m_grid7.SetCellValue(row, 0, str(output['text']))
+                
+                row += 1
         
         openFileDialog.Destroy()
-        
-        decisionTable = JDMn.getDefinitionsJDMn(filePath)
-        
-        inputs  = decisionTable ['input'  ]
-        rules   = decisionTable ['rule'   ]
-        
-        row = self.m_grid4.GetNumberRows()
-        
-        for input in inputs:
-            expression = input         ['inputExpression']
-            label      = expression    ['label'          ]
-            typeValue  = expression    ['typeRef'        ]
-            
-            self.m_grid4.AppendRows(1)
-            self.m_grid7.AppendCols(1)
-            
-            self.m_grid4.SetCellValue(row, 0, label)
-            self.m_grid4.SetCellValue(row, 1, typeValue)
-            self.m_grid7.SetColLabelValue(row+1, label)
-            
-            row += 1
-        
-        row = 0
-        
-        for rule in rules:
-            entrys = rule['inputEntry']
-            output = rule['outputEntry']
-            
-            col = 1
-            
-            if row > 0:
-                self.m_grid7.AppendRows(1)
-            
-            for entry in entrys:
-                self.m_grid7.SetCellValue(row, col, entry['text'])
-                
-                col += 1
-            
-            self.m_grid7.SetCellValue(row, 0, str(output['text']))
-            
-            row += 1
     
     def SaveFile(self,event):
         saveFrame = wx.Frame(None, title="Open File Dialog Example")
@@ -203,58 +208,63 @@ class FramePrincipal(JDmnGen.JDMnSetup):
         
         if saveFileDialog.ShowModal() == wx.ID_OK:
             filePath = saveFileDialog.GetPath()
+        else:
+            filePath = ''
+        
+        if filePath != '':        
+            self.Title = 'JDMn Setup - ' + filePath
+            
+            row = 0
+            col = 0
+            
+            maxRow = self.m_grid4.GetNumberRows()
+            maxCol = self.m_grid4.GetNumberCols()
+            
+            inputs = []
+            
+            for row in range(0, maxRow):
+                inputExpression = {}
+                input = {}
+                input['label'] = self.m_grid4.GetCellValue(row, 0)
+                input['typeRef'] = self.m_grid4.GetCellValue(row, 1)
+                inputExpression['inputExpression'] = input
+                inputs.append(inputExpression)
+            
+            maxRow = self.m_grid7.GetNumberRows()
+            maxCol = self.m_grid7.GetNumberCols()
+            
+            rules = []
+            
+            for row in range(0, maxRow):
+                rule = {}
+                input = []
+                output = {}
+                for col in range(1, maxCol):
+                    entry = {}
+                    entry['text'] = self.m_grid7.GetCellValue(row, col)
+                    input.append(entry)
+                rule['inputEntry'] = input
+                output['text'] = self.m_grid7.GetCellValue(row, 0)
+                rule['outputEntry'] = output
+                rules.append(rule)
+            
+            decisionTable = {}
+            decisionTable ['input'  ] = inputs
+            decisionTable ['rule'   ] = rules
+            
+            decision = {}
+            decision      ['decisionTable' ] = decisionTable
+            
+            definitions = {}
+            definitions   ['decision'      ] = decision
+            
+            dados = {}
+            dados         ['definitions'   ] = definitions
+            
+            with open(filePath, "w") as f:
+                json.dump(dados, f)
         
         saveFileDialog.Destroy()
-        
-        row = 0
-        col = 0
-        
-        maxRow = self.m_grid4.GetNumberRows()
-        maxCol = self.m_grid4.GetNumberCols()
-        
-        inputs = []
-        
-        for row in range(0, maxRow):
-            inputExpression = {}
-            input = {}
-            input['label'] = self.m_grid4.GetCellValue(row, 0)
-            input['typeRef'] = self.m_grid4.GetCellValue(row, 1)
-            inputExpression['inputExpression'] = input
-            inputs.append(inputExpression)
-        
-        maxRow = self.m_grid7.GetNumberRows()
-        maxCol = self.m_grid7.GetNumberCols()
-        
-        rules = []
-        
-        for row in range(0, maxRow):
-            rule = {}
-            input = []
-            output = {}
-            for col in range(1, maxCol):
-                entry = {}
-                entry['text'] = self.m_grid7.GetCellValue(row, col)
-                input.append(entry)
-            rule['inputEntry'] = input
-            output['text'] = self.m_grid7.GetCellValue(row, 0)
-            rule['outputEntry'] = output
-            rules.append(rule)
-        
-        decisionTable = {}
-        decisionTable ['input'  ] = inputs
-        decisionTable ['rule'   ] = rules
-        
-        decision = {}
-        decision      ['decisionTable' ] = decisionTable
-        
-        definitions = {}
-        definitions   ['decision'      ] = decision
-        
-        dados = {}
-        dados         ['definitions'   ] = definitions
-        
-        with open(filePath, "w") as f:
-            json.dump(dados, f)
 
 app = wx.App()
 frame = FramePrincipal(None)
