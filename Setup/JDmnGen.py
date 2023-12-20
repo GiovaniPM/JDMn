@@ -11,9 +11,10 @@ import wx
 import wx.xrc
 import wx.grid
 
-ID_OPEN = 1000
-ID_SAVE = 1001
-ID_EXIT = 1002
+ID_NEW = 1000
+ID_OPEN = 1001
+ID_SAVE = 1002
+ID_EXIT = 1003
 
 ###########################################################################
 ## Class JDMnSetup
@@ -210,11 +211,16 @@ class JDMnSetup ( wx.Frame ):
 		self.Layout()
 		self.m_menubar1 = wx.MenuBar( 0 )
 		self.file = wx.Menu()
+		self.new = wx.MenuItem( self.file, ID_NEW, u"New", wx.EmptyString, wx.ITEM_NORMAL )
+		self.file.Append( self.new )
+
 		self.open = wx.MenuItem( self.file, ID_OPEN, u"Open", wx.EmptyString, wx.ITEM_NORMAL )
 		self.file.Append( self.open )
 
 		self.save = wx.MenuItem( self.file, ID_SAVE, u"Save", wx.EmptyString, wx.ITEM_NORMAL )
 		self.file.Append( self.save )
+
+		self.file.AppendSeparator()
 
 		self.exit = wx.MenuItem( self.file, ID_EXIT, u"Exit", wx.EmptyString, wx.ITEM_NORMAL )
 		self.file.Append( self.exit )
@@ -236,6 +242,7 @@ class JDMnSetup ( wx.Frame ):
 		self.m_button5.Bind( wx.EVT_BUTTON, self.RemoveRule )
 		self.m_button62.Bind( wx.EVT_BUTTON, self.upRule )
 		self.m_button61.Bind( wx.EVT_BUTTON, self.downRule )
+		self.Bind( wx.EVT_MENU, self.newFile, id = self.new.GetId() )
 		self.Bind( wx.EVT_MENU, self.OpenFile, id = self.open.GetId() )
 		self.Bind( wx.EVT_MENU, self.SaveFile, id = self.save.GetId() )
 		self.Bind( wx.EVT_MENU, self.Exit, id = self.exit.GetId() )
@@ -270,6 +277,9 @@ class JDMnSetup ( wx.Frame ):
 		event.Skip()
 
 	def downRule( self, event ):
+		event.Skip()
+
+	def newFile( self, event ):
 		event.Skip()
 
 	def OpenFile( self, event ):
@@ -520,5 +530,81 @@ class Rule ( wx.Dialog ):
 
 	def RuleCancel( self, event ):
 		event.Skip()
+
+
+###########################################################################
+## Class About
+###########################################################################
+
+class About ( wx.Dialog ):
+
+	def __init__( self, parent ):
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 500,300 ), style = wx.DEFAULT_DIALOG_STYLE )
+
+		self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
+
+		bSizer26 = wx.BoxSizer( wx.VERTICAL )
+
+		self.m_panel23 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer26.Add( self.m_panel23, 1, wx.EXPAND, 5 )
+
+		self.m_panel24 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer28 = wx.BoxSizer( wx.HORIZONTAL )
+
+		self.m_panel26 = wx.Panel( self.m_panel24, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer28.Add( self.m_panel26, 1, wx.EXPAND |wx.ALL, 5 )
+
+		self.m_panel27 = wx.Panel( self.m_panel24, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer29 = wx.BoxSizer( wx.VERTICAL )
+
+		self.m_staticText8 = wx.StaticText( self.m_panel27, wx.ID_ANY, u"JDMn", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_CENTER_HORIZONTAL )
+		self.m_staticText8.Wrap( -1 )
+
+		self.m_staticText8.SetFont( wx.Font( 22, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_BOLD, False, wx.EmptyString ) )
+
+		bSizer29.Add( self.m_staticText8, 0, wx.ALL|wx.EXPAND, 5 )
+
+		self.m_panel29 = wx.Panel( self.m_panel27, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer29.Add( self.m_panel29, 1, wx.EXPAND |wx.ALL, 5 )
+
+		self.m_staticText9 = wx.StaticText( self.m_panel27, wx.ID_ANY, u"A DMn implementation with JSON", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_CENTER_HORIZONTAL )
+		self.m_staticText9.Wrap( -1 )
+
+		bSizer29.Add( self.m_staticText9, 0, wx.ALL|wx.EXPAND, 5 )
+
+		self.m_panel30 = wx.Panel( self.m_panel27, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer29.Add( self.m_panel30, 1, wx.EXPAND |wx.ALL, 5 )
+
+		self.m_staticText10 = wx.StaticText( self.m_panel27, wx.ID_ANY, u"Version: 1.0.4", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_CENTER_HORIZONTAL )
+		self.m_staticText10.Wrap( -1 )
+
+		bSizer29.Add( self.m_staticText10, 0, wx.ALL|wx.EXPAND, 5 )
+
+
+		self.m_panel27.SetSizer( bSizer29 )
+		self.m_panel27.Layout()
+		bSizer29.Fit( self.m_panel27 )
+		bSizer28.Add( self.m_panel27, 1, wx.EXPAND |wx.ALL, 5 )
+
+		self.m_panel28 = wx.Panel( self.m_panel24, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer28.Add( self.m_panel28, 1, wx.EXPAND |wx.ALL, 5 )
+
+
+		self.m_panel24.SetSizer( bSizer28 )
+		self.m_panel24.Layout()
+		bSizer28.Fit( self.m_panel24 )
+		bSizer26.Add( self.m_panel24, 1, wx.EXPAND, 5 )
+
+		self.m_panel25 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer26.Add( self.m_panel25, 1, wx.EXPAND, 5 )
+
+
+		self.SetSizer( bSizer26 )
+		self.Layout()
+
+		self.Centre( wx.BOTH )
+
+	def __del__( self ):
+		pass
 
 

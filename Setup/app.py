@@ -4,6 +4,19 @@ import json
 import wx
 import wx.grid
 
+def eraseGrid(self):
+    num_rows = self.m_grid4.GetNumberRows()
+    if num_rows > 0:
+        self.m_grid4.DeleteRows(0, num_rows)
+    num_rows = self.m_grid7.GetNumberRows()
+    if num_rows > 0:
+        self.m_grid7.DeleteRows(0, num_rows)
+        self.m_grid7.AppendRows(numRows=1)
+    num_cols = self.m_grid7.GetNumberCols()
+    if num_cols > 1:
+        self.m_grid7.DeleteCols(1, num_cols)
+    self.Title = 'JDMn Setup'
+
 class FrameRule(JDmnGen.Rule):
     ruleReg = {}
     
@@ -142,10 +155,15 @@ class FramePrincipal(JDmnGen.JDMnSetup):
             for pos in selected_rows:
                 self.m_grid7.DeleteRows(pos)
     
+    def newFile(self, event):
+        eraseGrid(self)
+    
     def Exit(self, event):
         self.Close()
     
     def OpenFile(self,event):
+        eraseGrid(self)
+        
         openFrame = wx.Frame(None, title="Open File Dialog Example")
         
         openFileDialog = wx.FileDialog(openFrame, "Open", "", "", "JSON files (*.json)|*.json", wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
