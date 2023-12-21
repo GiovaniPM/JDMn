@@ -10,6 +10,7 @@
 import wx
 import wx.xrc
 import wx.grid
+import wx.adv
 
 ID_NEW = 1000
 ID_OPEN = 1001
@@ -582,6 +583,9 @@ class About ( wx.Dialog ):
 		self.m_staticText9.Wrap( -1 )
 
 		bSizer29.Add( self.m_staticText9, 0, wx.ALL|wx.EXPAND, 5 )
+
+		self.m_hyperlink1 = wx.adv.HyperlinkCtrl( self.m_panel27, wx.ID_ANY, u"https://github.com/GiovaniPM/JDMn", u"https://github.com/GiovaniPM/JDMn", wx.DefaultPosition, wx.DefaultSize, wx.adv.HL_ALIGN_CENTRE|wx.adv.HL_DEFAULT_STYLE )
+		bSizer29.Add( self.m_hyperlink1, 0, wx.ALL, 5 )
 
 		self.m_panel30 = wx.Panel( self.m_panel27, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		bSizer29.Add( self.m_panel30, 1, wx.EXPAND |wx.ALL, 5 )
