@@ -170,7 +170,6 @@ class FramePrincipal(JDmnGen.JDMnSetup):
         self.Close()
     
     def OpenFile(self,event):
-        eraseGrid(self)
         
         openFrame = wx.Frame(None, title="Open File Dialog Example")
         
@@ -182,6 +181,8 @@ class FramePrincipal(JDmnGen.JDMnSetup):
             filePath = ''
         
         if filePath != '':
+            eraseGrid(self)
+            
             self.Title = 'JDMn Setup - ' + filePath
             
             decisionTable = JDMn.getDefinitionsJDMn(filePath)

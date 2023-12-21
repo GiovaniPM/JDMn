@@ -14,8 +14,8 @@ import wx.grid
 ID_NEW = 1000
 ID_OPEN = 1001
 ID_SAVE = 1002
-ID_ABOUT = 1003
-ID_EXIT = 1004
+ID_EXIT = 1003
+ID_ABOUT = 1004
 
 ###########################################################################
 ## Class JDMnSetup
@@ -223,15 +223,16 @@ class JDMnSetup ( wx.Frame ):
 
 		self.file.AppendSeparator()
 
-		self.about = wx.MenuItem( self.file, ID_ABOUT, u"About", wx.EmptyString, wx.ITEM_NORMAL )
-		self.file.Append( self.about )
-
-		self.file.AppendSeparator()
-
 		self.exit = wx.MenuItem( self.file, ID_EXIT, u"Exit", wx.EmptyString, wx.ITEM_NORMAL )
 		self.file.Append( self.exit )
 
 		self.m_menubar1.Append( self.file, u"File" )
+
+		self.help = wx.Menu()
+		self.about = wx.MenuItem( self.help, ID_ABOUT, u"About", wx.EmptyString, wx.ITEM_NORMAL )
+		self.help.Append( self.about )
+
+		self.m_menubar1.Append( self.help, u"Help" )
 
 		self.SetMenuBar( self.m_menubar1 )
 
@@ -251,8 +252,8 @@ class JDMnSetup ( wx.Frame ):
 		self.Bind( wx.EVT_MENU, self.newFile, id = self.new.GetId() )
 		self.Bind( wx.EVT_MENU, self.OpenFile, id = self.open.GetId() )
 		self.Bind( wx.EVT_MENU, self.SaveFile, id = self.save.GetId() )
-		self.Bind( wx.EVT_MENU, self.aboutFile, id = self.about.GetId() )
 		self.Bind( wx.EVT_MENU, self.Exit, id = self.exit.GetId() )
+		self.Bind( wx.EVT_MENU, self.aboutFile, id = self.about.GetId() )
 
 	def __del__( self ):
 		pass
@@ -295,10 +296,10 @@ class JDMnSetup ( wx.Frame ):
 	def SaveFile( self, event ):
 		event.Skip()
 
-	def aboutFile( self, event ):
+	def Exit( self, event ):
 		event.Skip()
 
-	def Exit( self, event ):
+	def aboutFile( self, event ):
 		event.Skip()
 
 
