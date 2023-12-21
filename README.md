@@ -231,7 +231,7 @@ JDMn (root)
 
 ### File structure
 
-![image](https://github.com/GiovaniPM/JDMn/assets/9011792/038c5661-ae5e-445b-94e8-5878889f0863)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/2f779761-ca3c-4be3-821f-062eda0724cc)
 
 ### File example
 
