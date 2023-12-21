@@ -48,7 +48,7 @@
       <property name="minimum_size"></property>
       <property name="name">JDMnSetup</property>
       <property name="pos"></property>
-      <property name="size">800,600</property>
+      <property name="size">1000,600</property>
       <property name="style">wxDEFAULT_FRAME_STYLE</property>
       <property name="subclass"></property>
       <property name="title">JDMn Setup</property>
@@ -3868,11 +3868,11 @@
                         <property name="wrap">-1</property>
                       </object>
                     </object>
-                    <object class="sizeritem" expanded="true">
+                    <object class="sizeritem" expanded="false">
                       <property name="border">5</property>
                       <property name="flag">wxALL</property>
                       <property name="proportion">0</property>
-                      <object class="wxHyperlinkCtrl" expanded="true">
+                      <object class="wxHyperlinkCtrl" expanded="false">
                         <property name="BottomDockable">1</property>
                         <property name="LeftDockable">1</property>
                         <property name="RightDockable">1</property>
