@@ -21,6 +21,33 @@ class FrameAbout(JDmnGen.Rule):
     def __init__(self, parent):
         JDmnGen.About.__init__(self, parent)
 
+class FrameExecute(JDmnGen.Rule):
+    def __init__(self, parent):
+        JDmnGen.Execute.__init__(self, parent)
+    
+    def runForest( self, event ):
+        JDMnDefs = JDMn.getDefinitionsJDMn(self.m_textCtrl4.Value)
+        
+        dados = {}
+        for row in range(self.m_grid4.GetNumberRows()):
+            value = self.m_grid4.GetCellValue(row, 2)
+            if value == '' or value == 'None':
+                dados[self.m_grid4.GetCellValue(row, 0)] = None
+            elif self.m_grid4.GetCellValue(row, 1) == 'number':
+                try:
+                    dados[self.m_grid4.GetCellValue(row, 0)] = int(value)
+                except:
+                    dados[self.m_grid4.GetCellValue(row, 0)] = float(value)
+            else:
+                dados[self.m_grid4.GetCellValue(row, 0)] = value
+        
+        answer, prove = JDMn.evaluateJDMn(JDMnDefs, dados, 'S')
+        
+        try:
+            self.m_textCtrl41.Value = answer
+        except:
+            self.m_textCtrl41.Value = str(answer)
+
 class FrameRule(JDmnGen.Rule):
     ruleReg = {}
     
@@ -59,12 +86,28 @@ class FrameInput(JDmnGen.Input):
 
 class FramePrincipal(JDmnGen.JDMnSetup):
     msgTypes = ''
+    areFile = False
+    fileName = ''
     
     def __init__(self, parent):
         JDmnGen.JDMnSetup.__init__(self, parent)
     
     def aboutFile( self, event ):
         frame = FrameAbout(self)
+        frame.ShowModal()
+    
+    def execTests( self, event ):
+        frame = FrameExecute(self)
+        frame.m_grid4.AppendRows(numRows=self.m_grid4.GetNumberRows())
+        frame.m_textCtrl4.Value = self.fileName
+        for row in range(self.m_grid4.GetNumberRows()):
+            frame.m_grid4.SetCellBackgroundColour(row, 0, wx.Colour(255, 255, 224))
+            frame.m_grid4.SetCellBackgroundColour(row, 1, wx.Colour(255, 255, 224))
+            frame.m_grid4.SetReadOnly(row, 0, True)
+            frame.m_grid4.SetReadOnly(row, 1, True)
+            for col in range(self.m_grid4.GetNumberCols()):
+                value = self.m_grid4.GetCellValue(row, col)
+                frame.m_grid4.SetCellValue(row, col, value)
         frame.ShowModal()
     
     def downRule( self, event ):
@@ -183,6 +226,10 @@ class FramePrincipal(JDmnGen.JDMnSetup):
         if filePath != '':
             eraseGrid(self)
             
+            self.areFile = True
+            self.m_menubar1.Enable(1004,True)
+            self.fileName = filePath
+            
             self.Title = 'JDMn Setup - ' + filePath
             
             decisionTable = JDMn.getDefinitionsJDMn(filePath)
@@ -240,6 +287,10 @@ class FramePrincipal(JDmnGen.JDMnSetup):
         
         if filePath != '':        
             self.Title = 'JDMn Setup - ' + filePath
+            
+            self.areFile = True
+            self.m_menubar1.Enable(1004,True)
+            self.fileName = filePath
             
             row = 0
             col = 0

@@ -16,7 +16,8 @@ ID_NEW = 1000
 ID_OPEN = 1001
 ID_SAVE = 1002
 ID_EXIT = 1003
-ID_ABOUT = 1004
+ID_EXECUTE = 1004
+ID_ABOUT = 1005
 
 ###########################################################################
 ## Class JDMnSetup
@@ -229,6 +230,13 @@ class JDMnSetup ( wx.Frame ):
 
 		self.m_menubar1.Append( self.file, u"File" )
 
+		self.run = wx.Menu()
+		self.execute = wx.MenuItem( self.run, ID_EXECUTE, u"Execute", wx.EmptyString, wx.ITEM_NORMAL )
+		self.run.Append( self.execute )
+		self.execute.Enable( False )
+
+		self.m_menubar1.Append( self.run, u"Run" )
+
 		self.help = wx.Menu()
 		self.about = wx.MenuItem( self.help, ID_ABOUT, u"About", wx.EmptyString, wx.ITEM_NORMAL )
 		self.help.Append( self.about )
@@ -254,6 +262,7 @@ class JDMnSetup ( wx.Frame ):
 		self.Bind( wx.EVT_MENU, self.OpenFile, id = self.open.GetId() )
 		self.Bind( wx.EVT_MENU, self.SaveFile, id = self.save.GetId() )
 		self.Bind( wx.EVT_MENU, self.Exit, id = self.exit.GetId() )
+		self.Bind( wx.EVT_MENU, self.execTests, id = self.execute.GetId() )
 		self.Bind( wx.EVT_MENU, self.aboutFile, id = self.about.GetId() )
 
 	def __del__( self ):
@@ -298,6 +307,9 @@ class JDMnSetup ( wx.Frame ):
 		event.Skip()
 
 	def Exit( self, event ):
+		event.Skip()
+
+	def execTests( self, event ):
 		event.Skip()
 
 	def aboutFile( self, event ):
@@ -590,7 +602,7 @@ class About ( wx.Dialog ):
 		self.m_panel30 = wx.Panel( self.m_panel27, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		bSizer29.Add( self.m_panel30, 1, wx.EXPAND |wx.ALL, 5 )
 
-		self.m_staticText10 = wx.StaticText( self.m_panel27, wx.ID_ANY, u"Version: 1.0.4", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_CENTER_HORIZONTAL )
+		self.m_staticText10 = wx.StaticText( self.m_panel27, wx.ID_ANY, u"Version: 1.0.5", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_CENTER_HORIZONTAL )
 		self.m_staticText10.Wrap( -1 )
 
 		bSizer29.Add( self.m_staticText10, 0, wx.ALL|wx.EXPAND, 5 )
@@ -621,5 +633,104 @@ class About ( wx.Dialog ):
 
 	def __del__( self ):
 		pass
+
+
+###########################################################################
+## Class Execute
+###########################################################################
+
+class Execute ( wx.Dialog ):
+
+	def __init__( self, parent ):
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"DMn Test", pos = wx.DefaultPosition, size = wx.Size( 600,600 ), style = wx.DEFAULT_DIALOG_STYLE )
+
+		self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
+
+		bSizer29 = wx.BoxSizer( wx.VERTICAL )
+
+		bSizer31 = wx.BoxSizer( wx.HORIZONTAL )
+
+		self.m_staticText10 = wx.StaticText( self, wx.ID_ANY, u"JSON:", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText10.Wrap( -1 )
+
+		bSizer31.Add( self.m_staticText10, 0, wx.ALL, 5 )
+
+		self.m_textCtrl4 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_READONLY )
+		bSizer31.Add( self.m_textCtrl4, 1, wx.ALL|wx.EXPAND, 5 )
+
+
+		bSizer29.Add( bSizer31, 0, wx.EXPAND, 5 )
+
+		self.m_panel31 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer30 = wx.BoxSizer( wx.VERTICAL )
+
+		self.m_grid4 = wx.grid.Grid( self.m_panel31, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
+
+		# Grid
+		self.m_grid4.CreateGrid( 0, 3 )
+		self.m_grid4.EnableEditing( True )
+		self.m_grid4.EnableGridLines( True )
+		self.m_grid4.EnableDragGridSize( False )
+		self.m_grid4.SetMargins( 0, 0 )
+
+		# Columns
+		self.m_grid4.SetColSize( 0, 143 )
+		self.m_grid4.SetColSize( 1, 111 )
+		self.m_grid4.SetColSize( 2, 224 )
+		self.m_grid4.EnableDragColMove( False )
+		self.m_grid4.EnableDragColSize( True )
+		self.m_grid4.SetColLabelValue( 0, u"Name" )
+		self.m_grid4.SetColLabelValue( 1, u"Type" )
+		self.m_grid4.SetColLabelValue( 2, u"Value" )
+		self.m_grid4.SetColLabelAlignment( wx.ALIGN_CENTER, wx.ALIGN_CENTER )
+
+		# Rows
+		self.m_grid4.EnableDragRowSize( True )
+		self.m_grid4.SetRowLabelAlignment( wx.ALIGN_CENTER, wx.ALIGN_CENTER )
+
+		# Label Appearance
+
+		# Cell Defaults
+		self.m_grid4.SetDefaultCellAlignment( wx.ALIGN_LEFT, wx.ALIGN_TOP )
+		bSizer30.Add( self.m_grid4, 1, wx.ALL|wx.EXPAND, 5 )
+
+
+		self.m_panel31.SetSizer( bSizer30 )
+		self.m_panel31.Layout()
+		bSizer30.Fit( self.m_panel31 )
+		bSizer29.Add( self.m_panel31, 1, wx.EXPAND |wx.ALL, 5 )
+
+		bSizer311 = wx.BoxSizer( wx.HORIZONTAL )
+
+		self.m_staticText101 = wx.StaticText( self, wx.ID_ANY, u"Result:", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText101.Wrap( -1 )
+
+		bSizer311.Add( self.m_staticText101, 0, wx.ALL, 5 )
+
+		self.m_textCtrl41 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_READONLY )
+		bSizer311.Add( self.m_textCtrl41, 1, wx.ALL, 5 )
+
+
+		bSizer29.Add( bSizer311, 0, wx.EXPAND, 5 )
+
+		self.m_button13 = wx.Button( self, wx.ID_ANY, u"Execute", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer29.Add( self.m_button13, 0, wx.ALL|wx.EXPAND, 5 )
+
+
+		self.SetSizer( bSizer29 )
+		self.Layout()
+
+		self.Centre( wx.BOTH )
+
+		# Connect Events
+		self.m_button13.Bind( wx.EVT_BUTTON, self.runForest )
+
+	def __del__( self ):
+		pass
+
+
+	# Virtual event handlers, override them in your derived class
+	def runForest( self, event ):
+		event.Skip()
 
 
