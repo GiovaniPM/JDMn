@@ -1,1 +1,55 @@
-{"definitions": {"decision": {"decisionTable": {"input": [{"inputExpression": {"label": "base", "typeRef": "number"}}], "rule": [{"inputEntry": [{"text": "<= 2112.00"}], "outputEntry": {"text": "0"}}, {"inputEntry": [{"text": "<= 2826.65"}], "outputEntry": {"text": "158.40"}}, {"inputEntry": [{"text": "<= 3751.05"}], "outputEntry": {"text": "370.40"}}, {"inputEntry": [{"text": "<= 4664.80"}], "outputEntry": {"text": "651.73"}}, {"inputEntry": [{"text": "> 4664.68"}], "outputEntry": {"text": "884.96"}}]}}}}
+{
+    "definitions": {
+        "decision": {
+            "decisionTable": {
+                "input": [{
+                    "inputExpression": {
+                        "label": "base",
+                        "typeRef": "number"
+                    }
+                }],
+                "rule": [{
+                        "inputEntry": [{
+                            "text": "<= 2112.00"
+                        }],
+                        "outputEntry": {
+                            "text": "0"
+                        }
+                    },
+                    {
+                        "inputEntry": [{
+                            "text": "<= 2826.65"
+                        }],
+                        "outputEntry": {
+                            "text": "158.40"
+                        }
+                    },
+                    {
+                        "inputEntry": [{
+                            "text": "<= 3751.05"
+                        }],
+                        "outputEntry": {
+                            "text": "370.40"
+                        }
+                    },
+                    {
+                        "inputEntry": [{
+                            "text": "<= 4664.80"
+                        }],
+                        "outputEntry": {
+                            "text": "651.73"
+                        }
+                    },
+                    {
+                        "inputEntry": [{
+                            "text": "> 4664.68"
+                        }],
+                        "outputEntry": {
+                            "text": "884.96"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
