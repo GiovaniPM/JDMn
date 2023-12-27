@@ -56,7 +56,7 @@ class FrameRule(JDmnGen.Rule):
     
     def RuleSave(self, event):
         self.ruleReg['rule'] = self.m_textCtrl1.Value
-        self.ruleReg['operator'] = self.m_comboBox1.Value
+        self.ruleReg['operator'] = self.m_comboBox1.Value.strip(' ') + ' '
         self.Close()
     
     def RuleCancel(self, event):
@@ -157,7 +157,7 @@ class FramePrincipal(JDmnGen.JDMnSetup):
                     frame.m_comboBox1.Value = operator
                     frame.m_textCtrl1.Value = rule.strip()
                 else:
-                    frame.m_comboBox1.Value = '=='
+                    frame.m_comboBox1.Value = '== '
                     frame.m_textCtrl1.Value = value.strip()
             frame.ShowModal()
             if frame.ruleReg != {}:
