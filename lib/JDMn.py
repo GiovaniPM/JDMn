@@ -7,6 +7,13 @@ date_format  = "%d/%m/%Y" # DD/MM/YYYY
 dmnOperators = ['== ', '<= ', '>= ', '< ', '> ', 'not in ', 'in ']
 valid_types  = ['string', 'number', 'date', 'boolean']
 
+def is_json(myString):
+    try:
+        json_object = json.loads(myString)
+    except ValueError as e:
+        return False
+    return True
+
 def splitRule(rule):
     """Split a column rule into: operator and value
 
@@ -234,5 +241,8 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
         valueReturned = valueReturned
     else:
         valueReturned = valueReturned.replace("'", "")
+        valueReturned = valueReturned.replace('\"', '"')
+        if is_json(valueReturned):
+            valueReturned = json.loads(valueReturned)
     
     return valueReturned, expressions[outputPos]
