@@ -75,7 +75,7 @@ You can save the Python dictionary into JSON files using a built-in module json.
 
 ### wxFormBuilder
 
-[![wxFormBuilder](https://img.shields.io/badge/wxFormBuilder-4.0.0-brightgreen.svg)](https://github.com/wxFormBuilder/wxFormBuilder/releases/download/v4.0.0/wxFormBuilder-4.0.0-x64.exe)
+[![wxFormBuilder](https://img.shields.io/badge/wxFormBuilder-4.0.0-brightgreen.svg)](https://github.com/wxFormBuilder/wxFormBuilder)
 
 ## Architecture
 
