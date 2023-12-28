@@ -1,6 +1,7 @@
 import JDMn
 import JDmnGen
 import json
+import time
 import wx
 import wx.grid
 
@@ -41,7 +42,11 @@ class FrameExecute(JDmnGen.Rule):
             else:
                 dados[self.m_grid4.GetCellValue(row, 0)] = value
         
+        startTime = time.time()
         answer, prove = JDMn.evaluateJDMn(JDMnDefs, dados, 'S')
+        endTime = time.time()
+        
+        self.m_textCtrl5.Value = str((endTime - startTime) * 1000)[0:5] + ' ms'
         
         try:
             self.m_textCtrl41.Value = answer

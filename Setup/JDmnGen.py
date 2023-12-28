@@ -602,7 +602,7 @@ class About ( wx.Dialog ):
 		self.m_panel30 = wx.Panel( self.m_panel27, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		bSizer29.Add( self.m_panel30, 1, wx.EXPAND |wx.ALL, 5 )
 
-		self.m_staticText10 = wx.StaticText( self.m_panel27, wx.ID_ANY, u"Version: 1.0.5", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_CENTER_HORIZONTAL )
+		self.m_staticText10 = wx.StaticText( self.m_panel27, wx.ID_ANY, u"Version: 1.0.6", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_CENTER_HORIZONTAL )
 		self.m_staticText10.Wrap( -1 )
 
 		bSizer29.Add( self.m_staticText10, 0, wx.ALL|wx.EXPAND, 5 )
@@ -709,6 +709,14 @@ class Execute ( wx.Dialog ):
 
 		self.m_textCtrl41 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_READONLY )
 		bSizer311.Add( self.m_textCtrl41, 1, wx.ALL, 5 )
+
+		self.m_staticText12 = wx.StaticText( self, wx.ID_ANY, u"Time:", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText12.Wrap( -1 )
+
+		bSizer311.Add( self.m_staticText12, 0, wx.ALL, 5 )
+
+		self.m_textCtrl5 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_READONLY )
+		bSizer311.Add( self.m_textCtrl5, 0, wx.ALL, 5 )
 
 
 		bSizer29.Add( bSizer311, 0, wx.EXPAND, 5 )
