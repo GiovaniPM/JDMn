@@ -29,7 +29,7 @@
     <property name="use_array_enum">0</property>
     <property name="use_enum">0</property>
     <property name="use_microsoft_bom">0</property>
-    <object class="Frame" expanded="false">
+    <object class="Frame" expanded="true">
       <property name="aui_managed">0</property>
       <property name="aui_manager_style">wxAUI_MGR_DEFAULT</property>
       <property name="bg"></property>
@@ -59,7 +59,7 @@
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
       <event name="OnActivate">appEntry</event>
-      <object class="wxBoxSizer" expanded="false">
+      <object class="wxBoxSizer" expanded="true">
         <property name="minimum_size"></property>
         <property name="name">bSizer1</property>
         <property name="orient">wxVERTICAL</property>
@@ -405,7 +405,7 @@
                                   <property name="window_extra_style"></property>
                                   <property name="window_name"></property>
                                   <property name="window_style"></property>
-                                  <event name="OnGridCellChange">LabelAlterado</event>
+                                  <event name="OnGridCellChange">labelChanged</event>
                                 </object>
                               </object>
                             </object>
@@ -544,7 +544,7 @@
                                   <property name="window_extra_style"></property>
                                   <property name="window_name"></property>
                                   <property name="window_style"></property>
-                                  <event name="OnButtonClick">AdicionaInput</event>
+                                  <event name="OnButtonClick">addInput</event>
                                 </object>
                               </object>
                               <object class="sizeritem" expanded="false">
@@ -619,7 +619,7 @@
                                   <property name="window_extra_style"></property>
                                   <property name="window_name"></property>
                                   <property name="window_style"></property>
-                                  <event name="OnButtonClick">RemoveInput</event>
+                                  <event name="OnButtonClick">delInput</event>
                                 </object>
                               </object>
                               <object class="sizeritem" expanded="false">
@@ -707,11 +707,11 @@
             </object>
           </object>
         </object>
-        <object class="sizeritem" expanded="false">
+        <object class="sizeritem" expanded="true">
           <property name="border">5</property>
           <property name="flag">wxEXPAND</property>
           <property name="proportion">1</property>
-          <object class="wxPanel" expanded="false">
+          <object class="wxPanel" expanded="true">
             <property name="BottomDockable">1</property>
             <property name="LeftDockable">1</property>
             <property name="RightDockable">1</property>
@@ -763,7 +763,7 @@
             <property name="window_extra_style"></property>
             <property name="window_name"></property>
             <property name="window_style">wxTAB_TRAVERSAL</property>
-            <object class="wxBoxSizer" expanded="false">
+            <object class="wxBoxSizer" expanded="true">
               <property name="minimum_size"></property>
               <property name="name">bSizer3</property>
               <property name="orient">wxVERTICAL</property>
@@ -830,7 +830,7 @@
                   <property name="wrap">-1</property>
                 </object>
               </object>
-              <object class="sizeritem" expanded="false">
+              <object class="sizeritem" expanded="true">
                 <property name="border">5</property>
                 <property name="flag">wxEXPAND</property>
                 <property name="proportion">1</property>
@@ -1187,7 +1187,7 @@
                                   <property name="window_extra_style"></property>
                                   <property name="window_name"></property>
                                   <property name="window_style"></property>
-                                  <event name="OnButtonClick">AdicionaRule</event>
+                                  <event name="OnButtonClick">addRule</event>
                                 </object>
                               </object>
                               <object class="sizeritem" expanded="false">
@@ -1262,7 +1262,7 @@
                                   <property name="window_extra_style"></property>
                                   <property name="window_name"></property>
                                   <property name="window_style"></property>
-                                  <event name="OnButtonClick">RemoveRule</event>
+                                  <event name="OnButtonClick">delRule</event>
                                 </object>
                               </object>
                               <object class="sizeritem" expanded="false">
@@ -1553,7 +1553,7 @@
             <property name="permission">none</property>
             <property name="shortcut"></property>
             <property name="unchecked_bitmap"></property>
-            <event name="OnMenuSelection">OpenFile</event>
+            <event name="OnMenuSelection">openFile</event>
           </object>
           <object class="wxMenuItem" expanded="false">
             <property name="bitmap"></property>
@@ -1567,7 +1567,7 @@
             <property name="permission">none</property>
             <property name="shortcut"></property>
             <property name="unchecked_bitmap"></property>
-            <event name="OnMenuSelection">SaveFile</event>
+            <event name="OnMenuSelection">saveFile</event>
           </object>
           <object class="separator" expanded="false">
             <property name="name">m_separator2</property>
@@ -1585,7 +1585,7 @@
             <property name="permission">none</property>
             <property name="shortcut"></property>
             <property name="unchecked_bitmap"></property>
-            <event name="OnMenuSelection">Exit</event>
+            <event name="OnMenuSelection">exitApp</event>
           </object>
         </object>
         <object class="wxMenu" expanded="false">
@@ -3434,7 +3434,7 @@
         </object>
       </object>
     </object>
-    <object class="Dialog" expanded="true">
+    <object class="Dialog" expanded="false">
       <property name="aui_managed">0</property>
       <property name="aui_manager_style">wxAUI_MGR_DEFAULT</property>
       <property name="bg"></property>
@@ -3462,7 +3462,7 @@
       <property name="window_extra_style"></property>
       <property name="window_name"></property>
       <property name="window_style"></property>
-      <object class="wxBoxSizer" expanded="true">
+      <object class="wxBoxSizer" expanded="false">
         <property name="minimum_size"></property>
         <property name="name">bSizer26</property>
         <property name="orient">wxVERTICAL</property>
@@ -3525,11 +3525,11 @@
             <property name="window_style">wxTAB_TRAVERSAL</property>
           </object>
         </object>
-        <object class="sizeritem" expanded="true">
+        <object class="sizeritem" expanded="false">
           <property name="border">5</property>
           <property name="flag">wxEXPAND</property>
           <property name="proportion">1</property>
-          <object class="wxPanel" expanded="true">
+          <object class="wxPanel" expanded="false">
             <property name="BottomDockable">1</property>
             <property name="LeftDockable">1</property>
             <property name="RightDockable">1</property>
@@ -3581,7 +3581,7 @@
             <property name="window_extra_style"></property>
             <property name="window_name"></property>
             <property name="window_style">wxTAB_TRAVERSAL</property>
-            <object class="wxBoxSizer" expanded="true">
+            <object class="wxBoxSizer" expanded="false">
               <property name="minimum_size"></property>
               <property name="name">bSizer28</property>
               <property name="orient">wxHORIZONTAL</property>
@@ -3644,11 +3644,11 @@
                   <property name="window_style">wxTAB_TRAVERSAL</property>
                 </object>
               </object>
-              <object class="sizeritem" expanded="true">
+              <object class="sizeritem" expanded="false">
                 <property name="border">5</property>
                 <property name="flag">wxEXPAND | wxALL</property>
                 <property name="proportion">1</property>
-                <object class="wxPanel" expanded="true">
+                <object class="wxPanel" expanded="false">
                   <property name="BottomDockable">1</property>
                   <property name="LeftDockable">1</property>
                   <property name="RightDockable">1</property>
@@ -3700,7 +3700,7 @@
                   <property name="window_extra_style"></property>
                   <property name="window_name"></property>
                   <property name="window_style">wxTAB_TRAVERSAL</property>
-                  <object class="wxBoxSizer" expanded="true">
+                  <object class="wxBoxSizer" expanded="false">
                     <property name="minimum_size"></property>
                     <property name="name">bSizer29</property>
                     <property name="orient">wxVERTICAL</property>
@@ -4328,7 +4328,7 @@
                 <property name="enabled">1</property>
                 <property name="fg"></property>
                 <property name="floatable">1</property>
-                <property name="font"></property>
+                <property name="font">,94,400,-1,70,0</property>
                 <property name="gripper">0</property>
                 <property name="hidden">0</property>
                 <property name="id">wxID_ANY</property>
@@ -4688,7 +4688,7 @@
                 <property name="gripper">0</property>
                 <property name="hidden">0</property>
                 <property name="id">wxID_ANY</property>
-                <property name="label">Time:</property>
+                <property name="label">Time Elapsed:</property>
                 <property name="markup">0</property>
                 <property name="max_size"></property>
                 <property name="maximize_button">0</property>

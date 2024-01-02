@@ -250,18 +250,18 @@ class JDMnSetup ( wx.Frame ):
 
 		# Connect Events
 		self.Bind( wx.EVT_ACTIVATE, self.appEntry )
-		self.m_grid4.Bind( wx.grid.EVT_GRID_CELL_CHANGED, self.LabelAlterado )
-		self.m_button1.Bind( wx.EVT_BUTTON, self.AdicionaInput )
-		self.m_button2.Bind( wx.EVT_BUTTON, self.RemoveInput )
+		self.m_grid4.Bind( wx.grid.EVT_GRID_CELL_CHANGED, self.labelChanged )
+		self.m_button1.Bind( wx.EVT_BUTTON, self.addInput )
+		self.m_button2.Bind( wx.EVT_BUTTON, self.delInput )
 		self.m_grid7.Bind( wx.grid.EVT_GRID_CELL_LEFT_DCLICK, self.ruleColSelect )
-		self.m_button4.Bind( wx.EVT_BUTTON, self.AdicionaRule )
-		self.m_button5.Bind( wx.EVT_BUTTON, self.RemoveRule )
+		self.m_button4.Bind( wx.EVT_BUTTON, self.addRule )
+		self.m_button5.Bind( wx.EVT_BUTTON, self.delRule )
 		self.m_button62.Bind( wx.EVT_BUTTON, self.upRule )
 		self.m_button61.Bind( wx.EVT_BUTTON, self.downRule )
 		self.Bind( wx.EVT_MENU, self.newFile, id = self.new.GetId() )
-		self.Bind( wx.EVT_MENU, self.OpenFile, id = self.open.GetId() )
-		self.Bind( wx.EVT_MENU, self.SaveFile, id = self.save.GetId() )
-		self.Bind( wx.EVT_MENU, self.Exit, id = self.exit.GetId() )
+		self.Bind( wx.EVT_MENU, self.openFile, id = self.open.GetId() )
+		self.Bind( wx.EVT_MENU, self.saveFile, id = self.save.GetId() )
+		self.Bind( wx.EVT_MENU, self.exitApp, id = self.exit.GetId() )
 		self.Bind( wx.EVT_MENU, self.execTests, id = self.execute.GetId() )
 		self.Bind( wx.EVT_MENU, self.aboutFile, id = self.about.GetId() )
 
@@ -273,22 +273,22 @@ class JDMnSetup ( wx.Frame ):
 	def appEntry( self, event ):
 		event.Skip()
 
-	def LabelAlterado( self, event ):
+	def labelChanged( self, event ):
 		event.Skip()
 
-	def AdicionaInput( self, event ):
+	def addInput( self, event ):
 		event.Skip()
 
-	def RemoveInput( self, event ):
+	def delInput( self, event ):
 		event.Skip()
 
 	def ruleColSelect( self, event ):
 		event.Skip()
 
-	def AdicionaRule( self, event ):
+	def addRule( self, event ):
 		event.Skip()
 
-	def RemoveRule( self, event ):
+	def delRule( self, event ):
 		event.Skip()
 
 	def upRule( self, event ):
@@ -300,13 +300,13 @@ class JDMnSetup ( wx.Frame ):
 	def newFile( self, event ):
 		event.Skip()
 
-	def OpenFile( self, event ):
+	def openFile( self, event ):
 		event.Skip()
 
-	def SaveFile( self, event ):
+	def saveFile( self, event ):
 		event.Skip()
 
-	def Exit( self, event ):
+	def exitApp( self, event ):
 		event.Skip()
 
 	def execTests( self, event ):
@@ -656,6 +656,8 @@ class Execute ( wx.Dialog ):
 		bSizer31.Add( self.m_staticText10, 0, wx.ALL, 5 )
 
 		self.m_textCtrl4 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_READONLY )
+		self.m_textCtrl4.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_ITALIC, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
+
 		bSizer31.Add( self.m_textCtrl4, 1, wx.ALL|wx.EXPAND, 5 )
 
 
@@ -710,7 +712,7 @@ class Execute ( wx.Dialog ):
 		self.m_textCtrl41 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_READONLY )
 		bSizer311.Add( self.m_textCtrl41, 1, wx.ALL, 5 )
 
-		self.m_staticText12 = wx.StaticText( self, wx.ID_ANY, u"Time:", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText12 = wx.StaticText( self, wx.ID_ANY, u"Time Elapsed:", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText12.Wrap( -1 )
 
 		bSizer311.Add( self.m_staticText12, 0, wx.ALL, 5 )

@@ -5,6 +5,14 @@ import time
 import wx
 import wx.grid
 
+def changeRowGrid(self, from_pos, to_pos):
+    data = [self.GetCellValue(from_pos, col) for col in range(self.GetNumberCols())]
+    self.DeleteRows(from_pos)
+    self.InsertRows(to_pos)
+    for col, value in enumerate(data):
+        self.SetCellValue(to_pos, col, value)
+    self.ForceRefresh()
+
 def eraseGrid(self):
     num_rows = self.m_grid4.GetNumberRows()
     if num_rows > 0:
@@ -122,12 +130,7 @@ class FramePrincipal(JDmnGen.JDMnSetup):
             from_pos = selected_rows[0]
             if from_pos < qty:
                 to_pos = selected_rows[0] + 1
-                data = [self.m_grid7.GetCellValue(from_pos, col) for col in range(self.m_grid7.GetNumberCols())]
-                self.m_grid7.DeleteRows(from_pos)
-                self.m_grid7.InsertRows(to_pos)
-                for col, value in enumerate(data):
-                    self.m_grid7.SetCellValue(to_pos, col, value)
-                self.m_grid7.ForceRefresh()
+                changeRowGrid(self.m_grid7, from_pos, to_pos)
     
     def upRule( self, event ):
         selected_rows = self.m_grid7.GetSelectedRows()
@@ -135,12 +138,7 @@ class FramePrincipal(JDmnGen.JDMnSetup):
             from_pos = selected_rows[0]
             if from_pos > 0:
                 to_pos = selected_rows[0] - 1
-                data = [self.m_grid7.GetCellValue(from_pos, col) for col in range(self.m_grid7.GetNumberCols())]
-                self.m_grid7.DeleteRows(from_pos)
-                self.m_grid7.InsertRows(to_pos)
-                for col, value in enumerate(data):
-                    self.m_grid7.SetCellValue(to_pos, col, value)
-                self.m_grid7.ForceRefresh()
+                changeRowGrid(self.m_grid7, from_pos, to_pos)
     
     def appEntry( self, event ):
         self.msgTypes = 'Type invalid!\n\nValid Types:\n'
@@ -168,7 +166,7 @@ class FramePrincipal(JDmnGen.JDMnSetup):
             if frame.ruleReg != {}:
                 self.m_grid7.SetCellValue( row, col, frame.ruleReg['operator'] + frame.ruleReg['rule'] )
     
-    def AdicionaInput(self, event):
+    def addInput(self, event):
         frame = FrameInput(self)
         frame.ShowModal()
         if frame.inputReg != {}:
@@ -179,7 +177,7 @@ class FramePrincipal(JDmnGen.JDMnSetup):
             self.m_grid4.SetCellValue(row-1, 0, frame.inputReg['label'])
             self.m_grid4.SetCellValue(row-1, 1, frame.inputReg['typeDef'])
     
-    def RemoveInput(self, event):
+    def delInput(self, event):
         selected_rows = self.m_grid4.GetSelectedRows()
         selected_rows.reverse()
         if selected_rows:
@@ -187,7 +185,7 @@ class FramePrincipal(JDmnGen.JDMnSetup):
                 self.m_grid4.DeleteRows(pos)
                 self.m_grid7.DeleteCols(pos+1)
     
-    def LabelAlterado(self, event):
+    def labelChanged(self, event):
         row = event.GetRow()
         col = event.GetCol()
         value = self.m_grid4.GetCellValue(row, col)
@@ -201,10 +199,10 @@ class FramePrincipal(JDmnGen.JDMnSetup):
                 wx.MessageBox(self.msgTypes, 'Error')
                 self.m_grid4.SetCellBackgroundColour(row, col, wx.RED)
     
-    def AdicionaRule(self, event):
+    def addRule(self, event):
         self.m_grid7.AppendRows(1)
     
-    def RemoveRule(self, event):
+    def delRule(self, event):
         selected_rows = self.m_grid7.GetSelectedRows()
         selected_rows.reverse()
         if selected_rows:
@@ -214,10 +212,10 @@ class FramePrincipal(JDmnGen.JDMnSetup):
     def newFile(self, event):
         eraseGrid(self)
     
-    def Exit(self, event):
+    def exitApp(self, event):
         self.Close()
     
-    def OpenFile(self,event):
+    def openFile(self,event):
         
         openFrame = wx.Frame(None, title="Open File Dialog Example")
         
@@ -280,7 +278,7 @@ class FramePrincipal(JDmnGen.JDMnSetup):
         
         openFileDialog.Destroy()
     
-    def SaveFile(self,event):
+    def saveFile(self,event):
         saveFrame = wx.Frame(None, title="Open File Dialog Example")
         
         saveFileDialog = wx.FileDialog(saveFrame, "Save", "", "", "JSON files (*.json)|*.json", wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT)
