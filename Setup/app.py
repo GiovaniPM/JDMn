@@ -5,6 +5,17 @@ import time
 import wx
 import wx.grid
 
+def pasteGrid(grid, data):
+    finalRow = grid.GetNumberRows()
+    if data:
+        rows = data.split('\n')
+        for i, row in enumerate(rows):
+            if row:
+                cols = row.split('\t')
+                grid.AppendRows(numRows=1)
+                for j, value in enumerate(cols):
+                    grid.SetCellValue(finalRow + i, j, value)
+
 def changeRowGrid(self, from_pos, to_pos):
     data = [self.GetCellValue(from_pos, col) for col in range(self.GetNumberCols())]
     self.DeleteRows(from_pos)
@@ -118,15 +129,7 @@ class FramePrincipal(JDmnGen.JDMnSetup):
             else:
                 wx.MessageBox("There are not data in clipboard", "Error")
             data = clipboard.GetText()
-            finalRow = self.m_grid7.GetNumberRows()
-            if data:
-                rows = data.split('\n')
-                for i, row in enumerate(rows):
-                    if row:
-                        cols = row.split('\t')
-                        self.m_grid7.AppendRows(numRows=1)
-                        for j, value in enumerate(cols):
-                            self.m_grid7.SetCellValue(finalRow + i, j, value)
+            pasteGrid(self.m_grid7, data)
         event.Skip()
     
     def execTests( self, event ):
