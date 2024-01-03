@@ -1,0 +1,2576 @@
+{
+    "definitions": {
+        "decision": {
+            "decisionTable": {
+                "input": [
+                    { "inputExpression": { "label": "col1", "typeRef": "number" } },
+                    { "inputExpression": { "label": "col2", "typeRef": "number" } },
+                    { "inputExpression": { "label": "col3", "typeRef": "number" } },
+                    { "inputExpression": { "label": "col4", "typeRef": "number" } },
+                    { "inputExpression": { "label": "col5", "typeRef": "number" } }
+                ],
+                "rule": [{
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "2" }
+                        ],
+                        "outputEntry": { "text": "11112" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11121" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "2" }
+                        ],
+                        "outputEntry": { "text": "11122" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11211" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "2" }
+                        ],
+                        "outputEntry": { "text": "11212" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11221" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "2" }
+                        ],
+                        "outputEntry": { "text": "11222" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "12111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "2" }
+                        ],
+                        "outputEntry": { "text": "12112" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "12121" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "2" }
+                        ],
+                        "outputEntry": { "text": "12122" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "12211" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "2" }
+                        ],
+                        "outputEntry": { "text": "12212" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "12221" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "2" }
+                        ],
+                        "outputEntry": { "text": "12222" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "21111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "2" }
+                        ],
+                        "outputEntry": { "text": "21112" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "21121" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "2" }
+                        ],
+                        "outputEntry": { "text": "21122" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "21211" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "2" }
+                        ],
+                        "outputEntry": { "text": "21212" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "21221" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "2" }
+                        ],
+                        "outputEntry": { "text": "21222" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "22111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "2" }
+                        ],
+                        "outputEntry": { "text": "22112" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "22121" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "2" },
+                            { "text": "2" }
+                        ],
+                        "outputEntry": { "text": "22122" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "22211" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "1" },
+                            { "text": "2" }
+                        ],
+                        "outputEntry": { "text": "22212" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "22221" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "2" },
+                            { "text": "2" }
+                        ],
+                        "outputEntry": { "text": "22222" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "3" }
+                        ],
+                        "outputEntry": { "text": "11113" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11131" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "3" }
+                        ],
+                        "outputEntry": { "text": "11133" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11311" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "3" }
+                        ],
+                        "outputEntry": { "text": "11313" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11331" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "3" }
+                        ],
+                        "outputEntry": { "text": "11333" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "13111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "3" }
+                        ],
+                        "outputEntry": { "text": "13113" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "13131" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "3" }
+                        ],
+                        "outputEntry": { "text": "13133" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "13311" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "3" }
+                        ],
+                        "outputEntry": { "text": "13313" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "13331" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "3" }
+                        ],
+                        "outputEntry": { "text": "13333" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "31111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "3" }
+                        ],
+                        "outputEntry": { "text": "31113" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "31131" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "3" }
+                        ],
+                        "outputEntry": { "text": "31133" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "31311" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "3" }
+                        ],
+                        "outputEntry": { "text": "31313" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "31331" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "3" }
+                        ],
+                        "outputEntry": { "text": "31333" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "33111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "3" }
+                        ],
+                        "outputEntry": { "text": "33113" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "33131" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "3" },
+                            { "text": "3" }
+                        ],
+                        "outputEntry": { "text": "33133" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "33311" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "1" },
+                            { "text": "3" }
+                        ],
+                        "outputEntry": { "text": "33313" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "33331" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "3" },
+                            { "text": "3" }
+                        ],
+                        "outputEntry": { "text": "33333" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "4" }
+                        ],
+                        "outputEntry": { "text": "11114" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11141" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "4" }
+                        ],
+                        "outputEntry": { "text": "11144" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11411" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "4" }
+                        ],
+                        "outputEntry": { "text": "11414" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11441" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "4" }
+                        ],
+                        "outputEntry": { "text": "11444" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "14111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "4" }
+                        ],
+                        "outputEntry": { "text": "14114" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "14141" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "4" }
+                        ],
+                        "outputEntry": { "text": "14144" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "14411" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "4" }
+                        ],
+                        "outputEntry": { "text": "14414" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "14441" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "4" }
+                        ],
+                        "outputEntry": { "text": "14444" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "41111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "4" }
+                        ],
+                        "outputEntry": { "text": "41114" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "41141" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "4" }
+                        ],
+                        "outputEntry": { "text": "41144" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "41411" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "4" }
+                        ],
+                        "outputEntry": { "text": "41414" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "41441" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "4" }
+                        ],
+                        "outputEntry": { "text": "41444" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "44111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "4" }
+                        ],
+                        "outputEntry": { "text": "44114" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "44141" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "4" },
+                            { "text": "4" }
+                        ],
+                        "outputEntry": { "text": "44144" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "44411" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "1" },
+                            { "text": "4" }
+                        ],
+                        "outputEntry": { "text": "44414" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "44441" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "4" },
+                            { "text": "4" }
+                        ],
+                        "outputEntry": { "text": "44444" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "5" }
+                        ],
+                        "outputEntry": { "text": "11115" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11151" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "5" }
+                        ],
+                        "outputEntry": { "text": "11155" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11511" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "5" }
+                        ],
+                        "outputEntry": { "text": "11515" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11551" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "5" }
+                        ],
+                        "outputEntry": { "text": "11555" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "15111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "5" }
+                        ],
+                        "outputEntry": { "text": "15115" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "15151" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "5" }
+                        ],
+                        "outputEntry": { "text": "15155" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "15511" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "5" }
+                        ],
+                        "outputEntry": { "text": "15515" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "15551" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "5" }
+                        ],
+                        "outputEntry": { "text": "15555" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "51111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "5" }
+                        ],
+                        "outputEntry": { "text": "51115" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "51151" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "5" }
+                        ],
+                        "outputEntry": { "text": "51155" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "51511" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "5" }
+                        ],
+                        "outputEntry": { "text": "51515" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "51551" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "5" }
+                        ],
+                        "outputEntry": { "text": "51555" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "55111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "5" }
+                        ],
+                        "outputEntry": { "text": "55115" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "55151" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "5" },
+                            { "text": "5" }
+                        ],
+                        "outputEntry": { "text": "55155" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "55511" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "1" },
+                            { "text": "5" }
+                        ],
+                        "outputEntry": { "text": "55515" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "55551" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "5" },
+                            { "text": "5" }
+                        ],
+                        "outputEntry": { "text": "55555" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "6" }
+                        ],
+                        "outputEntry": { "text": "11116" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11161" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "6" }
+                        ],
+                        "outputEntry": { "text": "11166" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11611" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "6" }
+                        ],
+                        "outputEntry": { "text": "11616" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11661" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "6" }
+                        ],
+                        "outputEntry": { "text": "11666" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "16111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "6" }
+                        ],
+                        "outputEntry": { "text": "16116" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "16161" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "6" }
+                        ],
+                        "outputEntry": { "text": "16166" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "16611" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "6" }
+                        ],
+                        "outputEntry": { "text": "16616" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "16661" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "6" }
+                        ],
+                        "outputEntry": { "text": "16666" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "61111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "6" }
+                        ],
+                        "outputEntry": { "text": "61116" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "61161" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "6" }
+                        ],
+                        "outputEntry": { "text": "61166" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "61611" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "6" }
+                        ],
+                        "outputEntry": { "text": "61616" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "61661" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "6" }
+                        ],
+                        "outputEntry": { "text": "61666" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "66111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "6" }
+                        ],
+                        "outputEntry": { "text": "66116" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "66161" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "6" },
+                            { "text": "6" }
+                        ],
+                        "outputEntry": { "text": "66166" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "66611" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "1" },
+                            { "text": "6" }
+                        ],
+                        "outputEntry": { "text": "66616" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "66661" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "6" },
+                            { "text": "6" }
+                        ],
+                        "outputEntry": { "text": "66666" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "7" }
+                        ],
+                        "outputEntry": { "text": "11117" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11171" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "7" }
+                        ],
+                        "outputEntry": { "text": "11177" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11711" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "7" }
+                        ],
+                        "outputEntry": { "text": "11717" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11771" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "7" }
+                        ],
+                        "outputEntry": { "text": "11777" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "17111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "7" }
+                        ],
+                        "outputEntry": { "text": "17117" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "17171" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "7" }
+                        ],
+                        "outputEntry": { "text": "17177" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "17711" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "7" }
+                        ],
+                        "outputEntry": { "text": "17717" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "17771" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "7" }
+                        ],
+                        "outputEntry": { "text": "17777" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "71111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "7" }
+                        ],
+                        "outputEntry": { "text": "71117" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "71171" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "7" }
+                        ],
+                        "outputEntry": { "text": "71177" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "71711" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "7" }
+                        ],
+                        "outputEntry": { "text": "71717" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "71771" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "7" }
+                        ],
+                        "outputEntry": { "text": "71777" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "77111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "7" }
+                        ],
+                        "outputEntry": { "text": "77117" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "77171" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "7" },
+                            { "text": "7" }
+                        ],
+                        "outputEntry": { "text": "77177" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "77711" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "1" },
+                            { "text": "7" }
+                        ],
+                        "outputEntry": { "text": "77717" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "77771" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "7" },
+                            { "text": "7" }
+                        ],
+                        "outputEntry": { "text": "77777" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "8" }
+                        ],
+                        "outputEntry": { "text": "11118" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11181" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "8" }
+                        ],
+                        "outputEntry": { "text": "11188" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11811" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "8" }
+                        ],
+                        "outputEntry": { "text": "11818" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11881" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "8" }
+                        ],
+                        "outputEntry": { "text": "11888" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "18111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "8" }
+                        ],
+                        "outputEntry": { "text": "18118" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "18181" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "8" }
+                        ],
+                        "outputEntry": { "text": "18188" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "18811" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "8" }
+                        ],
+                        "outputEntry": { "text": "18818" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "18881" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "8" }
+                        ],
+                        "outputEntry": { "text": "18888" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "81111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "8" }
+                        ],
+                        "outputEntry": { "text": "81118" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "81181" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "8" }
+                        ],
+                        "outputEntry": { "text": "81188" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "81811" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "8" }
+                        ],
+                        "outputEntry": { "text": "81818" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "81881" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "8" }
+                        ],
+                        "outputEntry": { "text": "81888" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "88111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "8" }
+                        ],
+                        "outputEntry": { "text": "88118" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "88181" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "8" },
+                            { "text": "8" }
+                        ],
+                        "outputEntry": { "text": "88188" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "88811" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "1" },
+                            { "text": "8" }
+                        ],
+                        "outputEntry": { "text": "88818" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "88881" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "8" },
+                            { "text": "8" }
+                        ],
+                        "outputEntry": { "text": "88888" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "9" }
+                        ],
+                        "outputEntry": { "text": "11119" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11191" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "9" }
+                        ],
+                        "outputEntry": { "text": "11199" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11911" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "9" }
+                        ],
+                        "outputEntry": { "text": "11919" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "11991" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "9" }
+                        ],
+                        "outputEntry": { "text": "11999" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "19111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "9" }
+                        ],
+                        "outputEntry": { "text": "19119" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "19191" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "9" }
+                        ],
+                        "outputEntry": { "text": "19199" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "19911" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "9" }
+                        ],
+                        "outputEntry": { "text": "19919" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "19991" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "9" }
+                        ],
+                        "outputEntry": { "text": "19999" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "91111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "9" }
+                        ],
+                        "outputEntry": { "text": "91119" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "91191" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "9" }
+                        ],
+                        "outputEntry": { "text": "91199" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "91911" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "9" }
+                        ],
+                        "outputEntry": { "text": "91919" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "91991" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "9" }
+                        ],
+                        "outputEntry": { "text": "91999" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "99111" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "1" },
+                            { "text": "9" }
+                        ],
+                        "outputEntry": { "text": "99119" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "99191" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "9" },
+                            { "text": "9" }
+                        ],
+                        "outputEntry": { "text": "99199" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "99911" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "1" },
+                            { "text": "9" }
+                        ],
+                        "outputEntry": { "text": "99919" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "1" }
+                        ],
+                        "outputEntry": { "text": "99991" }
+                    },
+                    {
+                        "inputEntry": [
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "9" },
+                            { "text": "9" }
+                        ],
+                        "outputEntry": { "text": "99999" }
+                    }
+                ]
+            }
+        }
+    }
+}

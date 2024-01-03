@@ -254,6 +254,7 @@ class JDMnSetup ( wx.Frame ):
 		self.m_button1.Bind( wx.EVT_BUTTON, self.addInput )
 		self.m_button2.Bind( wx.EVT_BUTTON, self.delInput )
 		self.m_grid7.Bind( wx.grid.EVT_GRID_CELL_LEFT_DCLICK, self.ruleColSelect )
+		self.m_grid7.Bind( wx.EVT_KEY_DOWN, self.pasteClip )
 		self.m_button4.Bind( wx.EVT_BUTTON, self.addRule )
 		self.m_button5.Bind( wx.EVT_BUTTON, self.delRule )
 		self.m_button62.Bind( wx.EVT_BUTTON, self.upRule )
@@ -283,6 +284,9 @@ class JDMnSetup ( wx.Frame ):
 		event.Skip()
 
 	def ruleColSelect( self, event ):
+		event.Skip()
+
+	def pasteClip( self, event ):
 		event.Skip()
 
 	def addRule( self, event ):
@@ -656,7 +660,7 @@ class Execute ( wx.Dialog ):
 		bSizer31.Add( self.m_staticText10, 0, wx.ALL, 5 )
 
 		self.m_textCtrl4 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_READONLY )
-		self.m_textCtrl4.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_ITALIC, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
+		self.m_textCtrl4.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_ITALIC, wx.FONTWEIGHT_BOLD, False, wx.EmptyString ) )
 
 		bSizer31.Add( self.m_textCtrl4, 1, wx.ALL|wx.EXPAND, 5 )
 

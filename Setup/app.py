@@ -109,6 +109,26 @@ class FramePrincipal(JDmnGen.JDMnSetup):
         frame = FrameAbout(self)
         frame.ShowModal()
     
+    def pasteClip(self, event):
+        if event.ControlDown() and event.GetKeyCode() == 86:  # V
+            clipboard = wx.TextDataObject()
+            if wx.TheClipboard.Open():
+                wx.TheClipboard.GetData(clipboard)
+                wx.TheClipboard.Close()
+            else:
+                wx.MessageBox("There are not data in clipboard", "Error")
+            data = clipboard.GetText()
+            finalRow = self.m_grid7.GetNumberRows()
+            if data:
+                rows = data.split('\n')
+                for i, row in enumerate(rows):
+                    if row:
+                        cols = row.split('\t')
+                        self.m_grid7.AppendRows(numRows=1)
+                        for j, value in enumerate(cols):
+                            self.m_grid7.SetCellValue(finalRow + i, j, value)
+        event.Skip()
+    
     def execTests( self, event ):
         frame = FrameExecute(self)
         frame.m_grid4.AppendRows(numRows=self.m_grid4.GetNumberRows())
