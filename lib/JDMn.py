@@ -206,6 +206,7 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
     for line in expressions:
         test = True
         exceptValue = False
+        ################################################################
         #for column in line:
         #    if test == True:
         #        try:
@@ -228,6 +229,7 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
             exceptValue = True
             generalError = True
             test = False
+        ################################################################
         tests.append(test)
         if debbugJDMn != None:
             if exceptValue != True:
