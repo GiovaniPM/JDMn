@@ -1,0 +1,1 @@
+print(eval("600.0 >= 300 and 'vestuario' == 'vestuario'"))
