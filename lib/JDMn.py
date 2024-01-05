@@ -212,7 +212,6 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
         #        try:
         #            test = eval(column)
         #        except:
-        #            print('\033[91m', line, '--> (', results[pos], ') ** Error **\033[0m')
         #            exceptValue = True
         #            generalError = True
         #            test = False
@@ -225,7 +224,6 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
         try:
             test = eval(cmd)
         except:
-            print('\033[91m', line, '--> (', results[pos], ') ** Error **\033[0m')
             exceptValue = True
             generalError = True
             test = False
@@ -237,6 +235,8 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
                     print('\033[32m', line, '--> (', results[pos], ')', test, '\033[0m')
                 else:
                     print('\033[34m', line, '--> (', results[pos], ')', test, '\033[0m')
+            else:
+                print('\033[91m', line, '--> (', results[pos], ') ** Error **\033[0m')
         pos += 1
     
     pos       = 0
