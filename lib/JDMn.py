@@ -7,6 +7,15 @@ date_format  = "%d/%m/%Y" # DD/MM/YYYY
 dmnOperators = ['== ', '<= ', '>= ', '< ', '> ', 'not in ', 'in ']
 valid_types  = ['string', 'number', 'date', 'boolean']
 
+def replaceDate(s):
+    match = re.search(r'\b(\d{2}/\d{2}/\d{4})\b', s)
+    if match:
+        date_string = match.group(1)
+        value = strToDate(date_string)
+        return s.replace(date_string, value)
+    else:
+        return s
+
 def is_json(myString):
     try:
         json_object = json.loads(myString)
@@ -179,12 +188,13 @@ def evaluateJDMn(decisionTable, dictToEvaluate, debbugJDMn = None):
                 else:
                     expression.append(str(values[pos]) + " == " + entry['text'])
             elif types[pos] == 'date':
-                s = entry['text']
-                match = re.search(r'\b(\d{2}/\d{2}/\d{4})\b', s)
-                if match:
-                    date_string = match.group(1)
-                    value = strToDate(date_string)
-                    s = s.replace(date_string, value)
+                #s = entry['text']
+                #match = re.search(r'\b(\d{2}/\d{2}/\d{4})\b', s)
+                #if match:
+                #    date_string = match.group(1)
+                #    value = strToDate(date_string)
+                #    s = s.replace(date_string, value)
+                s = replaceDate(entry['text'])
                 if existOperator(entry['text']):
                     expression.append(str(values[pos]) + " " + s)
                 else:
