@@ -727,8 +727,17 @@ class Execute ( wx.Dialog ):
 
 		bSizer29.Add( bSizer311, 0, wx.EXPAND, 5 )
 
+		bSizer33 = wx.BoxSizer( wx.HORIZONTAL )
+
 		self.m_button13 = wx.Button( self, wx.ID_ANY, u"Execute", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer29.Add( self.m_button13, 0, wx.ALL|wx.EXPAND, 5 )
+		bSizer33.Add( self.m_button13, 1, wx.ALL, 5 )
+
+		self.m_checkBox1 = wx.CheckBox( self, wx.ID_ANY, u"Log", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_checkBox1.SetValue(True)
+		bSizer33.Add( self.m_checkBox1, 0, wx.ALL, 5 )
+
+
+		bSizer29.Add( bSizer33, 0, wx.EXPAND, 5 )
 
 
 		self.SetSizer( bSizer29 )

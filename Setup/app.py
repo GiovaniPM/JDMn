@@ -62,7 +62,10 @@ class FrameExecute(JDmnGen.Rule):
                 dados[self.m_grid4.GetCellValue(row, 0)] = value
         
         startTime = time.time()
-        answer, prove = JDMn.evaluateJDMn(JDMnDefs, dados, 'S')
+        if self.m_checkBox1.IsChecked():
+            answer, prove = JDMn.evaluateJDMn(JDMnDefs, dados, 'S')
+        else:
+            answer, prove = JDMn.evaluateJDMn(JDMnDefs, dados)
         endTime = time.time()
         
         self.m_textCtrl5.Value = str((endTime - startTime) * 1000)[0:5] + ' ms'
