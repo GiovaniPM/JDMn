@@ -44,8 +44,8 @@ def decompoe():
                 start_time_millis = int(time.time() * 1000)
                 reg['evaluate'] = evaluateJDMn(request.json['evaluate'])
                 end_time_millis = int(time.time() * 1000)
-                reg['process time'] = str(end_time_millis - start_time_millis) + ' ms'
-                print(reg['_id'] + ' - ' + reg['process time'])
+                reg['processing time'] = str(end_time_millis - start_time_millis) + ' ms'
+                print(reg['_id'] + ' - ' + reg['processing time'])
         else:
             return jsonify( { 'error': 'No keys valid found.' } )
     
