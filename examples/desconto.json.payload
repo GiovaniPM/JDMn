@@ -1,0 +1,123 @@
+{
+    "evaluate": {
+        "JDMn": {
+            "definitions": {
+                "decision": {
+                    "decisionTable": {
+                        "input": [
+                            {
+                                "inputExpression": {
+                                    "label": "Preco",
+                                    "typeRef": "number"
+                                }
+                            },
+                            {
+                                "inputExpression": {
+                                    "label": "Categoria",
+                                    "typeRef": "string"
+                                }
+                            }
+                        ],
+                        "rule": [
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "< 100"
+                                    },
+                                    {
+                                        "text": ""
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "0"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": ">= 200"
+                                    },
+                                    {
+                                        "text": "'eletronico'"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "15"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": ">= 100"
+                                    },
+                                    {
+                                        "text": "'eletronico'"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "10"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": ">= 300"
+                                    },
+                                    {
+                                        "text": "'vestuario'"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "10"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": ">= 100"
+                                    },
+                                    {
+                                        "text": "'vestuario'"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "5"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": ">= 500"
+                                    },
+                                    {
+                                        "text": ""
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "3"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": ""
+                                    },
+                                    {
+                                        "text": ""
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "0"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "condition": {
+            "Preco": 5000,
+            "Categoria": null
+        }
+    }
+}

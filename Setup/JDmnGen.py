@@ -606,7 +606,7 @@ class About ( wx.Dialog ):
 		self.m_panel30 = wx.Panel( self.m_panel27, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		bSizer29.Add( self.m_panel30, 1, wx.EXPAND |wx.ALL, 5 )
 
-		self.m_staticText10 = wx.StaticText( self.m_panel27, wx.ID_ANY, u"Version: 1.0.6", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_CENTER_HORIZONTAL )
+		self.m_staticText10 = wx.StaticText( self.m_panel27, wx.ID_ANY, u"Version: 1.0.7", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_CENTER_HORIZONTAL )
 		self.m_staticText10.Wrap( -1 )
 
 		bSizer29.Add( self.m_staticText10, 0, wx.ALL|wx.EXPAND, 5 )
@@ -735,6 +735,9 @@ class Execute ( wx.Dialog ):
 		self.m_checkBox1 = wx.CheckBox( self, wx.ID_ANY, u"Log", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_checkBox1.SetValue(True)
 		bSizer33.Add( self.m_checkBox1, 0, wx.ALL, 5 )
+
+		self.m_checkBox2 = wx.CheckBox( self, wx.ID_ANY, u"Generate API call", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer33.Add( self.m_checkBox2, 0, wx.ALL, 5 )
 
 
 		bSizer29.Add( bSizer33, 0, wx.EXPAND, 5 )

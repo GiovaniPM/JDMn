@@ -1,1 +1,0 @@
-{"definitions": {"decision": {"decisionTable": {"input": [{"inputExpression": {"label": "ano", "typeRef": "number"}}], "rule": [{"inputEntry": [{"text": "2023"}], "outputEntry": {"text": "{\"Preco\": 600, \"Categoria\": null}"}}]}}}}

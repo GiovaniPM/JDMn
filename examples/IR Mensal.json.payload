@@ -1,0 +1,162 @@
+{
+    "evaluate": {
+        "JDMn": {
+            "definitions": {
+                "decision": {
+                    "decisionTable": {
+                        "input": [
+                            {
+                                "inputExpression": {
+                                    "label": "base",
+                                    "typeRef": "number"
+                                }
+                            },
+                            {
+                                "inputExpression": {
+                                    "label": "ano",
+                                    "typeRef": "number"
+                                }
+                            }
+                        ],
+                        "rule": [
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "<= 2112.00"
+                                    },
+                                    {
+                                        "text": ">= 2023"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "{\"aliquota\": 0.00,  \"deducao\": 0.00}"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "<= 2826.65"
+                                    },
+                                    {
+                                        "text": ">= 2023"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "{\"aliquota\": 7.50,  \"deducao\": 158.40}"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "<= 3751.05"
+                                    },
+                                    {
+                                        "text": ">= 2023"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "{\"aliquota\": 15.00,  \"deducao\": 370.40}"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "<= 4664.80"
+                                    },
+                                    {
+                                        "text": ">= 2023"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "{\"aliquota\": 22.50,  \"deducao\": 651.73}"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "> 4664.68"
+                                    },
+                                    {
+                                        "text": ">= 2023"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "{\"aliquota\": 27.50,  \"deducao\": 884.96}"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "<= 1903.98"
+                                    },
+                                    {
+                                        "text": ">= 2015"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "{\"aliquota\": 0.00,  \"deducao\": 0.00}"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "<= 2826.65"
+                                    },
+                                    {
+                                        "text": ">= 2015"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "{\"aliquota\": 7.50,  \"deducao\": 142.80}"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "<= 3751.05"
+                                    },
+                                    {
+                                        "text": ">= 2015"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "{\"aliquota\": 15.00,  \"deducao\": 354.80}"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "<= 4664.68"
+                                    },
+                                    {
+                                        "text": ">= 2015"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "{\"aliquota\": 22.50,  \"deducao\": 636.13}"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "> 4664.68"
+                                    },
+                                    {
+                                        "text": ">= 2015"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "{\"aliquota\": 27.50,  \"deducao\": 869.36}"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "condition": {
+            "base": 4200,
+            "ano": 2025
+        }
+    }
+}
