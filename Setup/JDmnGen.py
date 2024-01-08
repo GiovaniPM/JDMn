@@ -251,10 +251,11 @@ class JDMnSetup ( wx.Frame ):
 		# Connect Events
 		self.Bind( wx.EVT_ACTIVATE, self.appEntry )
 		self.m_grid4.Bind( wx.grid.EVT_GRID_CELL_CHANGED, self.labelChanged )
+		self.m_grid4.Bind( wx.EVT_KEY_DOWN, self.keyPress1 )
 		self.m_button1.Bind( wx.EVT_BUTTON, self.addInput )
 		self.m_button2.Bind( wx.EVT_BUTTON, self.delInput )
 		self.m_grid7.Bind( wx.grid.EVT_GRID_CELL_LEFT_DCLICK, self.ruleColSelect )
-		self.m_grid7.Bind( wx.EVT_KEY_DOWN, self.pasteClip )
+		self.m_grid7.Bind( wx.EVT_KEY_DOWN, self.keyPress2 )
 		self.m_button4.Bind( wx.EVT_BUTTON, self.addRule )
 		self.m_button5.Bind( wx.EVT_BUTTON, self.delRule )
 		self.m_button62.Bind( wx.EVT_BUTTON, self.upRule )
@@ -277,6 +278,9 @@ class JDMnSetup ( wx.Frame ):
 	def labelChanged( self, event ):
 		event.Skip()
 
+	def keyPress1( self, event ):
+		event.Skip()
+
 	def addInput( self, event ):
 		event.Skip()
 
@@ -286,7 +290,7 @@ class JDMnSetup ( wx.Frame ):
 	def ruleColSelect( self, event ):
 		event.Skip()
 
-	def pasteClip( self, event ):
+	def keyPress2( self, event ):
 		event.Skip()
 
 	def addRule( self, event ):

@@ -5,6 +5,38 @@ import time
 import wx
 import wx.grid
 
+def keyProcess(self, event, adding):
+    numCols = self.GetNumberCols()
+    numRows = self.GetNumberRows()
+    col     = self.GetGridCursorCol()
+    row     = self.GetGridCursorRow()
+    if event.ControlDown() and event.GetKeyCode() == 86:  # CTRL-V
+        clipboard = wx.TextDataObject()
+        if wx.TheClipboard.Open():
+            wx.TheClipboard.GetData(clipboard)
+            wx.TheClipboard.Close()
+        else:
+            wx.MessageBox("There are not data in clipboard", "Error")
+        data = clipboard.GetText()
+        if adding == 'Y':
+            pasteGrid(self, data)
+    elif event.ShiftDown() and event.GetKeyCode() == wx.WXK_TAB:  # SHIFT-AB
+        if ( col == 0 ) and ( row > 0 ):
+            self.SetGridCursor(row - 1, numCols - 1)
+        else:
+            event.Skip()
+    elif event.GetKeyCode() == wx.WXK_TAB:  # TAB
+        if ( row == numRows - 1 ) and ( col == numCols - 1 ):
+            if (adding == 'Y'):
+                self.AppendRows(numRows=1)
+                self.SetGridCursor(row + 1, 0)
+        elif col == numCols - 1:
+            self.SetGridCursor(row + 1, 0)
+        else:
+            event.Skip()
+    else:
+        event.Skip()
+
 def pasteGrid(grid, data):
     finalRow = grid.GetNumberRows()
     if data:
@@ -138,17 +170,11 @@ class FramePrincipal(JDmnGen.JDMnSetup):
         frame = FrameAbout(self)
         frame.ShowModal()
     
-    def pasteClip(self, event):
-        if event.ControlDown() and event.GetKeyCode() == 86:  # V
-            clipboard = wx.TextDataObject()
-            if wx.TheClipboard.Open():
-                wx.TheClipboard.GetData(clipboard)
-                wx.TheClipboard.Close()
-            else:
-                wx.MessageBox("There are not data in clipboard", "Error")
-            data = clipboard.GetText()
-            pasteGrid(self.m_grid7, data)
-        event.Skip()
+    def keyPress1(self, event):
+        keyProcess(self.m_grid4, event, 'N')
+    
+    def keyPress2(self, event):
+        keyProcess(self.m_grid7, event, 'Y')
     
     def execTests( self, event ):
         frame = FrameExecute(self)
