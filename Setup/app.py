@@ -20,7 +20,7 @@ def keyProcess(self, event, adding):
         data = clipboard.GetText()
         if adding == 'Y':
             pasteGrid(self, data)
-    elif event.ShiftDown() and event.GetKeyCode() == wx.WXK_TAB:  # SHIFT-AB
+    elif event.ShiftDown() and event.GetKeyCode() == wx.WXK_TAB:  # SHIFT-TAB
         if ( col == 0 ) and ( row > 0 ):
             self.SetGridCursor(row - 1, numCols - 1)
         else:
