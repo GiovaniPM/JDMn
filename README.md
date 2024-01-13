@@ -6,7 +6,7 @@ Python/JSON implementation of DMn
 ## Proposal
 
 To create a lightweight DMn implementation, using a popular file represetantion and a flexible language.  
-The representative DMn tables, need the complete satisfation of all imput entrys inside the rule to be validate a hypothesis.
+The representative DMn tables, need the complete satisfation of all input entrys inside the rule to be validate a hypothesis.
 
 ## What’s DMN?
 This modeling language created by OMG – an international group dedicated to developing technology standards – is a notation for business rules applied to processes.  
