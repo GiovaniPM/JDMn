@@ -753,6 +753,7 @@ class Execute ( wx.Dialog ):
 		self.Centre( wx.BOTH )
 
 		# Connect Events
+		self.m_grid4.Bind( wx.EVT_KEY_DOWN, self.keyPress3 )
 		self.m_button13.Bind( wx.EVT_BUTTON, self.runForest )
 
 	def __del__( self ):
@@ -760,6 +761,9 @@ class Execute ( wx.Dialog ):
 
 
 	# Virtual event handlers, override them in your derived class
+	def keyPress3( self, event ):
+		event.Skip()
+
 	def runForest( self, event ):
 		event.Skip()
 
