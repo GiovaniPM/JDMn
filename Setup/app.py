@@ -77,6 +77,9 @@ class FrameExecute(JDmnGen.Rule):
     def __init__(self, parent):
         JDmnGen.Execute.__init__(self, parent)
     
+    def keyPress3(self, event):
+        keyProcess(self.m_grid4, event, 'N')
+    
     def runForest( self, event ):
         JDMnDefs = JDMn.getDefinitionsJDMn(self.m_textCtrl4.Value)
         

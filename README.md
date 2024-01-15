@@ -1,12 +1,12 @@
 # JDMn
-[![JDMn](https://img.shields.io/badge/JDMn-1.0.7-blue.svg)](https://github.com/GiovaniPM/JDMn)
+[![JDMn](https://img.shields.io/badge/JDMn-1.0.8-blue.svg)](https://github.com/GiovaniPM/JDMn)
 
 Python/JSON implementation of DMn
 
 ## Proposal
 
 To create a lightweight DMn implementation, using a popular file represetantion and a flexible language.  
-The representative DMn tables, need the complete satisfation of all imput entrys inside the rule to be validate a hypothesis.
+The representative DMn tables, need the complete satisfation of all input entrys inside the rule to be validate a hypothesis.
 
 ## What’s DMN?
 This modeling language created by OMG – an international group dedicated to developing technology standards – is a notation for business rules applied to processes.  
@@ -311,10 +311,11 @@ or.json
 
 ### App setup
 
-![image](https://github.com/GiovaniPM/JDMn/assets/9011792/b112bb2b-53b0-4ff8-805a-41c01bd7b8b1)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/71f0b375-b42a-4788-a9c0-1305faf2bf9b)
 ![image](https://github.com/GiovaniPM/JDMn/assets/9011792/2e4dfa64-12ea-4e15-80b0-d5b34f0867fa)
 ![image](https://github.com/GiovaniPM/JDMn/assets/9011792/f04a0281-0284-4471-b076-7f115e7c501b)
-![image](https://github.com/GiovaniPM/JDMn/assets/9011792/0b523955-2c78-472f-b4c9-b75015207ed6)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/ce493965-ec18-4959-a17f-3ddae5f7f793)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/3f4afe03-54f4-4714-8872-1db10b99229b)
 
 ## Implementation
 

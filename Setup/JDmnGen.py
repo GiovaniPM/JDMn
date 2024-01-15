@@ -610,7 +610,7 @@ class About ( wx.Dialog ):
 		self.m_panel30 = wx.Panel( self.m_panel27, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		bSizer29.Add( self.m_panel30, 1, wx.EXPAND |wx.ALL, 5 )
 
-		self.m_staticText10 = wx.StaticText( self.m_panel27, wx.ID_ANY, u"Version: 1.0.7", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_CENTER_HORIZONTAL )
+		self.m_staticText10 = wx.StaticText( self.m_panel27, wx.ID_ANY, u"Version: 1.0.8", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_CENTER_HORIZONTAL )
 		self.m_staticText10.Wrap( -1 )
 
 		bSizer29.Add( self.m_staticText10, 0, wx.ALL|wx.EXPAND, 5 )
@@ -753,6 +753,7 @@ class Execute ( wx.Dialog ):
 		self.Centre( wx.BOTH )
 
 		# Connect Events
+		self.m_grid4.Bind( wx.EVT_KEY_DOWN, self.keyPress3 )
 		self.m_button13.Bind( wx.EVT_BUTTON, self.runForest )
 
 	def __del__( self ):
@@ -760,6 +761,9 @@ class Execute ( wx.Dialog ):
 
 
 	# Virtual event handlers, override them in your derived class
+	def keyPress3( self, event ):
+		event.Skip()
+
 	def runForest( self, event ):
 		event.Skip()
 
