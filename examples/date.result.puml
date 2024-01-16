@@ -1,0 +1,12 @@
+@startjson
+{
+    "_id": "95d210ad-a8f3-4bb5-8f99-84cf84b8c1e5",
+    "evaluate": {
+        "prove": [
+            "date(2023, 11, 15) < date(2023, 11, 30)"
+        ],
+        "result": 3
+    },
+    "processing time": "3 ms"
+}
+@endjson
