@@ -2,7 +2,6 @@ import JDMn
 import JDmnGen
 import json
 import os
-import platform
 import time
 import wx
 import wx.grid
