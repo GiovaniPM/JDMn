@@ -11,13 +11,12 @@ def changePath(filePath, newDir, extension):
     if not extension.startswith('.'):
         extension = '.' + extension
     
-    parts = filePath.split(os.sep)
+    if newDir != '':
+        parts = filePath.split(os.sep)
+        parts.insert(len(parts) - 1, newDir)
+        filePath = os.sep.join(parts)
     
-    parts.insert(len(parts) - 1, newDir)
-    
-    newPath = os.sep.join(parts)
-    
-    base, _ = os.path.splitext(newPath)
+    base, _ = os.path.splitext(filePath)
     
     return base + extension
 
