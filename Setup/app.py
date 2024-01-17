@@ -1,9 +1,25 @@
 import JDMn
 import JDmnGen
 import json
+import os
+import platform
 import time
 import wx
 import wx.grid
+
+def changePath(filePath, newDir, extension):
+    if not extension.startswith('.'):
+        extension = '.' + extension
+    
+    parts = filePath.split(os.sep)
+    
+    parts.insert(len(parts) - 1, newDir)
+    
+    newPath = os.sep.join(parts)
+    
+    base, _ = os.path.splitext(newPath)
+    
+    return base + extension
 
 def keyProcess(self, event, adding):
     numCols = self.GetNumberCols()
@@ -81,6 +97,7 @@ class FrameExecute(JDmnGen.Rule):
         keyProcess(self.m_grid4, event, 'N')
     
     def runForest( self, event ):
+        filepath = self.m_textCtrl4.Value
         JDMnDefs = JDMn.getDefinitionsJDMn(self.m_textCtrl4.Value)
         
         dados = {}
@@ -103,6 +120,9 @@ class FrameExecute(JDmnGen.Rule):
             answer, prove = JDMn.evaluateJDMn(JDMnDefs, dados)
         endTime = time.time()
         
+        payloadPath = changePath(filepath, 'payloads', '.payload')
+        #payloadPath = self.m_textCtrl4.Value + '.payload'
+        
         if self.m_checkBox2.IsChecked():
             decisionTable = {}
             decisionTable['decisionTable'] = JDMnDefs
@@ -115,7 +135,7 @@ class FrameExecute(JDmnGen.Rule):
             jdmn['condition'] = dados
             evaluate = {}
             evaluate['evaluate'] = jdmn
-            with open(self.m_textCtrl4.Value + '.payload', 'w') as file:
+            with open(payloadPath, 'w') as file:
                 file.write(json.dumps(evaluate, indent=4))
         
         self.m_textCtrl5.Value = str((endTime - startTime) * 1000)[0:5] + ' ms'

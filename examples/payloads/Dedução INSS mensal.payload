@@ -1,0 +1,75 @@
+{
+    "evaluate": {
+        "JDMn": {
+            "definitions": {
+                "decision": {
+                    "decisionTable": {
+                        "input": [
+                            {
+                                "inputExpression": {
+                                    "label": "base",
+                                    "typeRef": "number"
+                                }
+                            }
+                        ],
+                        "rule": [
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "<= 1903.98"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "0"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "<= 2826.65"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "142.80"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "<= 3751.05"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "354.80"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "<= 4664.68"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "636.13"
+                                }
+                            },
+                            {
+                                "inputEntry": [
+                                    {
+                                        "text": "> 4664.69"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "869.36"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "condition": {
+            "base": null
+        }
+    }
+}
