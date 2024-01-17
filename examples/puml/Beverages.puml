@@ -1,0 +1,104 @@
+@startjson
+{
+    "definitions": {
+        "decision": {
+            "decisionTable": {
+                "input": [
+                    {
+                        "inputExpression": {
+                            "label": "dish",
+                            "typeRef": "string"
+                        }
+                    },
+                    {
+                        "inputExpression": {
+                            "label": "children",
+                            "typeRef": "boolean"
+                        }
+                    }
+                ],
+                "rule": [
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "== 'Spareribs'"
+                            },
+                            {
+                                "text": "==  False"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "'Aecht Schlenkerla Rauchbier'"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "== 'Stew'"
+                            },
+                            {
+                                "text": "==  False"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "'Guiness'"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "== 'Roastbeer'"
+                            },
+                            {
+                                "text": "==  False"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "'Bordeaux'"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "in [ 'Steak', 'Dry Aged Gourmet Steak', 'Light Salad and a nice Steak' ]"
+                            },
+                            {
+                                "text": "==  False"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "'Pinot Noir'"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": "==  True"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "'Apple Juice'"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": ""
+                            },
+                            {
+                                "text": ""
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "'Water'"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
+@endjson
