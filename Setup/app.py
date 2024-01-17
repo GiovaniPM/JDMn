@@ -119,10 +119,8 @@ class FrameExecute(JDmnGen.Rule):
             answer, prove = JDMn.evaluateJDMn(JDMnDefs, dados)
         endTime = time.time()
         
-        payloadPath = changePath(filepath, 'payloads', '.payload')
-        #payloadPath = self.m_textCtrl4.Value + '.payload'
-        
         if self.m_checkBox2.IsChecked():
+            payloadPath = changePath(filepath, 'payloads', '.payload')
             decisionTable = {}
             decisionTable['decisionTable'] = JDMnDefs
             decision = {}
@@ -136,6 +134,19 @@ class FrameExecute(JDmnGen.Rule):
             evaluate['evaluate'] = jdmn
             with open(payloadPath, 'w') as file:
                 file.write(json.dumps(evaluate, indent=4))
+        
+        if self.m_checkBox3.IsChecked():
+            pumlPath = changePath(filepath, 'puml', '.puml')
+            decisionTable = {}
+            decisionTable['decisionTable'] = JDMnDefs
+            decision = {}
+            decision['decision'] = decisionTable
+            definitions = {}
+            definitions['definitions'] = decision
+            with open(pumlPath, 'w') as file:
+                file.write('@startjson\n')
+                file.write(json.dumps(definitions, indent=4))
+                file.write('\n@endjson')
         
         self.m_textCtrl5.Value = str((endTime - startTime) * 1000)[0:5] + ' ms'
         

@@ -737,11 +737,13 @@ class Execute ( wx.Dialog ):
 		bSizer33.Add( self.m_button13, 1, wx.ALL, 5 )
 
 		self.m_checkBox1 = wx.CheckBox( self, wx.ID_ANY, u"Log", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_checkBox1.SetValue(True)
 		bSizer33.Add( self.m_checkBox1, 0, wx.ALL, 5 )
 
 		self.m_checkBox2 = wx.CheckBox( self, wx.ID_ANY, u"Generate API call", wx.DefaultPosition, wx.DefaultSize, 0 )
 		bSizer33.Add( self.m_checkBox2, 0, wx.ALL, 5 )
+
+		self.m_checkBox3 = wx.CheckBox( self, wx.ID_ANY, u"PUML", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer33.Add( self.m_checkBox3, 0, wx.ALL, 5 )
 
 
 		bSizer29.Add( bSizer33, 0, wx.EXPAND, 5 )
