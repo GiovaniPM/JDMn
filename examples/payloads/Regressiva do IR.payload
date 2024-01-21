@@ -7,13 +7,7 @@
                         "input": [
                             {
                                 "inputExpression": {
-                                    "label": "season",
-                                    "typeRef": "string"
-                                }
-                            },
-                            {
-                                "inputExpression": {
-                                    "label": "guestCount",
+                                    "label": "prazoAnos",
                                     "typeRef": "number"
                                 }
                             }
@@ -22,79 +16,61 @@
                             {
                                 "inputEntry": [
                                     {
-                                        "text": "== 'Fall'"
-                                    },
-                                    {
-                                        "text": "<= 8"
+                                        "text": "<= 2"
                                     }
                                 ],
                                 "outputEntry": {
-                                    "text": "'Spareribs'"
+                                    "text": "35"
                                 }
                             },
                             {
                                 "inputEntry": [
-                                    {
-                                        "text": "== 'Winter'"
-                                    },
-                                    {
-                                        "text": "<= 8"
-                                    }
-                                ],
-                                "outputEntry": {
-                                    "text": "'Roastbeer'"
-                                }
-                            },
-                            {
-                                "inputEntry": [
-                                    {
-                                        "text": "== 'Spring'"
-                                    },
                                     {
                                         "text": "<= 4"
                                     }
                                 ],
                                 "outputEntry": {
-                                    "text": "'Dry Aged Gourmet Steak'"
+                                    "text": "30"
                                 }
                             },
                             {
                                 "inputEntry": [
                                     {
-                                        "text": "== 'Spring'"
-                                    },
+                                        "text": "<= 6"
+                                    }
+                                ],
+                                "outputEntry": {
+                                    "text": "25"
+                                }
+                            },
+                            {
+                                "inputEntry": [
                                     {
                                         "text": "<= 8"
                                     }
                                 ],
                                 "outputEntry": {
-                                    "text": "'Steak'"
+                                    "text": "20"
                                 }
                             },
                             {
                                 "inputEntry": [
                                     {
-                                        "text": "in [ 'Fall', 'Winter', 'Spring' ]"
-                                    },
-                                    {
-                                        "text": "> 8"
+                                        "text": "<= 10"
                                     }
                                 ],
                                 "outputEntry": {
-                                    "text": "'Stew'"
+                                    "text": "15"
                                 }
                             },
                             {
                                 "inputEntry": [
                                     {
-                                        "text": "== 'Summer'"
-                                    },
-                                    {
-                                        "text": ""
+                                        "text": "> 10"
                                     }
                                 ],
                                 "outputEntry": {
-                                    "text": "'Light Salad and a nice Steak'"
+                                    "text": "10"
                                 }
                             }
                         ]
@@ -103,8 +79,7 @@
             }
         },
         "condition": {
-            "season": "Summer",
-            "guestCount": null
+            "prazoAnos": 5
         }
     }
 }

@@ -1,0 +1,80 @@
+@startjson
+{
+    "definitions": {
+        "decision": {
+            "decisionTable": {
+                "input": [
+                    {
+                        "inputExpression": {
+                            "label": "prazoAnos",
+                            "typeRef": "number"
+                        }
+                    }
+                ],
+                "rule": [
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 2"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "35"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 4"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "30"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 6"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "25"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 8"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "20"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "<= 10"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "15"
+                        }
+                    },
+                    {
+                        "inputEntry": [
+                            {
+                                "text": "> 10"
+                            }
+                        ],
+                        "outputEntry": {
+                            "text": "10"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
+@endjson
