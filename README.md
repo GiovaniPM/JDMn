@@ -311,11 +311,13 @@ or.json
 
 ### App setup
 
-![image](https://github.com/GiovaniPM/JDMn/assets/9011792/71f0b375-b42a-4788-a9c0-1305faf2bf9b)
-![image](https://github.com/GiovaniPM/JDMn/assets/9011792/2e4dfa64-12ea-4e15-80b0-d5b34f0867fa)
-![image](https://github.com/GiovaniPM/JDMn/assets/9011792/f04a0281-0284-4471-b076-7f115e7c501b)
-![image](https://github.com/GiovaniPM/JDMn/assets/9011792/ce493965-ec18-4959-a17f-3ddae5f7f793)
-![image](https://github.com/GiovaniPM/JDMn/assets/9011792/3f4afe03-54f4-4714-8872-1db10b99229b)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/e20bf2e6-e417-48b1-8ae1-06385e4c2312)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/e563994a-89ca-4ea4-bfe2-e23ce3157a9c)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/91195e93-ba1e-40c3-8004-6739ba985654)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/401586dd-7ebf-4dd5-a40c-b2c0b33151c4)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/d1d0abf6-1af6-450d-b9db-55f31f70c663)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/eb4f2b53-ebc2-4efa-b74a-5cf37a0f08b3)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/8f8b77d7-8ec6-4d3e-a174-2eb590d51d11)
 
 ## Implementation
 
