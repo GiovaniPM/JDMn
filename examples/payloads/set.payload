@@ -7,8 +7,8 @@
                         "input": [
                             {
                                 "inputExpression": {
-                                    "label": "data",
-                                    "typeRef": "date"
+                                    "label": "colunaUm",
+                                    "typeRef": "string"
                                 }
                             }
                         ],
@@ -16,7 +16,7 @@
                             {
                                 "inputEntry": [
                                     {
-                                        "text": "< 01/01/2023"
+                                        "text": "in  ['1','3','5']"
                                     }
                                 ],
                                 "outputEntry": {
@@ -26,7 +26,7 @@
                             {
                                 "inputEntry": [
                                     {
-                                        "text": "< 01/06/2023"
+                                        "text": "in  ['2', '4', '6']"
                                     }
                                 ],
                                 "outputEntry": {
@@ -36,41 +36,11 @@
                             {
                                 "inputEntry": [
                                     {
-                                        "text": "< 31/12/2023"
-                                    }
-                                ],
-                                "outputEntry": {
-                                    "text": "3"
-                                }
-                            },
-                            {
-                                "inputEntry": [
-                                    {
-                                        "text": "< 31/12/2024"
-                                    }
-                                ],
-                                "outputEntry": {
-                                    "text": "4"
-                                }
-                            },
-                            {
-                                "inputEntry": [
-                                    {
-                                        "text": ">= 31/12/2024"
-                                    }
-                                ],
-                                "outputEntry": {
-                                    "text": "5"
-                                }
-                            },
-                            {
-                                "inputEntry": [
-                                    {
                                         "text": ""
                                     }
                                 ],
                                 "outputEntry": {
-                                    "text": "999999999"
+                                    "text": "3"
                                 }
                             }
                         ]
@@ -79,7 +49,7 @@
             }
         },
         "condition": {
-            "data": "01/08/2022"
+            "colunaUm": "3"
         }
     }
 }

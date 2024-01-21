@@ -90,13 +90,16 @@ class JDMnSetup ( wx.Frame ):
 		bSizer8 = wx.BoxSizer( wx.VERTICAL )
 
 		self.m_button1 = wx.Button( self.m_panel8, wx.ID_ANY, u"Add", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer8.Add( self.m_button1, 0, wx.BOTTOM, 5 )
+
+		self.m_button1.SetBitmap( wx.Bitmap( u"Glyphs/+.png", wx.BITMAP_TYPE_ANY ) )
+		self.m_button1.SetBitmapPosition( wx.TOP )
+		bSizer8.Add( self.m_button1, 0, wx.BOTTOM|wx.EXPAND, 5 )
 
 		self.m_button2 = wx.Button( self.m_panel8, wx.ID_ANY, u"Remove", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer8.Add( self.m_button2, 0, wx.TOP|wx.BOTTOM, 5 )
 
-		self.m_button3 = wx.Button( self.m_panel8, wx.ID_ANY, u"...", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer8.Add( self.m_button3, 0, wx.TOP, 5 )
+		self.m_button2.SetBitmap( wx.Bitmap( u"Glyphs/x.png", wx.BITMAP_TYPE_ANY ) )
+		self.m_button2.SetBitmapPosition( wx.TOP )
+		bSizer8.Add( self.m_button2, 0, 0, 5 )
 
 
 		self.m_panel8.SetSizer( bSizer8 )
@@ -175,19 +178,28 @@ class JDMnSetup ( wx.Frame ):
 		bSizer12 = wx.BoxSizer( wx.VERTICAL )
 
 		self.m_button4 = wx.Button( self.m_panel11, wx.ID_ANY, u"Add", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer12.Add( self.m_button4, 0, wx.BOTTOM, 5 )
+
+		self.m_button4.SetBitmap( wx.Bitmap( u"Glyphs/+.png", wx.BITMAP_TYPE_ANY ) )
+		self.m_button4.SetBitmapPosition( wx.TOP )
+		bSizer12.Add( self.m_button4, 0, wx.BOTTOM|wx.EXPAND, 5 )
 
 		self.m_button5 = wx.Button( self.m_panel11, wx.ID_ANY, u"Remove", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer12.Add( self.m_button5, 0, wx.TOP|wx.BOTTOM, 5 )
+
+		self.m_button5.SetBitmap( wx.Bitmap( u"Glyphs/x.png", wx.BITMAP_TYPE_ANY ) )
+		self.m_button5.SetBitmapPosition( wx.TOP )
+		bSizer12.Add( self.m_button5, 0, wx.BOTTOM, 5 )
 
 		self.m_button62 = wx.Button( self.m_panel11, wx.ID_ANY, u"Up", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer12.Add( self.m_button62, 0, wx.TOP|wx.BOTTOM, 5 )
+
+		self.m_button62.SetBitmap( wx.Bitmap( u"Glyphs/u.png", wx.BITMAP_TYPE_ANY ) )
+		self.m_button62.SetBitmapPosition( wx.TOP )
+		bSizer12.Add( self.m_button62, 0, wx.EXPAND|wx.BOTTOM, 5 )
 
 		self.m_button61 = wx.Button( self.m_panel11, wx.ID_ANY, u"Down", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer12.Add( self.m_button61, 0, wx.TOP|wx.BOTTOM, 5 )
 
-		self.m_button6 = wx.Button( self.m_panel11, wx.ID_ANY, u"...", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer12.Add( self.m_button6, 0, wx.TOP, 5 )
+		self.m_button61.SetBitmap( wx.Bitmap( u"Glyphs/d.png", wx.BITMAP_TYPE_ANY ) )
+		self.m_button61.SetBitmapPosition( wx.TOP )
+		bSizer12.Add( self.m_button61, 0, wx.EXPAND, 5 )
 
 
 		self.m_panel11.SetSizer( bSizer12 )
@@ -215,23 +227,28 @@ class JDMnSetup ( wx.Frame ):
 		self.m_menubar1 = wx.MenuBar( 0 )
 		self.file = wx.Menu()
 		self.new = wx.MenuItem( self.file, ID_NEW, u"New", wx.EmptyString, wx.ITEM_NORMAL )
+		self.new.SetBitmap( wx.Bitmap( u"Glyphs/new.png", wx.BITMAP_TYPE_ANY ) )
 		self.file.Append( self.new )
 
 		self.open = wx.MenuItem( self.file, ID_OPEN, u"Open", wx.EmptyString, wx.ITEM_NORMAL )
+		self.open.SetBitmap( wx.Bitmap( u"Glyphs/open.png", wx.BITMAP_TYPE_ANY ) )
 		self.file.Append( self.open )
 
 		self.save = wx.MenuItem( self.file, ID_SAVE, u"Save", wx.EmptyString, wx.ITEM_NORMAL )
+		self.save.SetBitmap( wx.Bitmap( u"Glyphs/save.png", wx.BITMAP_TYPE_ANY ) )
 		self.file.Append( self.save )
 
 		self.file.AppendSeparator()
 
 		self.exit = wx.MenuItem( self.file, ID_EXIT, u"Exit", wx.EmptyString, wx.ITEM_NORMAL )
+		self.exit.SetBitmap( wx.Bitmap( u"Glyphs/exit.png", wx.BITMAP_TYPE_ANY ) )
 		self.file.Append( self.exit )
 
 		self.m_menubar1.Append( self.file, u"File" )
 
 		self.run = wx.Menu()
 		self.execute = wx.MenuItem( self.run, ID_EXECUTE, u"Execute", wx.EmptyString, wx.ITEM_NORMAL )
+		self.execute.SetBitmap( wx.Bitmap( u"Glyphs/p.png", wx.BITMAP_TYPE_ANY ) )
 		self.run.Append( self.execute )
 		self.execute.Enable( False )
 
@@ -392,9 +409,15 @@ class Input ( wx.Dialog ):
 		bSizer16 = wx.BoxSizer( wx.HORIZONTAL )
 
 		self.m_button7 = wx.Button( self.m_panel13, wx.ID_ANY, u"Save", wx.DefaultPosition, wx.DefaultSize, 0 )
+
+		self.m_button7.SetBitmap( wx.Bitmap( u"Glyphs/s.png", wx.BITMAP_TYPE_ANY ) )
+		self.m_button7.SetBitmapPosition( wx.TOP )
 		bSizer16.Add( self.m_button7, 0, wx.RIGHT, 5 )
 
 		self.m_button8 = wx.Button( self.m_panel13, wx.ID_ANY, u"Cancel", wx.DefaultPosition, wx.DefaultSize, 0 )
+
+		self.m_button8.SetBitmap( wx.Bitmap( u"Glyphs/r.png", wx.BITMAP_TYPE_ANY ) )
+		self.m_button8.SetBitmapPosition( wx.TOP )
 		bSizer16.Add( self.m_button8, 0, wx.LEFT, 5 )
 
 
@@ -512,9 +535,15 @@ class Rule ( wx.Dialog ):
 		bSizer16 = wx.BoxSizer( wx.HORIZONTAL )
 
 		self.m_button7 = wx.Button( self.m_panel13, wx.ID_ANY, u"Save", wx.DefaultPosition, wx.DefaultSize, 0 )
+
+		self.m_button7.SetBitmap( wx.Bitmap( u"Glyphs/s.png", wx.BITMAP_TYPE_ANY ) )
+		self.m_button7.SetBitmapPosition( wx.TOP )
 		bSizer16.Add( self.m_button7, 0, wx.RIGHT, 5 )
 
 		self.m_button8 = wx.Button( self.m_panel13, wx.ID_ANY, u"Cancel", wx.DefaultPosition, wx.DefaultSize, 0 )
+
+		self.m_button8.SetBitmap( wx.Bitmap( u"Glyphs/r.png", wx.BITMAP_TYPE_ANY ) )
+		self.m_button8.SetBitmapPosition( wx.TOP )
 		bSizer16.Add( self.m_button8, 0, wx.LEFT, 5 )
 
 
@@ -610,7 +639,7 @@ class About ( wx.Dialog ):
 		self.m_panel30 = wx.Panel( self.m_panel27, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		bSizer29.Add( self.m_panel30, 1, wx.EXPAND |wx.ALL, 5 )
 
-		self.m_staticText10 = wx.StaticText( self.m_panel27, wx.ID_ANY, u"Version: 1.0.8", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_CENTER_HORIZONTAL )
+		self.m_staticText10 = wx.StaticText( self.m_panel27, wx.ID_ANY, u"Version: 1.0.9", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_CENTER_HORIZONTAL )
 		self.m_staticText10.Wrap( -1 )
 
 		bSizer29.Add( self.m_staticText10, 0, wx.ALL|wx.EXPAND, 5 )
@@ -734,16 +763,19 @@ class Execute ( wx.Dialog ):
 		bSizer33 = wx.BoxSizer( wx.HORIZONTAL )
 
 		self.m_button13 = wx.Button( self, wx.ID_ANY, u"Execute", wx.DefaultPosition, wx.DefaultSize, 0 )
+
+		self.m_button13.SetBitmap( wx.Bitmap( u"Glyphs/p.png", wx.BITMAP_TYPE_ANY ) )
+		self.m_button13.SetBitmapPosition( wx.TOP )
 		bSizer33.Add( self.m_button13, 1, wx.ALL, 5 )
 
 		self.m_checkBox1 = wx.CheckBox( self, wx.ID_ANY, u"Log", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer33.Add( self.m_checkBox1, 0, wx.ALL, 5 )
+		bSizer33.Add( self.m_checkBox1, 0, wx.ALL|wx.EXPAND, 5 )
 
 		self.m_checkBox2 = wx.CheckBox( self, wx.ID_ANY, u"Generate API call", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer33.Add( self.m_checkBox2, 0, wx.ALL, 5 )
+		bSizer33.Add( self.m_checkBox2, 0, wx.ALL|wx.EXPAND, 5 )
 
 		self.m_checkBox3 = wx.CheckBox( self, wx.ID_ANY, u"PUML", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer33.Add( self.m_checkBox3, 0, wx.ALL, 5 )
+		bSizer33.Add( self.m_checkBox3, 0, wx.ALL|wx.EXPAND, 5 )
 
 
 		bSizer29.Add( bSizer33, 0, wx.EXPAND, 5 )

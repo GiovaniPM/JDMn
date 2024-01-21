@@ -1,5 +1,5 @@
 # JDMn
-[![JDMn](https://img.shields.io/badge/JDMn-1.0.8-blue.svg)](https://github.com/GiovaniPM/JDMn)
+[![JDMn](https://img.shields.io/badge/JDMn-1.0.9-blue.svg)](https://github.com/GiovaniPM/JDMn)
 
 Python/JSON implementation of DMn
 
