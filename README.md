@@ -312,6 +312,9 @@ or.json
 ### App setup
 
 ![image](https://github.com/GiovaniPM/JDMn/assets/9011792/e20bf2e6-e417-48b1-8ae1-06385e4c2312)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/08ed2d81-aa80-477e-b5e9-dea8be55271e)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/ea1f339c-6e5b-4e7a-9a63-584247003069)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/b97d0b67-995e-401d-8aec-cc565a140402)
 ![image](https://github.com/GiovaniPM/JDMn/assets/9011792/e563994a-89ca-4ea4-bfe2-e23ce3157a9c)
 ![image](https://github.com/GiovaniPM/JDMn/assets/9011792/91195e93-ba1e-40c3-8004-6739ba985654)
 ![image](https://github.com/GiovaniPM/JDMn/assets/9011792/401586dd-7ebf-4dd5-a40c-b2c0b33151c4)
