@@ -134,6 +134,12 @@ class FrameExecute(JDmnGen.Rule):
             evaluate['evaluate'] = jdmn
             with open(payloadPath, 'w') as file:
                 file.write(json.dumps(evaluate, indent=4))
+            if self.m_checkBox3.IsChecked():
+                pumlPath = changePath(filepath, 'puml', '.api.puml')
+                with open(pumlPath, 'w') as file:
+                    file.write('@startjson\n')
+                    file.write(json.dumps(evaluate, indent=4))
+                    file.write('\n@endjson')
         
         if self.m_checkBox3.IsChecked():
             pumlPath = changePath(filepath, 'puml', '.puml')
