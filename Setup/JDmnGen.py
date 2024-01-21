@@ -50,7 +50,7 @@ class JDMnSetup ( wx.Frame ):
 		self.m_panel7 = wx.Panel( self.m_panel6, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		bSizer7 = wx.BoxSizer( wx.VERTICAL )
 
-		self.m_grid4 = wx.grid.Grid( self.m_panel7, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_grid4 = wx.grid.Grid( self.m_panel7, wx.ID_ANY, wx.DefaultPosition, wx.Size( -1,-1 ), 0 )
 
 		# Grid
 		self.m_grid4.CreateGrid( 0, 2 )
