@@ -311,11 +311,9 @@ or.json
 
 ### App setup
 
-![image](https://github.com/GiovaniPM/JDMn/assets/9011792/71f0b375-b42a-4788-a9c0-1305faf2bf9b)
-![image](https://github.com/GiovaniPM/JDMn/assets/9011792/2e4dfa64-12ea-4e15-80b0-d5b34f0867fa)
-![image](https://github.com/GiovaniPM/JDMn/assets/9011792/f04a0281-0284-4471-b076-7f115e7c501b)
-![image](https://github.com/GiovaniPM/JDMn/assets/9011792/ce493965-ec18-4959-a17f-3ddae5f7f793)
-![image](https://github.com/GiovaniPM/JDMn/assets/9011792/3f4afe03-54f4-4714-8872-1db10b99229b)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/e20bf2e6-e417-48b1-8ae1-06385e4c2312)
+![image](https://github.com/GiovaniPM/JDMn/assets/9011792/99aca9e1-c63b-4e35-9f7a-4984ee472f30)
+
 
 ## Implementation
 
