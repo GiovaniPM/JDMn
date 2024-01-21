@@ -618,15 +618,8 @@ class About ( wx.Dialog ):
 		self.m_panel27 = wx.Panel( self.m_panel24, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		bSizer29 = wx.BoxSizer( wx.VERTICAL )
 
-		self.m_staticText8 = wx.StaticText( self.m_panel27, wx.ID_ANY, u"JDMn", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_CENTER_HORIZONTAL )
-		self.m_staticText8.Wrap( -1 )
-
-		self.m_staticText8.SetFont( wx.Font( 22, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_BOLD, False, wx.EmptyString ) )
-
-		bSizer29.Add( self.m_staticText8, 0, wx.ALL|wx.EXPAND, 5 )
-
-		self.m_panel29 = wx.Panel( self.m_panel27, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
-		bSizer29.Add( self.m_panel29, 1, wx.EXPAND |wx.ALL, 5 )
+		self.m_bitmap1 = wx.StaticBitmap( self.m_panel27, wx.ID_ANY, wx.Bitmap( u"Glyphs/logo_a.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer29.Add( self.m_bitmap1, 0, wx.ALL|wx.EXPAND, 5 )
 
 		self.m_staticText9 = wx.StaticText( self.m_panel27, wx.ID_ANY, u"A DMn implementation with JSON", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_CENTER_HORIZONTAL )
 		self.m_staticText9.Wrap( -1 )
