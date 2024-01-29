@@ -32,7 +32,10 @@ class JDMnSetup ( wx.Frame ):
 
 		bSizer1 = wx.BoxSizer( wx.VERTICAL )
 
-		self.m_panel2 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		self.m_panel2 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( -1,200 ), wx.TAB_TRAVERSAL )
+		self.m_panel2.SetMinSize( wx.Size( -1,200 ) )
+		self.m_panel2.SetMaxSize( wx.Size( -1,200 ) )
+
 		bSizer2 = wx.BoxSizer( wx.VERTICAL )
 
 		self.m_staticText1 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"Inputs:", wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -119,7 +122,6 @@ class JDMnSetup ( wx.Frame ):
 
 		self.m_panel2.SetSizer( bSizer2 )
 		self.m_panel2.Layout()
-		bSizer2.Fit( self.m_panel2 )
 		bSizer1.Add( self.m_panel2, 1, wx.EXPAND, 5 )
 
 		self.m_panel4 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( -1,50 ), wx.TAB_TRAVERSAL )
@@ -792,6 +794,136 @@ class Execute ( wx.Dialog ):
 		event.Skip()
 
 	def runForest( self, event ):
+		event.Skip()
+
+
+###########################################################################
+## Class Output
+###########################################################################
+
+class Output ( wx.Dialog ):
+
+	def __init__( self, parent ):
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Output", pos = wx.DefaultPosition, size = wx.Size( 600,400 ), style = wx.DEFAULT_DIALOG_STYLE )
+
+		self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
+
+		bSizer12 = wx.BoxSizer( wx.VERTICAL )
+
+		self.m_panel10 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer12.Add( self.m_panel10, 1, wx.EXPAND, 5 )
+
+		self.m_panel9 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer13 = wx.BoxSizer( wx.HORIZONTAL )
+
+		self.m_panel12 = wx.Panel( self.m_panel9, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer13.Add( self.m_panel12, 1, wx.EXPAND, 5 )
+
+		self.m_panel13 = wx.Panel( self.m_panel9, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer21 = wx.BoxSizer( wx.VERTICAL )
+
+		bSizer15 = wx.BoxSizer( wx.HORIZONTAL )
+
+		self.m_grid4 = wx.grid.Grid( self.m_panel13, wx.ID_ANY, wx.DefaultPosition, wx.Size( -1,200 ), 0 )
+
+		# Grid
+		self.m_grid4.CreateGrid( 1, 2 )
+		self.m_grid4.EnableEditing( True )
+		self.m_grid4.EnableGridLines( True )
+		self.m_grid4.EnableDragGridSize( False )
+		self.m_grid4.SetMargins( 0, 0 )
+
+		# Columns
+		self.m_grid4.SetColSize( 0, 150 )
+		self.m_grid4.SetColSize( 1, 300 )
+		self.m_grid4.EnableDragColMove( False )
+		self.m_grid4.EnableDragColSize( True )
+		self.m_grid4.SetColLabelValue( 0, u"label" )
+		self.m_grid4.SetColLabelValue( 1, u"value" )
+		self.m_grid4.SetColLabelAlignment( wx.ALIGN_CENTER, wx.ALIGN_CENTER )
+
+		# Rows
+		self.m_grid4.EnableDragRowSize( True )
+		self.m_grid4.SetRowLabelAlignment( wx.ALIGN_CENTER, wx.ALIGN_CENTER )
+
+		# Label Appearance
+
+		# Cell Defaults
+		self.m_grid4.SetDefaultCellAlignment( wx.ALIGN_LEFT, wx.ALIGN_TOP )
+		self.m_grid4.SetMinSize( wx.Size( -1,200 ) )
+		self.m_grid4.SetMaxSize( wx.Size( -1,200 ) )
+
+		bSizer15.Add( self.m_grid4, 0, wx.ALL, 5 )
+
+
+		bSizer21.Add( bSizer15, 0, wx.EXPAND|wx.TOP|wx.BOTTOM, 5 )
+
+		bSizer25 = wx.BoxSizer( wx.HORIZONTAL )
+
+		self.m_panel15 = wx.Panel( self.m_panel13, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer25.Add( self.m_panel15, 0, wx.EXPAND, 5 )
+
+
+		bSizer21.Add( bSizer25, 1, wx.EXPAND|wx.TOP|wx.BOTTOM, 5 )
+
+		bSizer16 = wx.BoxSizer( wx.HORIZONTAL )
+
+		self.m_button7 = wx.Button( self.m_panel13, wx.ID_ANY, u"Save", wx.DefaultPosition, wx.DefaultSize, 0 )
+
+		self.m_button7.SetBitmap( wx.Bitmap( u"Glyphs/s.png", wx.BITMAP_TYPE_ANY ) )
+		self.m_button7.SetBitmapPosition( wx.TOP )
+		bSizer16.Add( self.m_button7, 0, wx.RIGHT, 5 )
+
+		self.m_button8 = wx.Button( self.m_panel13, wx.ID_ANY, u"Cancel", wx.DefaultPosition, wx.DefaultSize, 0 )
+
+		self.m_button8.SetBitmap( wx.Bitmap( u"Glyphs/r.png", wx.BITMAP_TYPE_ANY ) )
+		self.m_button8.SetBitmapPosition( wx.TOP )
+		bSizer16.Add( self.m_button8, 0, wx.LEFT, 5 )
+
+
+		bSizer21.Add( bSizer16, 0, wx.ALIGN_RIGHT|wx.TOP|wx.BOTTOM, 5 )
+
+
+		self.m_panel13.SetSizer( bSizer21 )
+		self.m_panel13.Layout()
+		bSizer21.Fit( self.m_panel13 )
+		bSizer13.Add( self.m_panel13, 1, wx.EXPAND, 5 )
+
+		self.m_panel14 = wx.Panel( self.m_panel9, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer13.Add( self.m_panel14, 1, wx.EXPAND, 5 )
+
+
+		self.m_panel9.SetSizer( bSizer13 )
+		self.m_panel9.Layout()
+		bSizer13.Fit( self.m_panel9 )
+		bSizer12.Add( self.m_panel9, 1, wx.EXPAND, 5 )
+
+		self.m_panel11 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer12.Add( self.m_panel11, 1, wx.EXPAND, 5 )
+
+
+		self.SetSizer( bSizer12 )
+		self.Layout()
+
+		self.Centre( wx.BOTH )
+
+		# Connect Events
+		self.m_grid4.Bind( wx.EVT_KEY_DOWN, self.keyPress4 )
+		self.m_button7.Bind( wx.EVT_BUTTON, self.OutputSave )
+		self.m_button8.Bind( wx.EVT_BUTTON, self.OutputExit )
+
+	def __del__( self ):
+		pass
+
+
+	# Virtual event handlers, override them in your derived class
+	def keyPress4( self, event ):
+		event.Skip()
+
+	def OutputSave( self, event ):
+		event.Skip()
+
+	def OutputExit( self, event ):
 		event.Skip()
 
 

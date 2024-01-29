@@ -6,6 +6,20 @@ import time
 import wx
 import wx.grid
 
+def convertStr(value):
+    try:
+        value = int(value)
+    except:
+        try:
+            value = float(value)
+        except:
+            value = value.replace("'","")
+            if value == 'True':
+                value = True
+            elif value == 'False':
+                value = False
+    return value
+
 def changePath(filePath, newDir, extension):
     if newDir != '':
         parts = filePath.split(os.sep)
@@ -49,6 +63,8 @@ def keyProcess(self, event, adding):
             self.SetGridCursor(row + 1, 0)
         else:
             event.Skip()
+    elif event.GetKeyCode() == wx.WXK_DELETE:  # DEL
+        self.DeleteRows(row, 1)
     else:
         event.Skip()
 
@@ -83,6 +99,26 @@ def eraseGrid(self):
     if num_cols > 1:
         self.m_grid7.DeleteCols(1, num_cols)
     self.Title = 'JDMn Setup'
+
+class FrameOutput(JDmnGen.Rule):
+    OutputReg = {}
+    
+    def __init__(self, parent):
+        JDmnGen.Output.__init__(self, parent)
+    
+    def keyPress4(self, event):
+        keyProcess(self.m_grid4, event, 'Y')
+    
+    def OutputSave(self, event):
+        self.OutputReg = {}
+        for row in range(self.m_grid4.GetNumberRows()):
+            key   = self.m_grid4.GetCellValue(row, 0)
+            value = self.m_grid4.GetCellValue(row, 1)
+            self.OutputReg[key] = convertStr(value)
+        self.Close()
+    
+    def OutputExit(self, event):
+        self.Close()
 
 class FrameAbout(JDmnGen.Rule):
     def __init__(self, parent):
@@ -271,6 +307,31 @@ class FramePrincipal(JDmnGen.JDMnSetup):
             frame.ShowModal()
             if frame.ruleReg != {}:
                 self.m_grid7.SetCellValue( row, col, frame.ruleReg['operator'] + frame.ruleReg['rule'] )
+        else:
+            value = self.m_grid7.GetCellValue(row, col)
+            frame = FrameOutput(self)
+            if JDMn.is_json(value):
+                json_object = json.loads(value)
+                keys = json_object.keys()
+                i = -1
+                frame.m_grid4.DeleteRows(0, 1)
+                for reg in keys:
+                    i += 1
+                    frame.m_grid4.AppendRows(1)
+                    frame.m_grid4.SetCellValue(i, 0, reg)
+                    try:
+                        value = str(json_object[reg])
+                    except:
+                        value = json_object[reg]
+                    frame.m_grid4.SetCellValue(i, 1, value)
+            else:
+                frame.m_grid4.DeleteRows(0, 1)
+                frame.m_grid4.AppendRows(1)
+                frame.m_grid4.SetCellValue(0, 0, 'return')
+                frame.m_grid4.SetCellValue(0, 1, value.replace("'",""))
+            frame.ShowModal()
+            if frame.OutputReg != {}:
+                self.m_grid7.SetCellValue( row, col, json.dumps(frame.OutputReg))
     
     def addInput(self, event):
         frame = FrameInput(self)

@@ -19,7 +19,11 @@ def replaceDate(s):
 def is_json(myString):
     try:
         json_object = json.loads(myString)
-    except ValueError as e:
+        try:
+            keys = json_object.keys()
+        except:
+            return False
+    except:
         return False
     return True
 
