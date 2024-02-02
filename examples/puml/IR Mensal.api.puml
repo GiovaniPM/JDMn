@@ -1,3 +1,4 @@
+@startjson
 {
     "evaluate": {
         "JDMn": {
@@ -160,3 +161,4 @@
         }
     }
 }
+@endjson
