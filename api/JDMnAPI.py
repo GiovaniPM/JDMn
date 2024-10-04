@@ -22,19 +22,19 @@ def evaluateJDMn(content):
     decision      = definitions ['decision'      ]
     decisionTable = decision    ['decisionTable' ]
     condition     = content     ['condition'     ]
-    
+
     dataResult = {}
     result, prove = JDMn.evaluateJDMn(decisionTable, condition, 'S')
-    
+
     dataResult['result'] = result
     dataResult['prove' ] = prove
-    
+
     return dataResult
 
 @app.route('/jdmn', methods=['GET'])
 def decompoe():
     reg = {}
-    
+
     if request.json == None:
         return jsonify( { 'error': 'No parameters found.' } )
     else:
@@ -48,7 +48,7 @@ def decompoe():
                 print(reg['_id'] + ' - ' + reg['processing time'])
         else:
             return jsonify( { 'error': 'No keys valid found.' } )
-    
+
     json_result = reg
     return jsonify(json_result)
 

@@ -25,7 +25,7 @@ def changePath(filePath, newDir, extension):
         parts = filePath.split(os.sep)
         parts.insert(len(parts) - 1, newDir)
         filePath = os.sep.join(parts)
-    
+
     if extension != '':
         if not extension.startswith('.'):
             extension = '.' + extension
@@ -102,13 +102,13 @@ def eraseGrid(self):
 
 class FrameOutput(JDmnGen.Rule):
     OutputReg = {}
-    
+
     def __init__(self, parent):
         JDmnGen.Output.__init__(self, parent)
-    
+
     def keyPress4(self, event):
         keyProcess(self.m_grid4, event, 'Y')
-    
+
     def OutputSave(self, event):
         self.OutputReg = {}
         for row in range(self.m_grid4.GetNumberRows()):
@@ -116,7 +116,7 @@ class FrameOutput(JDmnGen.Rule):
             value = self.m_grid4.GetCellValue(row, 1)
             self.OutputReg[key] = convertStr(value)
         self.Close()
-    
+
     def OutputExit(self, event):
         self.Close()
 
@@ -127,14 +127,14 @@ class FrameAbout(JDmnGen.Rule):
 class FrameExecute(JDmnGen.Rule):
     def __init__(self, parent):
         JDmnGen.Execute.__init__(self, parent)
-    
+
     def keyPress3(self, event):
         keyProcess(self.m_grid4, event, 'N')
-    
+
     def runForest( self, event ):
         filepath = self.m_textCtrl4.Value
         JDMnDefs = JDMn.getDefinitionsJDMn(self.m_textCtrl4.Value)
-        
+
         dados = {}
         for row in range(self.m_grid4.GetNumberRows()):
             value = self.m_grid4.GetCellValue(row, 2)
@@ -147,14 +147,14 @@ class FrameExecute(JDmnGen.Rule):
                     dados[self.m_grid4.GetCellValue(row, 0)] = float(value)
             else:
                 dados[self.m_grid4.GetCellValue(row, 0)] = value
-        
+
         startTime = time.time()
         if self.m_checkBox1.IsChecked():
             answer, prove = JDMn.evaluateJDMn(JDMnDefs, dados, 'S')
         else:
             answer, prove = JDMn.evaluateJDMn(JDMnDefs, dados)
         endTime = time.time()
-        
+
         if self.m_checkBox2.IsChecked():
             payloadPath = changePath(filepath, 'payloads', '.payload')
             decisionTable = {}
@@ -176,7 +176,7 @@ class FrameExecute(JDmnGen.Rule):
                     file.write('@startjson\n')
                     file.write(json.dumps(evaluate, indent=4))
                     file.write('\n@endjson')
-        
+
         if self.m_checkBox3.IsChecked():
             pumlPath = changePath(filepath, 'puml', '.puml')
             decisionTable = {}
@@ -189,9 +189,9 @@ class FrameExecute(JDmnGen.Rule):
                 file.write('@startjson\n')
                 file.write(json.dumps(definitions, indent=4))
                 file.write('\n@endjson')
-        
+
         self.m_textCtrl5.Value = str((endTime - startTime) * 1000)[0:5] + ' ms'
-        
+
         try:
             self.m_textCtrl41.Value = answer
         except:
@@ -199,36 +199,36 @@ class FrameExecute(JDmnGen.Rule):
 
 class FrameRule(JDmnGen.Rule):
     ruleReg = {}
-    
+
     def __init__(self, parent):
         JDmnGen.Rule.__init__(self, parent)
-    
+
     def RuleSave(self, event):
         self.ruleReg['rule'] = self.m_textCtrl1.Value
         self.ruleReg['operator'] = self.m_comboBox1.Value.strip(' ') + ' '
         self.Close()
-    
+
     def RuleCancel(self, event):
         self.ruleReg = {}
         self.Close()
 
 class FrameInput(JDmnGen.Input):
     inputReg = {}
-    
+
     def __init__(self, parent):
         JDmnGen.Input.__init__(self, parent)
-    
+
     def inputEntry( self, event ):
         self.m_comboBox1.Clear()
         for row in JDMn.valid_types:
             self.m_comboBox1.Append(row.strip())
         self.m_comboBox1.Selection = 0
-    
+
     def InputSave(self, event):
         self.inputReg['label'] = self.m_textCtrl1.Value
         self.inputReg['typeDef'] = self.m_comboBox1.Value
         self.Close()
-    
+
     def InputCancel(self, event):
         self.inputReg = {}
         self.Close()
@@ -237,20 +237,20 @@ class FramePrincipal(JDmnGen.JDMnSetup):
     msgTypes = ''
     areFile = False
     fileName = ''
-    
+
     def __init__(self, parent):
         JDmnGen.JDMnSetup.__init__(self, parent)
-    
+
     def aboutFile( self, event ):
         frame = FrameAbout(self)
         frame.ShowModal()
-    
+
     def keyPress1(self, event):
         keyProcess(self.m_grid4, event, 'N')
-    
+
     def keyPress2(self, event):
         keyProcess(self.m_grid7, event, 'Y')
-    
+
     def execTests( self, event ):
         frame = FrameExecute(self)
         frame.m_grid4.AppendRows(numRows=self.m_grid4.GetNumberRows())
@@ -264,7 +264,7 @@ class FramePrincipal(JDmnGen.JDMnSetup):
                 value = self.m_grid4.GetCellValue(row, col)
                 frame.m_grid4.SetCellValue(row, col, value)
         frame.ShowModal()
-    
+
     def downRule( self, event ):
         selected_rows = self.m_grid7.GetSelectedRows()
         qty = self.m_grid7.GetNumberRows() - 1
@@ -273,7 +273,7 @@ class FramePrincipal(JDmnGen.JDMnSetup):
             if from_pos < qty:
                 to_pos = selected_rows[0] + 1
                 changeRowGrid(self.m_grid7, from_pos, to_pos)
-    
+
     def upRule( self, event ):
         selected_rows = self.m_grid7.GetSelectedRows()
         if selected_rows:
@@ -281,12 +281,12 @@ class FramePrincipal(JDmnGen.JDMnSetup):
             if from_pos > 0:
                 to_pos = selected_rows[0] - 1
                 changeRowGrid(self.m_grid7, from_pos, to_pos)
-    
+
     def appEntry( self, event ):
         self.msgTypes = 'Type invalid!\n\nValid Types:\n'
         for row in JDMn.valid_types:
             self.msgTypes += '    - ' +  row + '\n'
-    
+
     def ruleColSelect(self, event):
         row = event.GetRow()
         col = event.GetCol()
@@ -332,7 +332,7 @@ class FramePrincipal(JDmnGen.JDMnSetup):
             frame.ShowModal()
             if frame.OutputReg != {}:
                 self.m_grid7.SetCellValue( row, col, json.dumps(frame.OutputReg))
-    
+
     def addInput(self, event):
         frame = FrameInput(self)
         frame.ShowModal()
@@ -343,7 +343,7 @@ class FramePrincipal(JDmnGen.JDMnSetup):
             self.m_grid7.SetColLabelValue(row, frame.inputReg['label'])
             self.m_grid4.SetCellValue(row-1, 0, frame.inputReg['label'])
             self.m_grid4.SetCellValue(row-1, 1, frame.inputReg['typeDef'])
-    
+
     def delInput(self, event):
         selected_rows = self.m_grid4.GetSelectedRows()
         selected_rows.reverse()
@@ -351,7 +351,7 @@ class FramePrincipal(JDmnGen.JDMnSetup):
             for pos in selected_rows:
                 self.m_grid4.DeleteRows(pos)
                 self.m_grid7.DeleteCols(pos+1)
-    
+
     def labelChanged(self, event):
         row = event.GetRow()
         col = event.GetCol()
@@ -365,111 +365,111 @@ class FramePrincipal(JDmnGen.JDMnSetup):
             if value not in JDMn.valid_types:
                 wx.MessageBox(self.msgTypes, 'Error')
                 self.m_grid4.SetCellBackgroundColour(row, col, wx.RED)
-    
+
     def addRule(self, event):
         self.m_grid7.AppendRows(1)
-    
+
     def delRule(self, event):
         selected_rows = self.m_grid7.GetSelectedRows()
         selected_rows.reverse()
         if selected_rows:
             for pos in selected_rows:
                 self.m_grid7.DeleteRows(pos)
-    
+
     def newFile(self, event):
         eraseGrid(self)
-    
+
     def exitApp(self, event):
         self.Close()
-    
+
     def openFile(self,event):
-        
+
         openFrame = wx.Frame(None, title="Open File Dialog Example")
-        
+
         openFileDialog = wx.FileDialog(openFrame, "Open", "", "", "JSON files (*.json)|*.json", wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
-        
+
         if openFileDialog.ShowModal() == wx.ID_OK:
             filePath = openFileDialog.GetPath()
         else:
             filePath = ''
-        
+
         if filePath != '':
             eraseGrid(self)
-            
+
             self.areFile = True
             self.m_menubar1.Enable(1004,True)
             self.fileName = filePath
-            
+
             self.Title = 'JDMn Setup - ' + filePath
-            
+
             decisionTable = JDMn.getDefinitionsJDMn(filePath)
-            
+
             inputs  = decisionTable ['input'  ]
             rules   = decisionTable ['rule'   ]
-            
+
             row = self.m_grid4.GetNumberRows()
-            
+
             for input in inputs:
                 expression = input         ['inputExpression']
                 label      = expression    ['label'          ]
                 typeValue  = expression    ['typeRef'        ]
-                
+
                 self.m_grid4.AppendRows(1)
                 self.m_grid7.AppendCols(1)
-                
+
                 self.m_grid4.SetCellValue(row, 0, label)
                 self.m_grid4.SetCellValue(row, 1, typeValue)
                 self.m_grid7.SetColLabelValue(row+1, label)
-                
+
                 row += 1
-            
+
             row = 0
-            
+
             for rule in rules:
                 entrys = rule['inputEntry']
                 output = rule['outputEntry']
-                
+
                 col = 1
-                
+
                 if row > 0:
                     self.m_grid7.AppendRows(1)
-                
+
                 for entry in entrys:
                     self.m_grid7.SetCellValue(row, col, entry['text'])
-                    
+
                     col += 1
-                
+
                 self.m_grid7.SetCellValue(row, 0, str(output['text']))
-                
+
                 row += 1
-        
+
         openFileDialog.Destroy()
-    
+
     def saveFile(self,event):
         saveFrame = wx.Frame(None, title="Open File Dialog Example")
-        
+
         saveFileDialog = wx.FileDialog(saveFrame, "Save", "", "", "JSON files (*.json)|*.json", wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT)
-        
+
         if saveFileDialog.ShowModal() == wx.ID_OK:
             filePath = saveFileDialog.GetPath()
         else:
             filePath = ''
-        
-        if filePath != '':        
+
+        if filePath != '':
             self.Title = 'JDMn Setup - ' + filePath
-            
+
             self.areFile = True
             self.m_menubar1.Enable(1004,True)
             self.fileName = filePath
-            
+
             row = 0
             col = 0
-            
+
             maxRow = self.m_grid4.GetNumberRows()
             maxCol = self.m_grid4.GetNumberCols()
-            
+
             inputs = []
-            
+
             for row in range(0, maxRow):
                 inputExpression = {}
                 input = {}
@@ -477,12 +477,12 @@ class FramePrincipal(JDmnGen.JDMnSetup):
                 input['typeRef'] = self.m_grid4.GetCellValue(row, 1)
                 inputExpression['inputExpression'] = input
                 inputs.append(inputExpression)
-            
+
             maxRow = self.m_grid7.GetNumberRows()
             maxCol = self.m_grid7.GetNumberCols()
-            
+
             rules = []
-            
+
             for row in range(0, maxRow):
                 rule = {}
                 input = []
@@ -495,23 +495,23 @@ class FramePrincipal(JDmnGen.JDMnSetup):
                 output['text'] = self.m_grid7.GetCellValue(row, 0)
                 rule['outputEntry'] = output
                 rules.append(rule)
-            
+
             decisionTable = {}
             decisionTable ['input'  ] = inputs
             decisionTable ['rule'   ] = rules
-            
+
             decision = {}
             decision      ['decisionTable' ] = decisionTable
-            
+
             definitions = {}
             definitions   ['decision'      ] = decision
-            
+
             dados = {}
             dados         ['definitions'   ] = definitions
-            
+
             with open(filePath, "w") as f:
                 json.dump(dados, f)
-        
+
         saveFileDialog.Destroy()
 
 app = wx.App()
