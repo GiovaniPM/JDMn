@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/01/10 16:44:59.000.429,=C:\Users\giova\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/01/10 16:46:42.000.260,C:\Users\giova\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\giova\projetos\JDMn\Delphi\Principal.dfm</Transaction>
+    <Transaction>2025/01/10 16:46:42.000.260,C:\Users\giova\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\giova\projetos\JDMn\Delphi\Principal.pas</Transaction>
+    <Transaction>2025/01/10 16:46:49.000.957,C:\Users\giova\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\giova\projetos\JDMn\Delphi\JDMn.dproj</Transaction>
+    <Transaction>2025/01/10 16:56:12.000.431,=C:\Users\giova\projetos\JDMn\Delphi\Unit1.pas</Transaction>
+    <Transaction>2025/01/10 16:57:06.000.677,C:\Users\giova\projetos\JDMn\Delphi\Unit1.dfm=C:\Users\giova\projetos\JDMn\Delphi\About.dfm</Transaction>
+    <Transaction>2025/01/10 16:57:06.000.677,C:\Users\giova\projetos\JDMn\Delphi\Unit1.pas=C:\Users\giova\projetos\JDMn\Delphi\About.pas</Transaction>
+  </Transactions>
+</BorlandProject>

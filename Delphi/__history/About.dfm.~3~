@@ -1,0 +1,80 @@
+object frmAbout: TfrmAbout
+  Left = 0
+  Top = 0
+  Caption = 'About'
+  ClientHeight = 441
+  ClientWidth = 640
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 640
+    Height = 441
+    Align = alClient
+    TabOrder = 0
+    ExplicitLeft = 24
+    ExplicitTop = -8
+    object Label1: TLabel
+      Left = 0
+      Top = 120
+      Width = 640
+      Height = 71
+      Alignment = taCenter
+      Caption = 'JDMn'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -53
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 0
+      Top = 203
+      Width = 640
+      Height = 25
+      Alignment = taCenter
+      Caption = 'A DMn implementation with JSON'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 0
+      Top = 288
+      Width = 640
+      Height = 25
+      Alignment = taCenter
+      Caption = 'Version: 1.0.9'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+    end
+    object LinkLabel1: TLinkLabel
+      Left = 8
+      Top = 234
+      Width = 640
+      Height = 29
+      Caption = 'https://github.com/GiovaniPM/JDMn'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+end
